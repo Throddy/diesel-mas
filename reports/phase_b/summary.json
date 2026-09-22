@@ -1,0 +1,24 @@
+{
+  "refactor_behaviour_identical": true,
+  "cycles": 60,
+  "before": {
+    "abstention_rate": 0.4166666666666667,
+    "action_rate": 0.4,
+    "action_rate_when_at_risk": 0.5581395348837209,
+    "do_nothing_rate": 0.18333333333333332,
+    "hard_constraint_violations_in_recommendations": 0,
+    "seconds_per_cycle_mean": 0.16819381713867188
+  },
+  "after": {
+    "abstention_rate": 0.25,
+    "action_rate": 0.5666666666666667,
+    "action_rate_when_at_risk": 0.7906976744186046,
+    "do_nothing_rate": 0.18333333333333332,
+    "hard_constraint_violations_in_recommendations": 0,
+    "seconds_per_cycle_mean": 0.2929434418678284
+  },
+  "rescued_by_replanning": 10,
+  "lost_recommendations": 0,
+  "changed_choice_in_working_cycles": 0,
+  "conflict_example": "2026-01-24 14:14:14.237288136"
+}

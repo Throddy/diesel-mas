@@ -1,0 +1,321 @@
+project:
+  name: diesel-mas
+  version: 2.0.0
+  model_version: quality-sulfur-v2
+  random_seed: 42
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  models: models
+  artifacts: artifacts
+  reports: reports
+  figures: reports/figures
+raw_files:
+  archive: data.rar
+  telemetry_avt: avt_tags.csv
+  telemetry_ht: 242000_tags.csv
+  lims: ЛИМСы_01_01_2023_-_н_в___2_.xlsx
+  pak: Выгрузка_ПАК_01_01_2023_-_н_в_.xlsx
+  tags: Теги_хакатон.xlsx
+  schemes: АВТ_схемы.pdf
+  tags_update: теги АВТ_24-2000.xlsx
+  vak_update: формулы_ВАК.xlsx
+telemetry:
+  expected_step_minutes: 10
+  time_column: date
+  sentinel_candidates:
+  - 307.0
+split:
+  train_end: '2025-02-28'
+  valid_end: '2025-09-30'
+  test_start: '2025-10-01'
+reporting:
+  periods:
+  - start: '2025-10-01'
+    end: '2026-08-07'
+    cycles: 60
+  - start: '2026-01-01'
+    end: '2026-02-01'
+    cycles: 24
+  - start: '2026-05-01'
+    end: '2026-06-01'
+    cycles: 24
+data_quality:
+  flatline_min_points: 36
+  flatline_critical_points: 144
+  flatline_tolerance: 1.0e-09
+  low_variance_window: 144
+  low_variance_min_std: 1.0e-06
+  jump_robust_z: 8.0
+  lims_stale_quantile: 0.95
+  pak_max_age_minutes: 60
+  telemetry_max_age_minutes: 30
+  source_disagreement_abs: 5.0
+  source_disagreement_rel: 0.5
+  lims_delay_minutes: 120
+  lims_max_age_minutes: 2880
+  feed_lims_max_age_minutes: 43200
+  telemetry_missing_max_share: 0.25
+  min_confidence: 0.25
+quality:
+  target_metric: Mg.Sulfur
+  target_unit: мг/кг
+  sulfur_limit_mgkg: 10.0
+  trailing_windows_minutes:
+  - 60
+  - 360
+  lag_grid_minutes:
+  - 0
+  conformal_alpha: 0.1
+  max_plausible_sulfur_mgkg: 100
+  model_kinds:
+  - ridge
+  - hgb
+  - rf
+  calibration_start: '2025-07-01'
+  feature_tags:
+  - ht:T5
+  - ht:T6
+  - ht:T11
+  - ht:F9
+  - ht:P3
+  - ht:P8
+  - ht:Q21
+  feature_suffixes:
+  - value
+  - mean60
+  - mean360
+  - std180
+  - delta180
+  t95_limit_c: 360.0
+  t95_source: 'Ustanovka_AVT_merged.pdf, лист 4: спецификация товарного ДТ; мягкая
+    проверка через софт-сенсор 24-2000:GODT:T95'
+  conformal_window: 90
+  min_calibration_residuals: 10
+  min_calibration_basis: меньше этого числа остатков конформный квантиль не строится;
+    QualityAgent возвращает статус INSUFFICIENT_HISTORY вместо интервала
+  conformal_window_basis: 'скользящее окно: квантиль остатков по последним 90 лабораторным
+    анализам строго до момента решения'
+reliability:
+  ood_contamination: 0.02
+  severity_high_quantile: 0.95
+  severity_warn_quantile: 0.85
+  robust_z_max: 8.0
+optimization:
+  delta_quantile: 0.95
+  max_simultaneous_controls: 2
+  min_score_gain_over_do_nothing: 0.05
+  act_only_if_risk_above: 0.15
+  support_quantiles:
+  - 0.01
+  - 0.99
+  step_multipliers:
+  - 1
+  - 2
+  - 3
+  - 5
+  hold_upper_margin: 0.5
+  planning_horizon_minutes: 180
+  ranking_weights:
+    energy: 1.0
+    production_loss: 3.0
+    severity: 1.0
+    movement: 0.2
+  heat_reference_c: 180.0
+  severity_increase_tolerance: 0.05
+  severity_basis: 'A-20: тяжесть — направленная проверка. Запрещены варианты, ухудшающие
+    прокси тяжести; удержание режима допустимо всегда.'
+  replan_max_rounds: 4
+  replan_basis: 'раунды перепланирования: 0 обычный поиск, 1 увеличенные шаги, 2 комбинации
+    двух параметров, 3 снижение нагрузки'
+decision_log:
+  path: artifacts/decisions.jsonl
+demo:
+  stable: 2026-04-29 00:00
+  quality_risk: 2026-03-05 00:00
+  bad_data: 2025-12-10 00:00
+  descriptions:
+    stable: 'стабильный режим: прогноз серы с большим запасом до предела, источники
+      исправны'
+    quality_risk: 'риск по сере: верхняя граница прогноза выше 10 мг/кг, система предлагает
+      коррекцию режима'
+    bad_data: 'недостоверные данные: система отказывается от рекомендации и называет
+      причину'
+    limit_breach: 'превышение предела: прогноз серы выше 10 мг/кг, политики расходятся
+      по времени вне спецификации'
+  selection: reports/demo_moments.json — автоматический скан тестового блока, scripts/find_demo_moments.py
+  limit_breach: 2026-05-08 06:00
+raw_patterns:
+  lims: ЛИМС*.xlsx
+  pak: Выгрузка*ПАК*.xlsx
+  tags_update: теги*24-2000.xlsx
+  vak_update: формулы*ВАК.xlsx
+operating_mode:
+  temperature_tag: ht:T5
+  feed_tag: ht:F9
+  pressure_tag: ht:P3
+  temperature_min_c: 200.0
+  feed_min_tph: 30.0
+  pressure_min_mpa: 1.0
+  transient_minutes: 720
+  basis: 'A-15: консервативные модельные пороги; не паспортные пределы'
+features:
+  response_model: true
+  simulator: false
+  llm: false
+  mcp: false
+  adaptive_conformal: false
+  controller_activity: true
+  catalyst_index: true
+  catalyst_index_window_days: 90
+response:
+  lag_minutes: 360
+  bootstrap_blocks: 40
+  ridge: 1.0
+  min_samples: 30
+  prior_enabled: true
+  prior_log_sensitivity: null
+  effect_uncertainty_quantile: 0.9
+  activation_energy_kj_mol: 116.91
+  activation_energy_spread_kj_mol: 8.47
+  gas_constant_j_mol_k: 8.314462618
+  prior_weight_per_sample: 1.0
+  prior_source: https://doi.org/10.1016/j.fuel.2017.07.092
+fusion:
+  enabled: false
+  q_state: 0.00019
+  q_drift: 1.9e-05
+  r_lims: 0.0115
+  r_pak: 0.115
+  p0_state: 0.25
+  p0_drift: 0.05
+  step_minutes: 10.0
+  lookback_hours: 240.0
+  pak_every_minutes: 60.0
+  basis: 'A-24: q_state и r_pak оценены по обучающему блоку; q_drift и r_lims заданы
+    допущением, поскольку повторяемость лаборатории по данным не оценивается'
+natural_experiments:
+  temperature_change_min_c: 3.0
+  feed_change_min_tph: 22.8
+  hold_hours: 12.0
+  hold_tolerance_temperature_c: 1.5
+  hold_tolerance_feed_tph: 6.0
+  stable_other_temperature_c: 1.5
+  stable_other_feed_tph: 12.1
+  stable_other_pressure_mpa: 0.104
+  feed_sulfur_max_relative_change: 0.1
+  settle_hours: 6.0
+  compare_window_hours: 12.0
+  min_episodes_for_conclusion: 10
+  basis: 'A-26: пороги выбраны по распределению изменений за 12 ч в рабочем режиме
+    ДО расчёта эффекта. Порог изменения температуры 3 °C задан постановкой (70-й процентиль
+    |ΔT|); стабильность прочих параметров по 75-му процентилю их обычного изменения:
+    F9 12,1 т/ч, P3 0,104 МПа; удержание с допуском 1,5 °C, вдвое меньше порога изменения;
+    между окном до и окном после оставлен промежуток 2 ч на сам переход: смена уставки
+    на 3 °C при темпе порядка 1 °C за 20 мин занимает около часа, взято вдвое больше'
+  transition_hours: 2.0
+  effect_lag_hours: 6.0
+soft_sensors:
+  min_observations: 300
+  trailing_windows_minutes:
+  - 60
+  - 360
+  targets:
+  - metric: 95%.T
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: °С
+    limit_c: 360.0
+    limit_source: Ustanovka_AVT_merged.pdf, лист 4
+  - metric: FlashPoint
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: °С
+    limit_c: null
+    limit_source: null
+  - metric: D15
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: кг/м3
+    limit_c: null
+    limit_source: null
+  - metric: CloudPoint
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: °С
+    limit_c: null
+    limit_source: null
+  - metric: 50%.T
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: °С
+    limit_c: null
+    limit_source: null
+  - metric: 90%.T
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: °С
+    limit_c: null
+    limit_source: null
+  - metric: IBP.T
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: °С
+    limit_c: null
+    limit_source: null
+  - metric: I250
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: '% об.'
+    limit_c: null
+    limit_source: null
+  - metric: I350
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: '% об.'
+    limit_c: null
+    limit_source: null
+  - metric: CFPP
+    process_unit: Гидроочистка
+    sample_point: '2'
+    unit: °С
+    limit_c: null
+    limit_source: null
+  basis: цели отобраны по точке отбора продукта гидроочистки, известной единице и
+    числу наблюдений. Промышленный предел подтверждён только для 95%.T; остальные
+    показатели публикуются без предела и в жёстких ограничениях не участвуют
+horizons:
+  hours:
+  - 6
+  - 12
+  - 24
+  min_training_targets: 300
+  action_delay_minutes: 360
+  basis: горизонт означает момент t_decision плюс horizon; признаки собираются на
+    t_decision, цель берётся на target_time. action_delay_minutes равно транспортному
+    запаздыванию из A-23 и задаёт горизонт проверки действия
+retraining:
+  mode: fixed
+  every_days: 30
+  calibration_holdout: 90
+  selection_holdout: 90
+  basis: 'A-29: fixed обучает один раз на блоке до train_end. expanding переобучает
+    модель на всех данных, доступных к моменту запуска, за вычетом последних анализов
+    на калибровку; в этом режиме блок оценки входит в обучение поздних окон и метрики
+    на нём перестают измерять обобщение. Сравнение двух схем на одинаковом блоке лежит
+    в reports/walk_forward.json'
+expected_loss:
+  enabled: false
+  off_spec: 100.0
+  energy: 1.0
+  production_loss: 3.0
+  severity: 1.0
+  movement: 0.2
+  margin: 0.05
+  cooldown_minutes: 180.0
+  basis: 'A-27: безразмерные прокси цены, экономических данных в пакете нет. Сравнение
+    ожидаемых потерь измерено и не внедрено: на тестовом блоке и в замкнутом контуре
+    оно даёт те же решения, что пороговое правило (reports/decision_rules.json). Запрет
+    разгона включён: cooldown 180 мин равен постоянной времени реактора из A-23 и
+    снимается, пока продукт вне спецификации по точечному прогнозу'

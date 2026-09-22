@@ -1,0 +1,88 @@
+controls:
+- canonical_name: ht_r201_gss_outlet_temp
+  tags:
+  - ht:T5
+  description_ru: Полисеп. Р-201. Температура ГСС на выходе
+  unit: °C
+  unit_area: Гидроочистка 24-2000
+  physical_class: temperature
+  source_file: теги АВТ_24-2000.xlsx
+  source_sheet: 24-2000
+  industrial_limit_known: false
+  evidence: Обновлённый КИП подтверждает величину; связь с уставкой и доступность
+    исполнительного контура — допущение A-21, нужна проверка технологом.
+  controller_status: advisory_assumption
+  direction_note: Знак и применимость описаны в config/physics.yaml
+- canonical_name: ht_feed_flow_mass
+  tags:
+  - ht:F9
+  description_ru: Расход сырья на установку, массовый
+  unit: т/ч
+  unit_area: Гидроочистка 24-2000
+  physical_class: flow
+  source_file: теги АВТ_24-2000.xlsx
+  source_sheet: 24-2000
+  industrial_limit_known: false
+  evidence: Обновлённый КИП подтверждает величину; связь с уставкой и доступность
+    исполнительного контура — допущение A-21, нужна проверка технологом.
+  controller_status: advisory_assumption
+  direction_note: Знак и применимость описаны в config/physics.yaml
+- canonical_name: ht_s201_inlet_pressure
+  tags:
+  - ht:P3
+  description_ru: Полисеп. Сепаратор С-201. Давление на входе
+  unit: МПа
+  unit_area: Гидроочистка 24-2000
+  physical_class: pressure
+  source_file: теги АВТ_24-2000.xlsx
+  source_sheet: 24-2000
+  industrial_limit_known: false
+  evidence: Обновлённый КИП подтверждает величину; связь с уставкой и доступность
+    исполнительного контура — допущение A-21, нужна проверка технологом.
+  controller_status: advisory_assumption
+  direction_note: Знак и применимость описаны в config/physics.yaml
+not_controls:
+- tag: avt:P23
+  reason: 'Скан: PI; новый КИП: регулятор ветки B. Конфликт, не используем.'
+- tag: avt:P22
+  reason: 'Скан: PIC; новый КИП: регистрирующее. Конфликт, не используем.'
+- tag: avt:F7/F8/F9
+  reason: FI после ЭЛОУ; тег суммарного FC не установлен.
+- tag: avt:T55
+  reason: 'TC печи П-3: вакуумный блок, маршрут в сырьё ГО не подтверждён.'
+- tag: ht:F26
+  reason: Выход продукта по обновлённому КИП, не сырьё.
+- tag: ht:F15
+  reason: Объёмное сырьё, масштаб расходится с массовым F9; не независимое действие.
+- tag: ht:F14
+  reason: Квенч по новой версии; эффект и исполнительный контур ещё не проверены.
+- tag: ht:F22
+  reason: Газ поддува, эффект на серу ещё не подтверждён.
+- tag: ht:Q20
+  reason: 'По справочнику сера, но значения порядка тысяч: семантика/масштаб требуют
+    сверки.'
+- tag: ht:Q21
+  reason: Подтверждённый анализатор серы, только измерение.
+- tag: ht:P8
+  reason: Перепад давления, состояние оборудования.
+- tag: ht:W10
+  reason: Массовый расход бензина, не перепад.
+- tag: ht:F17
+  reason: Выход продукта, прокси выпуска.
+- tag: avt:F57
+  reason: Виртуальный расход, не независимый рычаг.
+- tag: avt:F30
+  reason: 'FC на скане: кандидат фазы B; отсутствует проверенная модель переноса АВТ
+    → ГО.'
+- tag: avt:F32
+  reason: 'FC на скане: кандидат фазы B; отсутствует проверенная модель переноса АВТ
+    → ГО.'
+- tag: avt:F28
+  reason: 'FC на скане: кандидат фазы B; отсутствует проверенная модель переноса АВТ
+    → ГО.'
+- tag: avt:F64
+  reason: 'FC на скане: кандидат фазы B; отсутствует проверенная модель переноса АВТ
+    → ГО.'
+- tag: avt:F56
+  reason: 'FC на скане: кандидат фазы B; отсутствует проверенная модель переноса АВТ
+    → ГО.'

@@ -1,0 +1,74 @@
+{
+  "model": {
+    "form": "плуг-флоу, реакция порядка n, Аррениус, P^m по водороду",
+    "order": 1.5,
+    "hydrogen_order": 0.7,
+    "activation_energy_kj_mol": 116.91,
+    "pre_exponential": 193596066337.36353,
+    "delay_minutes": 360.0,
+    "time_constant_minutes": 180.0,
+    "calibration_point": {
+      "temperature_c": 368.033935546875,
+      "feed_tph": 216.5996551513672,
+      "pressure_mpa": 3.675220489501953,
+      "feed_sulfur_mgkg": 9236.99975013733,
+      "product_sulfur_mgkg": 8.5
+    }
+  },
+  "blocks": {
+    "train": {
+      "n": 822,
+      "MAE_mgkg": 6.234909273246847,
+      "MedianAE_mgkg": 3.66385356212884,
+      "bias_mgkg": -0.12503648750594376,
+      "median_ratio": 0.9849569531120064,
+      "ratio_p05_p95": [
+        0.3266501840220828,
+        2.5583514673861
+      ],
+      "within_factor_2": 0.7153284671532847,
+      "correlation": -0.12209058914190023,
+      "predicted_median": 8.196594554482612,
+      "truth_median": 8.5
+    },
+    "test": {
+      "n": 368,
+      "MAE_mgkg": 5.340603266687281,
+      "MedianAE_mgkg": 4.180733488341296,
+      "bias_mgkg": -2.9507217991166965,
+      "median_ratio": 0.6437677058862412,
+      "ratio_p05_p95": [
+        0.33700716410941023,
+        3.581525072768349
+      ],
+      "within_factor_2": 0.625,
+      "correlation": -0.0512665727228237,
+      "predicted_median": 5.6127765417561815,
+      "truth_median": 8.800000190734863
+    },
+    "all": {
+      "n": 1422,
+      "MAE_mgkg": 5.44184903883028,
+      "MedianAE_mgkg": 3.4803217578832393,
+      "bias_mgkg": -1.2857830947703652,
+      "median_ratio": 0.8451231714169686,
+      "ratio_p05_p95": [
+        0.3417495167431229,
+        2.5135625413660074
+      ],
+      "within_factor_2": 0.7264416315049227,
+      "correlation": -0.09084577719112497,
+      "predicted_median": 7.280901021915652,
+      "truth_median": 8.699999809265137
+    }
+  },
+  "sensitivity_comparison": {
+    "plant_d_ln_s_dt": -0.06585965961929596,
+    "model_M_d_ln_s_dt": -0.02035704788708111
+  },
+  "verdict": {
+    "usable_as_a_simulated_plant": true,
+    "physically_validated": false,
+    "note": "модель калибруется одной точкой и не обучается на данных; она пригодна как независимый отклик для замкнутого контура, но не является проверенной физической моделью установки"
+  }
+}

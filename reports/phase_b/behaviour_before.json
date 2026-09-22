@@ -1,0 +1,4435 @@
+[
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 8.895872,
+    "reasons": [
+      "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.",
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.177778,
+    "selected_upper": null,
+    "t": "2025-10-01 00:00:00",
+    "upper": 11.593152
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.491235,
+    "reasons": [
+      "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.",
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.333333,
+    "selected_upper": null,
+    "t": "2025-10-06 06:06:06.101694915",
+    "upper": 12.369032
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.220307,
+    "reasons": [
+      "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.",
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.211111,
+    "selected_upper": null,
+    "t": "2025-10-11 12:12:12.203389830",
+    "upper": 12.015956
+  },
+  {
+    "abstained": false,
+    "action_id": "A038_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A036_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 377,39 → 383,25 °C; Расход сырья на установку, массовый: 252,38 → 246,54 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 246.536583,
+      "ht_r201_gss_outlet_temp": 383.247665
+    },
+    "point_forecast": 8.644621,
+    "reasons": [],
+    "risk": 0.133333,
+    "selected_upper": 9.910288,
+    "t": "2025-10-16 18:18:18.305084745",
+    "upper": 11.26572
+  },
+  {
+    "abstained": false,
+    "action_id": "A029_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 380,49 → 382,83 °C; Расход сырья на установку, массовый: 251,56 → 248,64 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 248.642361,
+      "ht_r201_gss_outlet_temp": 382.832458
+    },
+    "point_forecast": 8.080318,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.979775,
+    "t": "2025-10-22 00:24:24.406779661",
+    "upper": 10.530316
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A002_ht_r201_gss_outlet_temp_decrease_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A004_ht_r201_gss_outlet_temp_decrease_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A006_ht_r201_gss_outlet_temp_decrease_3",
+      "A009_ht_feed_flow_mass_increase_1",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A011_ht_feed_flow_mass_increase_2",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A013_ht_feed_flow_mass_increase_3",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A015_ht_feed_flow_mass_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A019_ht_s201_inlet_pressure_increase_2",
+      "A021_ht_s201_inlet_pressure_increase_3",
+      "A023_ht_s201_inlet_pressure_increase_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 6.782033,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 8.838384,
+    "t": "2025-10-27 06:30:30.508474576",
+    "upper": 8.838384
+  },
+  {
+    "abstained": false,
+    "action_id": "A029_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 378,67 → 381,02 °C; Расход сырья на установку, массовый: 252,64 → 249,72 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 249.717083,
+      "ht_r201_gss_outlet_temp": 381.019043
+    },
+    "point_forecast": 8.019396,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.90285,
+    "t": "2025-11-01 12:36:36.610169491",
+    "upper": 10.450922
+  },
+  {
+    "abstained": false,
+    "action_id": "A003_ht_r201_gss_outlet_temp_increase_2",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 375,69 → 378,04 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 378.036835
+    },
+    "point_forecast": 7.854536,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.836356,
+    "t": "2025-11-06 18:42:42.711864407",
+    "upper": 10.236076
+  },
+  {
+    "abstained": false,
+    "action_id": "A038_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A036_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 378,14 → 384,00 °C; Расход сырья на установку, массовый: 251,56 → 245,72 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 245.716896,
+      "ht_r201_gss_outlet_temp": 384.003738
+    },
+    "point_forecast": 8.708488,
+    "reasons": [],
+    "risk": 0.133333,
+    "selected_upper": 9.984994,
+    "t": "2025-11-12 00:48:48.813559322",
+    "upper": 11.348952
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.180901,
+    "reasons": [
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.2,
+    "selected_upper": null,
+    "t": "2025-11-17 06:54:54.915254237",
+    "upper": 11.964603
+  },
+  {
+    "abstained": false,
+    "action_id": "A007_ht_r201_gss_outlet_temp_increase_5",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A032_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 379,37 → 385,23 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 385.228653
+    },
+    "point_forecast": 8.446112,
+    "reasons": [],
+    "risk": 0.077778,
+    "selected_upper": 9.980103,
+    "t": "2025-11-22 13:01:01.016949152",
+    "upper": 11.007022
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 10.298665,
+    "reasons": [
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.688889,
+    "selected_upper": null,
+    "t": "2025-11-27 19:07:07.118644068",
+    "upper": 13.421279
+  },
+  {
+    "abstained": false,
+    "action_id": "A007_ht_r201_gss_outlet_temp_increase_5",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A028_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 365,35 → 371,21 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 371.214005
+    },
+    "point_forecast": 8.439197,
+    "reasons": [],
+    "risk": 0.077778,
+    "selected_upper": 9.92888,
+    "t": "2025-12-03 01:13:13.220338983",
+    "upper": 10.99801
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A019_ht_s201_inlet_pressure_increase_2",
+      "A021_ht_s201_inlet_pressure_increase_3",
+      "A023_ht_s201_inlet_pressure_increase_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 7.564144,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.857636,
+    "t": "2025-12-08 07:19:19.322033898",
+    "upper": 9.857636
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.369091,
+    "reasons": [
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.277778,
+    "selected_upper": null,
+    "t": "2025-12-13 13:25:25.423728814",
+    "upper": 12.209853
+  },
+  {
+    "abstained": false,
+    "action_id": "A040_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 372,63 → 378,50 °C; Расход сырья на установку, массовый: 214,48 → 199,88 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 199.881786,
+      "ht_r201_gss_outlet_temp": 378.495865
+    },
+    "point_forecast": 9.055068,
+    "reasons": [],
+    "risk": 0.188889,
+    "selected_upper": 9.791766,
+    "t": "2025-12-18 19:31:31.525423729",
+    "upper": 11.800617
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.679248,
+    "reasons": [
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.411111,
+    "selected_upper": null,
+    "t": "2025-12-24 01:37:37.627118644",
+    "upper": 12.614051
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A002_ht_r201_gss_outlet_temp_decrease_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A004_ht_r201_gss_outlet_temp_decrease_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A006_ht_r201_gss_outlet_temp_decrease_3",
+      "A008_ht_r201_gss_outlet_temp_decrease_5",
+      "A009_ht_feed_flow_mass_increase_1",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A011_ht_feed_flow_mass_increase_2",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A013_ht_feed_flow_mass_increase_3",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A015_ht_feed_flow_mass_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A019_ht_s201_inlet_pressure_increase_2",
+      "A021_ht_s201_inlet_pressure_increase_3",
+      "A023_ht_s201_inlet_pressure_increase_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 5.122572,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 6.675765,
+    "t": "2025-12-29 07:43:43.728813559",
+    "upper": 6.675765
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A019_ht_s201_inlet_pressure_increase_2",
+      "A021_ht_s201_inlet_pressure_increase_3",
+      "A023_ht_s201_inlet_pressure_increase_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 7.540655,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.827025,
+    "t": "2026-01-03 13:49:49.830508474",
+    "upper": 9.827025
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A019_ht_s201_inlet_pressure_increase_2",
+      "A021_ht_s201_inlet_pressure_increase_3",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 7.629352,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.942615,
+    "t": "2026-01-08 19:55:55.932203390",
+    "upper": 9.942615
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "FAIL"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.636639,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 6.795692,
+    "reasons": [
+      "Критические данные недостоверны; проверьте статусы источников и датчиков.",
+      "Сильное расхождение ЛИМС и ПАК; требуется сверка измерений."
+    ],
+    "risk": 0.044444,
+    "selected_upper": null,
+    "t": "2026-01-14 02:02:02.033898304",
+    "upper": 8.856185
+  },
+  {
+    "abstained": false,
+    "action_id": "A034_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A028_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 378,01 → 381,52 °C; Расход сырья на установку, массовый: 193,81 → 187,97 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 187.973824,
+      "ht_r201_gss_outlet_temp": 381.524704
+    },
+    "point_forecast": 8.307303,
+    "reasons": [],
+    "risk": 0.077778,
+    "selected_upper": 9.82637,
+    "t": "2026-01-19 08:08:08.135593220",
+    "upper": 10.826125
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.108601,
+    "reasons": [
+      "Нет варианта, проходящего все проверки SafetyAgent."
+    ],
+    "risk": 0.188889,
+    "selected_upper": null,
+    "t": "2026-01-24 14:14:14.237288136",
+    "upper": 11.870381
+  },
+  {
+    "abstained": false,
+    "action_id": "A001_ht_r201_gss_outlet_temp_increase_1",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 381,35 → 382,52 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 382.519424
+    },
+    "point_forecast": 7.807569,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.977289,
+    "t": "2026-01-29 20:20:20.338983050",
+    "upper": 10.174869
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A002_ht_r201_gss_outlet_temp_decrease_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A009_ht_feed_flow_mass_increase_1",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A011_ht_feed_flow_mass_increase_2",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A019_ht_s201_inlet_pressure_increase_2",
+      "A021_ht_s201_inlet_pressure_increase_3",
+      "A023_ht_s201_inlet_pressure_increase_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 7.331357,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.554266,
+    "t": "2026-02-04 02:26:26.440677966",
+    "upper": 9.554266
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.003233,
+    "reasons": [
+      "Нет варианта, проходящего все проверки SafetyAgent."
+    ],
+    "risk": 0.188889,
+    "selected_upper": null,
+    "t": "2026-02-09 08:32:32.542372882",
+    "upper": 11.733064
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 8.803569,
+    "reasons": [
+      "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.",
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.155556,
+    "selected_upper": null,
+    "t": "2026-02-14 14:38:38.644067796",
+    "upper": 11.472861
+  },
+  {
+    "abstained": false,
+    "action_id": "A001_ht_r201_gss_outlet_temp_increase_1",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 368,96 → 370,13 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 370.132645
+    },
+    "point_forecast": 7.73845,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.881418,
+    "t": "2026-02-19 20:44:44.745762712",
+    "upper": 10.084792
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A002_ht_r201_gss_outlet_temp_decrease_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A004_ht_r201_gss_outlet_temp_decrease_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A009_ht_feed_flow_mass_increase_1",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A011_ht_feed_flow_mass_increase_2",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A013_ht_feed_flow_mass_increase_3",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A019_ht_s201_inlet_pressure_increase_2",
+      "A021_ht_s201_inlet_pressure_increase_3",
+      "A023_ht_s201_inlet_pressure_increase_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 7.253521,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.452829,
+    "t": "2026-02-25 02:50:50.847457628",
+    "upper": 9.452829
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "FAIL"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 7.74925,
+    "reasons": [
+      "Режим за пределами области обучения модели."
+    ],
+    "risk": 0.044444,
+    "selected_upper": null,
+    "t": "2026-03-02 08:56:56.949152542",
+    "upper": 10.098868
+  },
+  {
+    "abstained": false,
+    "action_id": "A005_ht_r201_gss_outlet_temp_increase_3",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 381,30 → 384,81 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 384.812576
+    },
+    "point_forecast": 8.078624,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.928614,
+    "t": "2026-03-07 15:03:03.050847458",
+    "upper": 10.528109
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.109853,
+    "reasons": [
+      "Нет варианта, проходящего все проверки SafetyAgent."
+    ],
+    "risk": 0.188889,
+    "selected_upper": null,
+    "t": "2026-03-12 21:09:09.152542372",
+    "upper": 11.872012
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.065537,
+    "reasons": [
+      "Нет варианта, проходящего все проверки SafetyAgent."
+    ],
+    "risk": 0.188889,
+    "selected_upper": null,
+    "t": "2026-03-18 03:15:15.254237288",
+    "upper": 11.81426
+  },
+  {
+    "abstained": false,
+    "action_id": "A034_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A028_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 382,16 → 385,67 °C; Расход сырья на установку, массовый: 195,80 → 189,96 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 189.961327,
+      "ht_r201_gss_outlet_temp": 385.673325
+    },
+    "point_forecast": 8.331856,
+    "reasons": [],
+    "risk": 0.077778,
+    "selected_upper": 9.866591,
+    "t": "2026-03-23 09:21:21.355932204",
+    "upper": 10.858122
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.154189,
+    "reasons": [
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.188889,
+    "selected_upper": null,
+    "t": "2026-03-28 15:27:27.457627118",
+    "upper": 11.929791
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.984965,
+    "reasons": [
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.588889,
+    "selected_upper": null,
+    "t": "2026-04-02 21:33:33.559322034",
+    "upper": 13.012464
+  },
+  {
+    "abstained": false,
+    "action_id": "A001_ht_r201_gss_outlet_temp_increase_1",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 386,71 → 387,88 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 387.877701
+    },
+    "point_forecast": 7.730176,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.881519,
+    "t": "2026-04-08 03:39:39.661016948",
+    "upper": 10.07401
+  },
+  {
+    "abstained": false,
+    "action_id": "A014_ht_feed_flow_mass_decrease_3",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "FAIL"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5"
+    ],
+    "headline": "Расход сырья на установку, массовый: 225,62 → 216,86 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 216.860767
+    },
+    "point_forecast": 7.903749,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.852979,
+    "t": "2026-04-13 09:45:45.762711864",
+    "upper": 10.300211
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "forecast_confidence",
+        "FAIL"
+      ],
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "FAIL"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "FAIL"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "NOT_VERIFIED"
+      ]
+    ],
+    "confidence": 0.239415,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 5.339274,
+    "reasons": [
+      "Критические данные недостоверны; проверьте статусы источников и датчиков.",
+      "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.",
+      "Режим за пределами области обучения модели.",
+      "Сильное расхождение ЛИМС и ПАК; требуется сверка измерений.",
+      "останов: управляющие действия заблокированы."
+    ],
+    "risk": 0.044444,
+    "selected_upper": null,
+    "t": "2026-04-18 15:51:51.864406780",
+    "upper": 6.958173
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "forecast_confidence",
+        "FAIL"
+      ],
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "FAIL"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "FAIL"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.239415,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 7.052899,
+    "reasons": [
+      "Критические данные недостоверны; проверьте статусы источников и датчиков.",
+      "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.",
+      "Режим за пределами области обучения модели.",
+      "Сильное расхождение ЛИМС и ПАК; требуется сверка измерений.",
+      "останов: управляющие действия заблокированы."
+    ],
+    "risk": 0.044444,
+    "selected_upper": null,
+    "t": "2026-04-23 21:57:57.966101694",
+    "upper": 9.191378
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A009_ht_feed_flow_mass_increase_1",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A011_ht_feed_flow_mass_increase_2",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A013_ht_feed_flow_mass_increase_3",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A015_ht_feed_flow_mass_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A020_ht_s201_inlet_pressure_decrease_2",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 2.096128,
+    "reasons": [],
+    "risk": 0.011111,
+    "selected_upper": 2.731687,
+    "t": "2026-04-29 04:04:04.067796608",
+    "upper": 2.731687
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "FAIL"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 11.148574,
+    "reasons": [
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе.",
+      "Режим за пределами области обучения модели."
+    ],
+    "risk": 0.844444,
+    "selected_upper": null,
+    "t": "2026-05-04 10:10:10.169491524",
+    "upper": 14.528886
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "FAIL"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.636639,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.639712,
+    "reasons": [
+      "Критические данные недостоверны; проверьте статусы источников и датчиков.",
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе.",
+      "Сильное расхождение ЛИМС и ПАК; требуется сверка измерений."
+    ],
+    "risk": 0.4,
+    "selected_upper": null,
+    "t": "2026-05-09 16:16:16.271186440",
+    "upper": 12.562528
+  },
+  {
+    "abstained": false,
+    "action_id": "A003_ht_r201_gss_outlet_temp_increase_2",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 363,63 → 365,98 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 365.976898
+    },
+    "point_forecast": 7.903269,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.882351,
+    "t": "2026-05-14 22:22:22.372881356",
+    "upper": 10.299586
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 10.001822,
+    "reasons": [
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.6,
+    "selected_upper": null,
+    "t": "2026-05-20 04:28:28.474576272",
+    "upper": 13.034432
+  },
+  {
+    "abstained": false,
+    "action_id": "A005_ht_r201_gss_outlet_temp_increase_3",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 362,68 → 366,19 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 366.192612
+    },
+    "point_forecast": 8.000726,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.798773,
+    "t": "2026-05-25 10:34:34.576271188",
+    "upper": 10.426592
+  },
+  {
+    "abstained": false,
+    "action_id": "A038_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A036_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 359,43 → 365,29 °C; Расход сырья на установку, массовый: 228,81 → 222,97 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 222.969917,
+      "ht_r201_gss_outlet_temp": 365.286453
+    },
+    "point_forecast": 8.673879,
+    "reasons": [],
+    "risk": 0.133333,
+    "selected_upper": 9.858856,
+    "t": "2026-05-30 16:40:40.677966100",
+    "upper": 11.303849
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "FAIL"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 9.56349,
+    "reasons": [
+      "Ни один вариант не обеспечивает ограничение по сере по верхней границе."
+    ],
+    "risk": 0.355556,
+    "selected_upper": null,
+    "t": "2026-06-04 22:46:46.779661016",
+    "upper": 12.463195
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A002_ht_r201_gss_outlet_temp_decrease_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A004_ht_r201_gss_outlet_temp_decrease_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A006_ht_r201_gss_outlet_temp_decrease_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A008_ht_r201_gss_outlet_temp_decrease_5",
+      "A009_ht_feed_flow_mass_increase_1",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A011_ht_feed_flow_mass_increase_2",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A013_ht_feed_flow_mass_increase_3",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A015_ht_feed_flow_mass_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A019_ht_s201_inlet_pressure_increase_2",
+      "A021_ht_s201_inlet_pressure_increase_3",
+      "A023_ht_s201_inlet_pressure_increase_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 5.328722,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 6.944421,
+    "t": "2026-06-10 04:52:52.881355932",
+    "upper": 6.944421
+  },
+  {
+    "abstained": false,
+    "action_id": "A040_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 363,97 → 369,83 °C; Расход сырья на установку, массовый: 247,23 → 232,63 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 232.633709,
+      "ht_r201_gss_outlet_temp": 369.82872
+    },
+    "point_forecast": 9.145201,
+    "reasons": [],
+    "risk": 0.188889,
+    "selected_upper": 9.975669,
+    "t": "2026-06-15 10:58:58.983050848",
+    "upper": 11.918078
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "FAIL"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "FAIL"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "NOT_VERIFIED"
+      ]
+    ],
+    "confidence": 0.301048,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 5.837468,
+    "reasons": [
+      "Критические данные недостоверны; проверьте статусы источников и датчиков.",
+      "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.",
+      "Режим за пределами области обучения модели.",
+      "Сильное расхождение ЛИМС и ПАК; требуется сверка измерений.",
+      "переходный режим: управляющие действия заблокированы."
+    ],
+    "risk": 0.044444,
+    "selected_upper": null,
+    "t": "2026-06-20 17:05:05.084745764",
+    "upper": 7.607422
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "forecast_confidence",
+        "FAIL"
+      ],
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "FAIL"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "FAIL"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "NOT_VERIFIED"
+      ]
+    ],
+    "confidence": 0.239415,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 5.333996,
+    "reasons": [
+      "Критические данные недостоверны; проверьте статусы источников и датчиков.",
+      "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.",
+      "Режим за пределами области обучения модели.",
+      "Сильное расхождение ЛИМС и ПАК; требуется сверка измерений.",
+      "останов: управляющие действия заблокированы."
+    ],
+    "risk": 0.044444,
+    "selected_upper": null,
+    "t": "2026-06-25 23:11:11.186440676",
+    "upper": 6.951295
+  },
+  {
+    "abstained": true,
+    "action_id": null,
+    "checks": [
+      [
+        "HC-01",
+        "forecast_confidence",
+        "FAIL"
+      ],
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "FAIL"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "FAIL"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.239415,
+    "feasible_ids": [],
+    "headline": "Надёжной рекомендации нет",
+    "moves": {},
+    "point_forecast": 5.992878,
+    "reasons": [
+      "Критические данные недостоверны; проверьте статусы источников и датчиков.",
+      "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.",
+      "Режим за пределами области обучения модели.",
+      "Сильное расхождение ЛИМС и ПАК; требуется сверка измерений.",
+      "переходный режим: управляющие действия заблокированы."
+    ],
+    "risk": 0.044444,
+    "selected_upper": null,
+    "t": "2026-07-01 05:17:17.288135592",
+    "upper": 7.809952
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.535347,
+    "feasible_ids": [
+      "A00_do_nothing"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 6.226332,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 8.114192,
+    "t": "2026-07-06 11:23:23.389830508",
+    "upper": 8.114192
+  },
+  {
+    "abstained": false,
+    "action_id": "A039_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 358,72 → 364,58 °C; Расход сырья на установку, массовый: 240,23 → 231,48 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 231.475407,
+      "ht_r201_gss_outlet_temp": 364.579758
+    },
+    "point_forecast": 8.823623,
+    "reasons": [],
+    "risk": 0.155556,
+    "selected_upper": 9.896928,
+    "t": "2026-07-11 17:29:29.491525424",
+    "upper": 11.498997
+  },
+  {
+    "abstained": false,
+    "action_id": "A001_ht_r201_gss_outlet_temp_increase_1",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 371,22 → 372,40 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 372.396652
+    },
+    "point_forecast": 7.706129,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.841552,
+    "t": "2026-07-16 23:35:35.593220340",
+    "upper": 10.042672
+  },
+  {
+    "abstained": false,
+    "action_id": "A00_do_nothing",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "NA"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A001_ht_r201_gss_outlet_temp_increase_1",
+      "A002_ht_r201_gss_outlet_temp_decrease_1",
+      "A003_ht_r201_gss_outlet_temp_increase_2",
+      "A004_ht_r201_gss_outlet_temp_decrease_2",
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A006_ht_r201_gss_outlet_temp_decrease_3",
+      "A008_ht_r201_gss_outlet_temp_decrease_5",
+      "A009_ht_feed_flow_mass_increase_1",
+      "A00_do_nothing",
+      "A010_ht_feed_flow_mass_decrease_1",
+      "A011_ht_feed_flow_mass_increase_2",
+      "A012_ht_feed_flow_mass_decrease_2",
+      "A013_ht_feed_flow_mass_increase_3",
+      "A014_ht_feed_flow_mass_decrease_3",
+      "A015_ht_feed_flow_mass_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A017_ht_s201_inlet_pressure_increase_1",
+      "A018_ht_s201_inlet_pressure_decrease_1",
+      "A019_ht_s201_inlet_pressure_increase_2",
+      "A020_ht_s201_inlet_pressure_decrease_2",
+      "A022_ht_s201_inlet_pressure_decrease_3",
+      "A025_temperature_and_feed",
+      "A026_temperature_and_feed",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A029_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Ничего не делать — сохранить текущий режим",
+    "moves": {},
+    "point_forecast": 5.86316,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 7.640903,
+    "t": "2026-07-22 05:41:41.694915256",
+    "upper": 7.640903
+  },
+  {
+    "abstained": false,
+    "action_id": "A005_ht_r201_gss_outlet_temp_increase_3",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 368,47 → 371,99 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 371.990189
+    },
+    "point_forecast": 8.116274,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.951371,
+    "t": "2026-07-27 11:47:47.796610168",
+    "upper": 10.577175
+  },
+  {
+    "abstained": false,
+    "action_id": "A033_temperature_and_feed",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A028_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 370,83 → 374,35 °C; Расход сырья на установку, массовый: 253,84 → 250,92 т/ч",
+    "moves": {
+      "ht_feed_flow_mass": 250.924755,
+      "ht_r201_gss_outlet_temp": 374.350235
+    },
+    "point_forecast": 8.171123,
+    "reasons": [],
+    "risk": 0.055556,
+    "selected_upper": 9.876057,
+    "t": "2026-08-01 17:53:53.898305084",
+    "upper": 10.648654
+  },
+  {
+    "abstained": false,
+    "action_id": "A005_ht_r201_gss_outlet_temp_increase_3",
+    "checks": [
+      [
+        "HC-01",
+        "product_sulfur_limit",
+        "PASS"
+      ],
+      [
+        "HC-02",
+        "Сумма долей блендинга",
+        "NOT_VERIFIED"
+      ],
+      [
+        "HC-03",
+        "component_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "control_within_model_support",
+        "PASS"
+      ],
+      [
+        "HC-03",
+        "response_and_rate",
+        "PASS"
+      ],
+      [
+        "HC-04",
+        "data_validity",
+        "PASS"
+      ],
+      [
+        "HC-05",
+        "state_in_distribution",
+        "PASS"
+      ],
+      [
+        "HC-06",
+        "reliability_gate",
+        "PASS"
+      ],
+      [
+        "PRODUCT-CN",
+        "Цетановое число ≥ 51",
+        "NOT_VERIFIED"
+      ],
+      [
+        "PRODUCT-T95",
+        "T95 ≤ 360 °C",
+        "PASS"
+      ]
+    ],
+    "confidence": 0.951997,
+    "feasible_ids": [
+      "A005_ht_r201_gss_outlet_temp_increase_3",
+      "A007_ht_r201_gss_outlet_temp_increase_5",
+      "A016_ht_feed_flow_mass_decrease_5",
+      "A027_temperature_and_feed",
+      "A028_temperature_and_feed",
+      "A030_temperature_and_feed",
+      "A031_temperature_and_feed",
+      "A032_temperature_and_feed",
+      "A033_temperature_and_feed",
+      "A034_temperature_and_feed",
+      "A035_temperature_and_feed",
+      "A036_temperature_and_feed",
+      "A037_temperature_and_feed",
+      "A038_temperature_and_feed",
+      "A039_temperature_and_feed",
+      "A040_temperature_and_feed"
+    ],
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 369,90 → 373,41 °C",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 373.412216
+    },
+    "point_forecast": 8.121521,
+    "reasons": [],
+    "risk": 0.044444,
+    "selected_upper": 9.960479,
+    "t": "2026-08-07 00:00:00",
+    "upper": 10.584012
+  }
+]

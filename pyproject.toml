@@ -1,0 +1,14 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["_context", "data", "reports", "models", "artifacts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "C4", "SIM", "RET", "ARG"]
+ignore = ["E741", "ARG002", "RET505", "SIM108", "B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ARG001"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,6 @@
+[ok] system built in 1.0s; telemetry (189217, 97), LIMS target 1462, PAK 189649
+[ok] decision cycle in 0.3s
+     headline : Ничего не делать — сохранить текущий режим
+     abstained: False
+     candidates: 41, feasible: 40
+[ok] smoke test passed

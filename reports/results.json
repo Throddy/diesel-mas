@@ -1,0 +1,1722 @@
+{
+  "model": {
+    "period": [
+      "2025-10-01 10:00:00",
+      "2026-08-06 10:00:00"
+    ],
+    "n": 367,
+    "MAE": 1.1035833057752322,
+    "RMSE": 1.5901104950412552,
+    "R2": 0.46940345574969744,
+    "baseline_previous_lims_MAE": 1.7092895906398204,
+    "baseline_pak_MAE": 1.4811057749540866,
+    "baseline_train_median_MAE": 1.5079018890005043,
+    "recall_upper_bound": 0.9838709677419355,
+    "precision_upper_bound": 0.21631205673758866,
+    "interval_coverage": 0.8692098092643051
+  },
+  "system": {
+    "n_cycles": 12,
+    "abstention_rate": 0.16666666666666666,
+    "recommendation_rate": 0.8333333333333334,
+    "hard_constraint_violation_rate_of_recommendations": 0.0,
+    "unsafe_candidates_rejected_share": 1.0,
+    "unnecessary_action_rate_when_recommending": 0.7,
+    "ood_rejection_rate": 0.0,
+    "mean_confidence": 0.9223968577775845,
+    "inference_seconds_mean": 0.44986051321029663,
+    "inference_seconds_max": 1.1280858516693115,
+    "deterministic": true
+  },
+  "response": {
+    "temperature_data": 0.003775245239263052,
+    "temperature_prior": -0.034266114298630815,
+    "temperature_joint": -0.02035704788708111,
+    "bootstrap": [
+      -0.024696539185810235,
+      -0.01728391195832987
+    ],
+    "n_train": 735
+  },
+  "demo": {
+    "block": "test",
+    "n_found": {
+      "stable": 110,
+      "quality_risk": 387,
+      "bad_data": 68
+    },
+    "selected": {
+      "quality_risk": "2026-03-05 00:00:00",
+      "stable": "2026-04-29 00:00:00",
+      "bad_data": "2025-12-10 00:00:00"
+    },
+    "period": [
+      "2025-10-01 00:00:00",
+      "2026-08-07 00:00:00"
+    ]
+  },
+  "data": {
+    "avt_grid": {
+      "n_rows": 189217,
+      "t_min": "2023-01-01 00:00:00",
+      "t_max": "2026-08-07 00:00:00",
+      "duplicate_timestamps": 0,
+      "monotonic": true,
+      "step_minutes_mode": 10.0,
+      "share_expected_step": 1.0,
+      "irregular_steps": {
+        "10.0": 189216
+      }
+    },
+    "ht_grid": {
+      "n_rows": 189217,
+      "t_min": "2023-01-01 00:00:00",
+      "t_max": "2026-08-07 00:00:00",
+      "duplicate_timestamps": 0,
+      "monotonic": true,
+      "step_minutes_mode": 10.0,
+      "share_expected_step": 1.0,
+      "irregular_steps": {
+        "10.0": 189216
+      }
+    },
+    "avt_dropped_index_columns": [
+      "Unnamed: 0.1",
+      "Unnamed: 0"
+    ],
+    "ht_dropped_index_columns": [
+      "Unnamed: 0"
+    ],
+    "telemetry_shape": [
+      189217,
+      97
+    ],
+    "lims_rows": 36806,
+    "pak_rows": 265104,
+    "sentinel_columns": 79,
+    "sentinel_top": [
+      {
+        "column": "avt:D10",
+        "sentinel": 307.0,
+        "n": 189207,
+        "share": 0.9999471506260008
+      },
+      {
+        "column": "avt:F26",
+        "sentinel": 307.0,
+        "n": 71175,
+        "share": 0.3761554194390567
+      },
+      {
+        "column": "ht:Q20",
+        "sentinel": 307.0,
+        "n": 22043,
+        "share": 0.11649587510635936
+      },
+      {
+        "column": "ht:Q21",
+        "sentinel": 307.0,
+        "n": 5618,
+        "share": 0.029690778312730887
+      },
+      {
+        "column": "ht:F2",
+        "sentinel": 307.0,
+        "n": 5454,
+        "share": 0.02882404857914458
+      },
+      {
+        "column": "avt:F68",
+        "sentinel": 307.0,
+        "n": 4801,
+        "share": 0.025372984456999106
+      },
+      {
+        "column": "avt:F27",
+        "sentinel": 307.0,
+        "n": 3494,
+        "share": 0.018465571275308245
+      },
+      {
+        "column": "avt:T17",
+        "sentinel": 307.0,
+        "n": 3318,
+        "share": 0.01753542229292294
+      },
+      {
+        "column": "avt:T20",
+        "sentinel": 307.0,
+        "n": 3299,
+        "share": 0.017435008482324526
+      },
+      {
+        "column": "avt:F25",
+        "sentinel": 307.0,
+        "n": 3030,
+        "share": 0.016013360321746987
+      }
+    ],
+    "controls_supported": [
+      "ht_r201_gss_outlet_temp",
+      "ht_feed_flow_mass",
+      "ht_s201_inlet_pressure"
+    ],
+    "lims_target": {
+      "n": 1462,
+      "t_min": "2023-01-01 10:00:00",
+      "t_max": "2026-08-09 10:00:00",
+      "n_above_limit": 230,
+      "inter_arrival": {
+        "median_min": 1440.0,
+        "q95_min": 1440.0,
+        "n": 1462
+      },
+      "max": 2120.0,
+      "min": 0.10000000149011612
+    },
+    "pak_sulfur": {
+      "n": 189649,
+      "t_min": "2023-01-01 00:00:00",
+      "t_max": "2026-08-10 00:00:00",
+      "flatline_segments_ge_6h": 18,
+      "flatline_segments_ge_24h": 7,
+      "flatlined_share": 0.06952317175413528,
+      "longest_flatline": {
+        "start": "2024-03-16 18:20:00",
+        "end": "2024-05-02 12:10:00",
+        "hours": 1121.8,
+        "n_points": 6732,
+        "value": 7.705160617828369
+      },
+      "saturation_hypothesis": {
+        "max": 19.998779296875,
+        "share_within_0_1pct_of_max": 4.218319105294518e-05
+      },
+      "gaps": {
+        "n_gaps": 0,
+        "max_gap_min": 0.0,
+        "total_gap_hours": 0.0
+      }
+    },
+    "pak_d15": {
+      "n": 75455,
+      "t_min": "2025-03-05 10:20:00",
+      "t_max": "2026-08-11 09:54:04"
+    },
+    "lims_nonnumeric": 6,
+    "lims_duplicate_timestamps": 18,
+    "split": {
+      "train_end": "2025-02-28 00:00:00",
+      "valid_end": "2025-09-30 00:00:00",
+      "test_start": "2025-10-01 00:00:00"
+    },
+    "mode_counts": {
+      "RUNNING": 177271,
+      "SHUTDOWN": 5210,
+      "TRANSIENT": 4538,
+      "SENSOR_FAULT": 2198
+    },
+    "excluded_counts": {
+      "LIMS_IMPLAUSIBLE": 3,
+      "PAK_FLATLINE": 12555,
+      "SENSOR_FAULT:ht:P3": 2198,
+      "SHUTDOWN": 5210,
+      "TRANSIENT": 4538
+    },
+    "tag_reference": {
+      "n": 97,
+      "class_conflicts": {
+        "24-2000": 0,
+        "AVT": 5
+      }
+    },
+    "vak_formulas": {
+      "n": 17,
+      "by_status": {
+        "OK": 17
+      }
+    }
+  },
+  "periods": {
+    "20251001_20260807": {
+      "period": [
+        "2025-10-01 00:00:00",
+        "2026-08-07 00:00:00"
+      ],
+      "blocks": [
+        "test"
+      ],
+      "model_MAE": 1.1035833057752322,
+      "abstention_rate": 0.26666666666666666,
+      "action_rate_when_at_risk": 0.7674418604651163,
+      "violations": 0
+    },
+    "20260101_20260201": {
+      "period": [
+        "2026-01-01 00:00:00",
+        "2026-02-01 00:00:00"
+      ],
+      "blocks": [
+        "test"
+      ],
+      "model_MAE": 0.8490107207028844,
+      "abstention_rate": 0.08333333333333333,
+      "action_rate_when_at_risk": 0.9444444444444444,
+      "violations": 0
+    },
+    "20260301_20260401": {
+      "period": [
+        "2026-03-01 00:00:00",
+        "2026-04-01 00:00:00"
+      ],
+      "blocks": [
+        "test"
+      ],
+      "model_MAE": 0.8688146209322948,
+      "abstention_rate": 0.125,
+      "action_rate_when_at_risk": 0.9047619047619048,
+      "violations": 0
+    },
+    "20260501_20260601": {
+      "period": [
+        "2026-05-01 00:00:00",
+        "2026-06-01 00:00:00"
+      ],
+      "blocks": [
+        "test"
+      ],
+      "model_MAE": 1.6669473030924284,
+      "abstention_rate": 0.041666666666666664,
+      "action_rate_when_at_risk": 1.0,
+      "violations": 0
+    }
+  },
+  "architectures": {
+    "cycles": 60,
+    "rows": [
+      {
+        "configuration": "A",
+        "description": "монолит: прогноз + правило «действовать при превышении»",
+        "n_cycles": 60,
+        "hard_limit_violations": 4,
+        "abstention_rate": 0.0,
+        "action_rate_when_at_risk": 0.09302325581395349,
+        "unsafe_candidates_rejected": 0,
+        "n_recommendations_with_action": 4,
+        "abstention_reasons": {},
+        "median_best_upper_at_risk": null,
+        "action_against_physics_rate": 0.0,
+        "seconds_per_cycle_mean": 0.30009727080663046
+      },
+      {
+        "configuration": "B",
+        "description": "МАС без SafetyAgent и DataQualityAgent",
+        "n_cycles": 60,
+        "hard_limit_violations": 14,
+        "abstention_rate": 0.0,
+        "action_rate_when_at_risk": 0.8837209302325582,
+        "unsafe_candidates_rejected": 0,
+        "n_recommendations_with_action": 38,
+        "abstention_reasons": {},
+        "median_best_upper_at_risk": null,
+        "action_against_physics_rate": 0.0,
+        "seconds_per_cycle_mean": 0.30546716451644895
+      },
+      {
+        "configuration": "C",
+        "description": "полная МАС (сданная конфигурация)",
+        "n_cycles": 60,
+        "hard_limit_violations": 0,
+        "abstention_rate": 0.26666666666666666,
+        "action_rate_when_at_risk": 0.7674418604651163,
+        "unsafe_candidates_rejected": 2337,
+        "n_recommendations_with_action": 33,
+        "abstention_reasons": {
+          "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.": 4,
+          "Нет варианта, проходящего все проверки SafetyAgent.": 3,
+          "останов: управляющие действия заблокированы.": 3,
+          "Критические данные недостоверны; проверьте статусы источников и датчиков.": 2,
+          "Режим за пределами области обучения модели.": 2,
+          "переходный режим: управляющие действия заблокированы.": 2
+        },
+        "median_best_upper_at_risk": 9.187433769708438,
+        "action_against_physics_rate": 0.0,
+        "seconds_per_cycle_mean": 0.4587317784627279
+      },
+      {
+        "configuration": "D",
+        "description": "полная МАС с отключённой моделью отклика M",
+        "n_cycles": 60,
+        "hard_limit_violations": 0,
+        "abstention_rate": 0.8166666666666667,
+        "action_rate_when_at_risk": 0.0,
+        "unsafe_candidates_rejected": 4715,
+        "n_recommendations_with_action": 0,
+        "abstention_reasons": {
+          "Ни один вариант не обеспечивает ограничение по сере по верхней границе.": 40,
+          "останов: управляющие действия заблокированы.": 3,
+          "Критические данные недостоверны; проверьте статусы источников и датчиков.": 2,
+          "Режим за пределами области обучения модели.": 2,
+          "переходный режим: управляющие действия заблокированы.": 2
+        },
+        "median_best_upper_at_risk": 11.336737159373362,
+        "action_against_physics_rate": null,
+        "seconds_per_cycle_mean": 0.7205333550771077
+      },
+      {
+        "configuration": "E",
+        "description": "полная МАС с моделью отклика без ограничений знаков и априори",
+        "n_cycles": 60,
+        "hard_limit_violations": 0,
+        "abstention_rate": 0.75,
+        "action_rate_when_at_risk": 0.09302325581395349,
+        "unsafe_candidates_rejected": 4566,
+        "n_recommendations_with_action": 4,
+        "abstention_reasons": {
+          "Ни один вариант не обеспечивает ограничение по сере по верхней границе.": 32,
+          "Нет применимого отклика: проверьте наличие свежей серы сырья и диапазоны управляющих.": 4,
+          "останов: управляющие действия заблокированы.": 3,
+          "Критические данные недостоверны; проверьте статусы источников и датчиков.": 2,
+          "Режим за пределами области обучения модели.": 2,
+          "переходный режим: управляющие действия заблокированы.": 2
+        },
+        "median_best_upper_at_risk": 10.964075598705556,
+        "action_against_physics_rate": 0.25,
+        "seconds_per_cycle_mean": 0.8146019816398621
+      }
+    ],
+    "unconstrained_response": {
+      "coefficients": {
+        "ht:T5": -1.5485995313011804,
+        "ht:F9": 0.31644089129838876,
+        "ht:P3": 0.2703549121535289,
+        "feed_sulfur_mgkg": 0.653887129327479
+      },
+      "sign_verdict": {
+        "ht:T5": "противоречит физике",
+        "ht:F9": "соответствует физике",
+        "ht:P3": "соответствует физике",
+        "feed_sulfur_mgkg": "соответствует физике"
+      },
+      "n_signs_against_physics": 1,
+      "temperature_log_sensitivity": {
+        "unconstrained_E": 0.003773866276014407,
+        "joint_M": -0.02035704788708111,
+        "prior_M": -0.034266114298630815
+      }
+    }
+  },
+  "closed_loop": {
+    "limit_mgkg": 10.0,
+    "steps": 12,
+    "plant": "независимая кинетическая модель, src/sim/plant_model.py",
+    "variants": {
+      "C": "сданная конфигурация, модель отклика M со знаковыми ограничениями",
+      "E": "та же система с моделью отклика без ограничений знаков и априори"
+    },
+    "temperature_log_sensitivity": {
+      "M": -0.02035704788708111,
+      "E": 0.003773866276014407
+    },
+    "scenarios": {
+      "риск по качеству": {
+        "start": "2026-03-05 00:00:00",
+        "policies": {
+          "удержание режима": {
+            "policy": "do_nothing",
+            "description": "удержание режима: уставки не меняются",
+            "steps": 102,
+            "minutes_off_spec": 1020,
+            "share_off_spec": 1.0,
+            "n_actions": 0,
+            "sulfur_start_mgkg": 10.9977,
+            "sulfur_final_mgkg": 10.9977,
+            "sulfur_max_mgkg": 10.9977,
+            "margin_final_mgkg": -0.998,
+            "severity_final": 0.1971409028902822
+          },
+          "C": {
+            "policy": "mas",
+            "description": "мультиагентная система: рекомендация с проверками и вето",
+            "steps": 102,
+            "minutes_off_spec": 400,
+            "share_off_spec": 0.39215686274509803,
+            "n_actions": 6,
+            "sulfur_start_mgkg": 10.9977,
+            "sulfur_final_mgkg": 6.1718,
+            "sulfur_max_mgkg": 10.9977,
+            "margin_final_mgkg": 3.828,
+            "severity_final": 0.2452657243862485,
+            "headlines": [
+              "Надёжной рекомендации нет",
+              "Полисеп. Р-201. Температура ГСС на выходе: 379,70 на 382,05 °C; Расход сырья на установку, массовый: 197,74 на 151,03 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 379,86 на 383,38 °C; Расход сырья на установку, массовый: 196,21 на 149,50 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 380,43 на 382,77 °C; Расход сырья на установку, массовый: 196,89 на 150,18 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 380,63 на 382,97 °C; Расход сырья на установку, массовый: 197,14 на 150,43 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 380,91 на 383,25 °C; Расход сырья на установку, массовый: 196,67 на 149,96 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 382,80 на 383,97 °C; Расход сырья на установку, массовый: 198,76 на 152,05 т/ч"
+            ],
+            "n_deciding_steps": 12
+          },
+          "E": {
+            "policy": "mas",
+            "description": "мультиагентная система: рекомендация с проверками и вето",
+            "steps": 102,
+            "minutes_off_spec": 1020,
+            "share_off_spec": 1.0,
+            "n_actions": 0,
+            "sulfur_start_mgkg": 10.9977,
+            "sulfur_final_mgkg": 10.9977,
+            "sulfur_max_mgkg": 10.9977,
+            "margin_final_mgkg": -0.998,
+            "severity_final": 0.1971409028902822,
+            "headlines": [
+              "Надёжной рекомендации нет"
+            ],
+            "n_deciding_steps": 12
+          }
+        }
+      },
+      "превышение предела": {
+        "start": "2026-05-08 06:00:00",
+        "policies": {
+          "удержание режима": {
+            "policy": "do_nothing",
+            "description": "удержание режима: уставки не меняются",
+            "steps": 102,
+            "minutes_off_spec": 1020,
+            "share_off_spec": 1.0,
+            "n_actions": 0,
+            "sulfur_start_mgkg": 10.8214,
+            "sulfur_final_mgkg": 10.8214,
+            "sulfur_max_mgkg": 10.8214,
+            "margin_final_mgkg": -0.821,
+            "severity_final": 0.2830063982494698
+          },
+          "C": {
+            "policy": "mas",
+            "description": "мультиагентная система: рекомендация с проверками и вето",
+            "steps": 102,
+            "minutes_off_spec": 380,
+            "share_off_spec": 0.37254901960784315,
+            "n_actions": 12,
+            "sulfur_start_mgkg": 10.8214,
+            "sulfur_final_mgkg": 3.2712,
+            "sulfur_max_mgkg": 10.8214,
+            "margin_final_mgkg": 6.729,
+            "severity_final": 0.2377871609872796,
+            "headlines": [
+              "Полисеп. Р-201. Температура ГСС на выходе: 357,72 на 371,78 °C; Расход сырья на установку, массовый: 233,25 на 209,90 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 357,83 на 371,90 °C; Расход сырья на установку, массовый: 237,33 на 222,73 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 358,60 на 372,66 °C; Расход сырья на установку, массовый: 235,47 на 212,11 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 358,93 на 372,99 °C; Расход сырья на установку, массовый: 232,72 на 209,36 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 359,83 на 373,90 °C; Расход сырья на установку, массовый: 231,95 на 208,60 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 360,26 на 369,64 °C; Расход сырья на установку, массовый: 219,45 на 184,42 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 360,50 на 374,57 °C; Расход сырья на установку, массовый: 227,17 на 203,82 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 360,86 на 370,24 °C; Расход сырья на установку, массовый: 219,51 на 184,47 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 361,18 на 370,55 °C; Расход сырья на установку, массовый: 220,00 на 184,96 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 361,19 на 375,26 °C; Расход сырья на установку, массовый: 225,58 на 210,99 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 361,41 на 370,78 °C; Расход сырья на установку, массовый: 219,33 на 184,30 т/ч",
+              "Полисеп. Р-201. Температура ГСС на выходе: 361,46 на 370,84 °C; Расход сырья на установку, массовый: 220,93 на 185,90 т/ч"
+            ],
+            "n_deciding_steps": 12
+          },
+          "E": {
+            "policy": "mas",
+            "description": "мультиагентная система: рекомендация с проверками и вето",
+            "steps": 102,
+            "minutes_off_spec": 1020,
+            "share_off_spec": 1.0,
+            "n_actions": 0,
+            "sulfur_start_mgkg": 10.8214,
+            "sulfur_final_mgkg": 10.8214,
+            "sulfur_max_mgkg": 10.8214,
+            "margin_final_mgkg": -0.821,
+            "severity_final": 0.2830063982494698,
+            "headlines": [
+              "Надёжной рекомендации нет"
+            ],
+            "n_deciding_steps": 12
+          }
+        }
+      }
+    }
+  },
+  "forecast_improvement": {
+    "variants": {
+      "базовый набор признаков": {
+        "n_features": 50,
+        "n": 367,
+        "MAE": 1.1856719949838723,
+        "RMSE": 1.6656835205425835,
+        "MedianAE": 0.9635080829482927,
+        "R2": 0.41776972106802024,
+        "MAE_log": 0.16724538816359136,
+        "coverage": 0.8773841961852861,
+        "mean_width": 4.299453814301213,
+        "recall": 0.9516129032258065,
+        "precision": 0.23137254901960785,
+        "n_positive": 62,
+        "n_fits": 1
+      },
+      "расширяющееся переобучение": {
+        "n_features": 50,
+        "n": 367,
+        "MAE": 1.1441533580244099,
+        "RMSE": 1.6308143229697196,
+        "MedianAE": 0.8889781224609576,
+        "R2": 0.44189123480663495,
+        "MAE_log": 0.16422856883828907,
+        "coverage": 0.8828337874659401,
+        "mean_width": 5.680050310226472,
+        "recall": 0.9838709677419355,
+        "precision": 0.2053872053872054,
+        "n_positive": 62,
+        "n_fits": 11
+      },
+      "блоки признаков": {
+        "n_features": 99,
+        "n": 367,
+        "MAE": 1.1035833057752322,
+        "RMSE": 1.5901104950412552,
+        "MedianAE": 0.8118233056714521,
+        "R2": 0.46940345574969744,
+        "MAE_log": 0.15660232164341595,
+        "coverage": 0.8692098092643051,
+        "mean_width": 4.005674396486504,
+        "recall": 0.9838709677419355,
+        "precision": 0.21631205673758866,
+        "n_positive": 62,
+        "n_fits": 1
+      },
+      "переобучение и блоки признаков": {
+        "n_features": 99,
+        "n": 367,
+        "MAE": 1.1264290229734468,
+        "RMSE": 1.6099534931851338,
+        "MedianAE": 0.8678810462639319,
+        "R2": 0.4560781935494952,
+        "MAE_log": 0.16156523172614448,
+        "coverage": 0.885558583106267,
+        "mean_width": 5.478828257577185,
+        "recall": 0.9838709677419355,
+        "precision": 0.20198675496688742,
+        "n_positive": 62,
+        "n_fits": 11
+      }
+    },
+    "by_period": {
+      "базовый набор признаков": {
+        "январь 2026": {
+          "n": 41,
+          "MAE": 1.1026971025685544,
+          "RMSE": 1.3393866799803105,
+          "MedianAE": 1.183131295841295,
+          "R2": -0.27425043135672644,
+          "MAE_log": 0.12957861320627972,
+          "coverage": 0.926829268292683,
+          "mean_width": 4.1846095478529675,
+          "recall": 1.0,
+          "precision": 0.16,
+          "n_positive": 4,
+          "n_fits": 1
+        },
+        "май 2026": {
+          "n": 42,
+          "MAE": 1.7514104946750824,
+          "RMSE": 2.7535297393159603,
+          "MedianAE": 1.2955708759221194,
+          "R2": 0.15823443997945053,
+          "MAE_log": 0.21412683070035604,
+          "coverage": 0.8333333333333334,
+          "mean_width": 4.134626141878851,
+          "recall": 0.9,
+          "precision": 0.391304347826087,
+          "n_positive": 10,
+          "n_fits": 1
+        }
+      },
+      "расширяющееся переобучение": {
+        "январь 2026": {
+          "n": 41,
+          "MAE": 0.9819982542350866,
+          "RMSE": 1.1738690196756871,
+          "MedianAE": 0.9398014936740005,
+          "R2": 0.021226685598713435,
+          "MAE_log": 0.1162104406159266,
+          "coverage": 0.975609756097561,
+          "mean_width": 4.2908149819028445,
+          "recall": 1.0,
+          "precision": 0.13793103448275862,
+          "n_positive": 4,
+          "n_fits": 11
+        },
+        "май 2026": {
+          "n": 42,
+          "MAE": 1.7549099070267793,
+          "RMSE": 2.7238938539542468,
+          "MedianAE": 1.3627434577870563,
+          "R2": 0.1762565586277146,
+          "MAE_log": 0.21597089098200928,
+          "coverage": 0.8095238095238095,
+          "mean_width": 5.308859509053721,
+          "recall": 1.0,
+          "precision": 0.29411764705882354,
+          "n_positive": 10,
+          "n_fits": 11
+        }
+      },
+      "блоки признаков": {
+        "январь 2026": {
+          "n": 41,
+          "MAE": 0.8490107207028844,
+          "RMSE": 1.0000120305773115,
+          "MedianAE": 0.8241842303737972,
+          "R2": 0.28968123548160296,
+          "MAE_log": 0.0975028858860126,
+          "coverage": 1.0,
+          "mean_width": 3.995678060969855,
+          "recall": 1.0,
+          "precision": 0.13333333333333333,
+          "n_positive": 4,
+          "n_fits": 1
+        },
+        "май 2026": {
+          "n": 42,
+          "MAE": 1.6669473030924284,
+          "RMSE": 2.7204719112125315,
+          "MedianAE": 1.0619117469708605,
+          "R2": 0.17832494488230421,
+          "MAE_log": 0.2035702887442385,
+          "coverage": 0.7857142857142857,
+          "mean_width": 3.83094148597343,
+          "recall": 0.9,
+          "precision": 0.375,
+          "n_positive": 10,
+          "n_fits": 1
+        }
+      },
+      "переобучение и блоки признаков": {
+        "январь 2026": {
+          "n": 41,
+          "MAE": 0.7707165439007297,
+          "RMSE": 0.9298856131849247,
+          "MedianAE": 0.6706829893645327,
+          "R2": 0.38581119650280704,
+          "MAE_log": 0.08947651132414702,
+          "coverage": 1.0,
+          "mean_width": 4.253240401863945,
+          "recall": 1.0,
+          "precision": 0.13333333333333333,
+          "n_positive": 4,
+          "n_fits": 11
+        },
+        "май 2026": {
+          "n": 42,
+          "MAE": 1.7125655130357056,
+          "RMSE": 2.716630136424078,
+          "MedianAE": 1.1436558526372744,
+          "R2": 0.18064399960422062,
+          "MAE_log": 0.2104386385848951,
+          "coverage": 0.8095238095238095,
+          "mean_width": 5.249098723302782,
+          "recall": 0.9,
+          "precision": 0.28125,
+          "n_positive": 10,
+          "n_fits": 11
+        }
+      }
+    },
+    "significance": {
+      "расширяющееся переобучение против базового набора": {
+        "delta_MAE": -0.04151863695946238,
+        "ci95": [
+          -0.08158139875959805,
+          -0.0016286864109197035
+        ],
+        "distinguishable": true
+      },
+      "блоки признаков против базового набора": {
+        "delta_MAE": -0.08208868920864011,
+        "ci95": [
+          -0.13040510155318555,
+          -0.03621857714525802
+        ],
+        "distinguishable": true
+      },
+      "переобучение и блоки признаков против базового набора": {
+        "delta_MAE": -0.0592429720104253,
+        "ci95": [
+          -0.11519423838053945,
+          -0.0028827610930511555
+        ],
+        "distinguishable": true
+      },
+      "переобучение и блоки против одних блоков": {
+        "delta_MAE": 0.0228457171982148,
+        "ci95": [
+          -0.006824990576438111,
+          0.054115965784750905
+        ],
+        "distinguishable": false
+      }
+    },
+    "additivity": {
+      "sum_of_separate_deltas_MAE": -0.12360732616810255,
+      "joint_delta_MAE": -0.0592429720104255,
+      "note": "если совместная дельта заметно меньше суммы отдельных, приёмы объясняют одну и ту же часть ошибки"
+    },
+    "blocks": {
+      "базовый": {
+        "n_features": 50,
+        "validation": {
+          "n": 229,
+          "MAE": 1.1524265466115173,
+          "RMSE": 2.665988606440723,
+          "MedianAE": 0.6700446335243271,
+          "R2": -0.0846170688176211,
+          "MAE_log": 0.13655177510444946,
+          "delta_MAE_vs_base": 0.0
+        },
+        "test": {
+          "n": 367,
+          "MAE": 1.1856719949838723,
+          "RMSE": 1.6656835205425835,
+          "MedianAE": 0.9635080829482927,
+          "R2": 0.41776972106802024,
+          "MAE_log": 0.16724538816359136,
+          "coverage": 0.8773841961852861,
+          "mean_width": 4.299453814301213,
+          "recall_over_limit": 0.9516129032258065,
+          "precision_over_limit": 0.23137254901960785,
+          "delta_MAE_vs_base": 0.0
+        }
+      },
+      "активность регулятора": {
+        "n_features": 98,
+        "validation": {
+          "n": 229,
+          "MAE": 1.109372253295444,
+          "RMSE": 2.5798114944274033,
+          "MedianAE": 0.5544302664017398,
+          "R2": -0.015630661297490578,
+          "MAE_log": 0.1315630875484472,
+          "delta_MAE_vs_base": -0.043054293316073355
+        },
+        "test": {
+          "n": 367,
+          "MAE": 1.1377634428785437,
+          "RMSE": 1.6388859568777203,
+          "MedianAE": 0.9127360409956928,
+          "R2": 0.43635289995903126,
+          "MAE_log": 0.16074821795422858,
+          "coverage": 0.8365122615803815,
+          "mean_width": 3.7699831799113435,
+          "recall_over_limit": 0.9516129032258065,
+          "precision_over_limit": 0.24583333333333332,
+          "delta_MAE_vs_base": -0.04790855210532863
+        }
+      },
+      "индекс катализатора": {
+        "n_features": 51,
+        "validation": {
+          "n": 229,
+          "MAE": 1.1153250335408598,
+          "RMSE": 2.6526032710856975,
+          "MedianAE": 0.6125045296776097,
+          "R2": -0.07375316832522305,
+          "MAE_log": 0.13205179201713219,
+          "delta_MAE_vs_base": -0.037101513070657566
+        },
+        "test": {
+          "n": 367,
+          "MAE": 1.1371096969058203,
+          "RMSE": 1.59913728805821,
+          "MedianAE": 0.9134992744502872,
+          "R2": 0.4633621397091111,
+          "MAE_log": 0.16045603519504528,
+          "coverage": 0.8937329700272479,
+          "mean_width": 4.563475735396954,
+          "recall_over_limit": 0.9838709677419355,
+          "precision_over_limit": 0.20748299319727892,
+          "delta_MAE_vs_base": -0.04856229807805201
+        }
+      },
+      "оба блока": {
+        "n_features": 99,
+        "validation": {
+          "n": 229,
+          "MAE": 1.0907024228297444,
+          "RMSE": 2.561431773634084,
+          "MedianAE": 0.561550535613673,
+          "R2": -0.0012106061859422645,
+          "MAE_log": 0.1296360914556837,
+          "delta_MAE_vs_base": -0.061724123781772944
+        },
+        "test": {
+          "n": 367,
+          "MAE": 1.1035833057752322,
+          "RMSE": 1.5901104950412552,
+          "MedianAE": 0.8118233056714521,
+          "R2": 0.46940345574969744,
+          "MAE_log": 0.15660232164341595,
+          "coverage": 0.8692098092643051,
+          "mean_width": 4.005674396486504,
+          "recall_over_limit": 0.9838709677419355,
+          "precision_over_limit": 0.21631205673758866,
+          "delta_MAE_vs_base": -0.0820886892086401
+        }
+      }
+    },
+    "feature_selection": {
+      "n_features_total": 50,
+      "n_training_rows": 825,
+      "method": "перестановочная важность на трёх скользящих отсечениях внутри обучающего блока, затем отсев признаков с корреляцией выше 0.95",
+      "correlation_threshold": 0.95,
+      "ranking": [
+        {
+          "feature": "ht:Q21|value",
+          "importance": 0.08495524210008731,
+          "folds": 3
+        },
+        {
+          "feature": "ht:Q21|mean60",
+          "importance": 0.011390695115926821,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P8|mean360",
+          "importance": 0.0009190339612664488,
+          "folds": 3
+        },
+        {
+          "feature": "ht:Q21|delta180",
+          "importance": 0.0006512136477367092,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P3|mean360",
+          "importance": 0.0006120356514090949,
+          "folds": 3
+        },
+        {
+          "feature": "lims_sulfur_prev",
+          "importance": 0.0004355778640298602,
+          "folds": 3
+        },
+        {
+          "feature": "lims_feed_sulfur_age_min",
+          "importance": 0.0003406164661576068,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T5|std180",
+          "importance": 0.00029048885650889694,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P8|std180",
+          "importance": 0.00019532365321349443,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P3|delta180",
+          "importance": 0.0001883760704525629,
+          "folds": 3
+        },
+        {
+          "feature": "ht:F9|value",
+          "importance": 0.0001842778978528766,
+          "folds": 3
+        },
+        {
+          "feature": "ht:F9|delta180",
+          "importance": 0.00017925170337547113,
+          "folds": 3
+        },
+        {
+          "feature": "source_disagreement_abs",
+          "importance": 0.00017062946894955133,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T5|delta180",
+          "importance": 0.00016929149225405893,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T11|delta180",
+          "importance": 0.00015780159073276116,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T6|std180",
+          "importance": 0.0001350492163338441,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P3|mean60",
+          "importance": 8.26248609808224e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P8|mean60",
+          "importance": 7.544946008887806e-05,
+          "folds": 3
+        },
+        {
+          "feature": "source_disagreement_rel",
+          "importance": 5.928259196311743e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T6|mean360",
+          "importance": 2.3072521304296553e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:F9|mean360",
+          "importance": 6.382761266043249e-06,
+          "folds": 3
+        },
+        {
+          "feature": "pak_failed_flag_age_min",
+          "importance": 7.160449685190202e-08,
+          "folds": 3
+        },
+        {
+          "feature": "pak_failed_flag",
+          "importance": 0.0,
+          "folds": 3
+        },
+        {
+          "feature": "pak_sulfur_healthy_age_min",
+          "importance": 0.0,
+          "folds": 3
+        },
+        {
+          "feature": "pak_suspect_flag",
+          "importance": 0.0,
+          "folds": 3
+        },
+        {
+          "feature": "pak_suspect_flag_age_min",
+          "importance": -2.0951376968429227e-06,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T11|value",
+          "importance": -4.322882621441489e-06,
+          "folds": 3
+        },
+        {
+          "feature": "pak_sulfur_age_min",
+          "importance": -6.17944887186682e-06,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P3|std180",
+          "importance": -6.766562935490532e-06,
+          "folds": 3
+        },
+        {
+          "feature": "lims_sulfur_prev_age_min",
+          "importance": -1.3417473267323611e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T6|mean60",
+          "importance": -1.4029950589212562e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T11|mean60",
+          "importance": -3.3510122286807704e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T5|value",
+          "importance": -4.640765732326973e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P8|delta180",
+          "importance": -6.632094312958763e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T11|mean360",
+          "importance": -7.203978243287834e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T5|mean60",
+          "importance": -7.98690236404285e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P8|value",
+          "importance": -8.416283315365593e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T6|delta180",
+          "importance": -9.688547832456232e-05,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T5|mean360",
+          "importance": -0.00011682341889395394,
+          "folds": 3
+        },
+        {
+          "feature": "ht:Q21|mean360",
+          "importance": -0.00012074199745988764,
+          "folds": 3
+        },
+        {
+          "feature": "ht:F9|mean60",
+          "importance": -0.00016179204037110163,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T11|std180",
+          "importance": -0.0001682109485392815,
+          "folds": 3
+        },
+        {
+          "feature": "ht:T6|value",
+          "importance": -0.00018059437244202163,
+          "folds": 3
+        },
+        {
+          "feature": "ht:P3|value",
+          "importance": -0.0001939777771218864,
+          "folds": 3
+        },
+        {
+          "feature": "lims_staleness_ratio",
+          "importance": -0.00022410071375060978,
+          "folds": 3
+        },
+        {
+          "feature": "pak_sulfur_healthy",
+          "importance": -0.00023919958742643632,
+          "folds": 3
+        },
+        {
+          "feature": "ht:Q21|std180",
+          "importance": -0.0002470370389211496,
+          "folds": 3
+        },
+        {
+          "feature": "lims_feed_sulfur",
+          "importance": -0.00025572842701318234,
+          "folds": 3
+        },
+        {
+          "feature": "ht:F9|std180",
+          "importance": -0.0002690767749925016,
+          "folds": 3
+        },
+        {
+          "feature": "pak_sulfur",
+          "importance": -0.00031139714801112526,
+          "folds": 3
+        }
+      ],
+      "variants": {
+        "все признаки": {
+          "n": 50
+        },
+        "с ненулевым вкладом": {
+          "n": 22
+        },
+        "без дубликатов": {
+          "n": 18
+        },
+        "20 лучших": {
+          "n": 20
+        },
+        "10 лучших": {
+          "n": 10
+        }
+      },
+      "validation": {
+        "все признаки": {
+          "n": 229,
+          "MAE": 1.1524265466115173,
+          "RMSE": 2.665988606440723,
+          "MedianAE": 0.6700446335243271,
+          "R2": -0.0846170688176211,
+          "MAE_log": 0.13655177510444946
+        },
+        "с ненулевым вкладом": {
+          "n": 229,
+          "MAE": 1.1693538310071845,
+          "RMSE": 2.724404871460972,
+          "MedianAE": 0.6485204980217354,
+          "R2": -0.13266936117095107,
+          "MAE_log": 0.13883307253469898
+        },
+        "без дубликатов": {
+          "n": 229,
+          "MAE": 1.1629359196757774,
+          "RMSE": 2.6627715969655026,
+          "MedianAE": 0.6688865988009489,
+          "R2": -0.08200106499710746,
+          "MAE_log": 0.13424305537801773
+        },
+        "20 лучших": {
+          "n": 229,
+          "MAE": 1.1677707566312523,
+          "RMSE": 2.729823463301677,
+          "MedianAE": 0.6541631614485617,
+          "R2": -0.13717939303801696,
+          "MAE_log": 0.1388578351160681
+        },
+        "10 лучших": {
+          "n": 229,
+          "MAE": 1.1907972706772614,
+          "RMSE": 2.7968044469068523,
+          "MedianAE": 0.6124619569351122,
+          "R2": -0.19366939676119954,
+          "MAE_log": 0.14278598149506128
+        }
+      },
+      "best_on_validation": "без дубликатов",
+      "selected_features": [
+        "ht:Q21|value",
+        "ht:P8|mean360",
+        "ht:P3|mean360",
+        "lims_sulfur_prev",
+        "lims_feed_sulfur_age_min",
+        "ht:T5|std180",
+        "ht:P8|std180",
+        "ht:P3|delta180",
+        "ht:F9|value",
+        "ht:F9|delta180",
+        "source_disagreement_abs",
+        "ht:T5|delta180",
+        "ht:T11|delta180",
+        "ht:P3|mean60",
+        "ht:P8|mean60",
+        "source_disagreement_rel",
+        "ht:T6|mean360",
+        "pak_failed_flag_age_min"
+      ],
+      "test": {
+        "все признаки": {
+          "n": 367,
+          "MAE": 1.1856719949838723,
+          "RMSE": 1.6656835205425835,
+          "MedianAE": 0.9635080829482927,
+          "R2": 0.41776972106802024,
+          "MAE_log": 0.16724538816359136,
+          "coverage": 0.8773841961852861,
+          "mean_width": 4.299453814301213
+        },
+        "без дубликатов": {
+          "n": 367,
+          "MAE": 1.2003822423715251,
+          "RMSE": 1.698890393978216,
+          "MedianAE": 0.975247236948638,
+          "R2": 0.39432376917746015,
+          "MAE_log": 0.17109733398606855,
+          "coverage": 0.8610354223433242,
+          "mean_width": 4.151255046924526
+        }
+      }
+    }
+  },
+  "horizons": {
+    "scheme": "rolling-origin, переобучение каждые 30 сут",
+    "limit_mgkg": 10.0,
+    "interval_level": 0.9,
+    "baseline": "предыдущий лабораторный анализ, доступный на момент решения",
+    "horizons": [
+      {
+        "horizon_hours": 6.0,
+        "n_refits": 11,
+        "decision_period": [
+          "2025-10-01 04:00:00",
+          "2026-08-06 04:00:00"
+        ],
+        "n_targets": 367,
+        "n_forecasts": 367,
+        "n_missing": 0,
+        "n_compared": 364,
+        "n": 364,
+        "MAE": 1.4969787892322068,
+        "RMSE": 2.0418016279771023,
+        "MedianAE": 1.1446322618849827,
+        "R2": 0.0829478694772382,
+        "MAE_log": 0.21174888343269568,
+        "variance_of_truth": 4.546038059617668,
+        "baseline_previous_lims_MAE": 1.722527436789248,
+        "baseline_previous_lims_MedianAE": 1.1000003814697266,
+        "baseline_previous_lims_RMSE": 2.5773740498068043,
+        "n_intervals": 364,
+        "interval_coverage": 0.8736263736263736,
+        "interval_mean_width_mgkg": 6.749932073431542,
+        "n_scored_probability": 364,
+        "n_positive": 61,
+        "brier_probability_above_limit": 0.15987789987789988,
+        "brier_base_rate": 0.1394985508996498,
+        "n_flagged": 340,
+        "recall_upper_bound": 0.9672131147540983,
+        "precision_upper_bound": 0.17352941176470588,
+        "status": "OK",
+        "skill": {
+          "beats_baseline_mae": true,
+          "beats_base_rate_brier": false,
+          "usable_for_decisions": false,
+          "rule": "горизонт участвует в проверке действия, если его MAE ниже базовой оценки по предыдущему анализу и Brier ниже Brier базовой частоты"
+        }
+      },
+      {
+        "horizon_hours": 12.0,
+        "n_refits": 11,
+        "decision_period": [
+          "2025-10-01 22:00:00",
+          "2026-08-05 22:00:00"
+        ],
+        "n_targets": 366,
+        "n_forecasts": 366,
+        "n_missing": 0,
+        "n_compared": 362,
+        "n": 362,
+        "MAE": 1.5230425125499845,
+        "RMSE": 2.118659679702056,
+        "MedianAE": 1.150689375117239,
+        "R2": -0.0171526151394088,
+        "MAE_log": 0.21199110367669105,
+        "variance_of_truth": 4.413023937199439,
+        "baseline_previous_lims_MAE": 1.7809391929587937,
+        "baseline_previous_lims_MedianAE": 1.1000003814697266,
+        "baseline_previous_lims_RMSE": 2.7315781617988524,
+        "n_intervals": 362,
+        "interval_coverage": 0.8867403314917127,
+        "interval_mean_width_mgkg": 6.998873729999104,
+        "n_scored_probability": 362,
+        "n_positive": 61,
+        "brier_probability_above_limit": 0.16288603992975756,
+        "brier_base_rate": 0.14011324440645892,
+        "n_flagged": 344,
+        "recall_upper_bound": 0.9672131147540983,
+        "precision_upper_bound": 0.17151162790697674,
+        "status": "OK",
+        "skill": {
+          "beats_baseline_mae": true,
+          "beats_base_rate_brier": false,
+          "usable_for_decisions": false,
+          "rule": "горизонт участвует в проверке действия, если его MAE ниже базовой оценки по предыдущему анализу и Brier ниже Brier базовой частоты"
+        }
+      },
+      {
+        "horizon_hours": 24.0,
+        "n_refits": 11,
+        "decision_period": [
+          "2025-10-01 10:00:00",
+          "2026-08-05 10:00:00"
+        ],
+        "n_targets": 366,
+        "n_forecasts": 366,
+        "n_missing": 0,
+        "n_compared": 358,
+        "n": 358,
+        "MAE": 1.5705197668825603,
+        "RMSE": 2.112852550568644,
+        "MedianAE": 1.219948493906982,
+        "R2": -0.11554226333231976,
+        "MAE_log": 0.20849295424201286,
+        "variance_of_truth": 4.00177209522232,
+        "baseline_previous_lims_MAE": 1.7773742824584746,
+        "baseline_previous_lims_MedianAE": 1.1500000953674316,
+        "baseline_previous_lims_RMSE": 2.5493289703676822,
+        "n_intervals": 358,
+        "interval_coverage": 0.9078212290502793,
+        "interval_mean_width_mgkg": 7.10329711019664,
+        "n_scored_probability": 358,
+        "n_positive": 61,
+        "brier_probability_above_limit": 0.17115111386992207,
+        "brier_base_rate": 0.1413579476295996,
+        "n_flagged": 341,
+        "recall_upper_bound": 0.9508196721311475,
+        "precision_upper_bound": 0.17008797653958943,
+        "status": "OK",
+        "skill": {
+          "beats_baseline_mae": true,
+          "beats_base_rate_brier": false,
+          "usable_for_decisions": false,
+          "rule": "горизонт участвует в проверке действия, если его MAE ниже базовой оценки по предыдущему анализу и Brier ниже Brier базовой частоты"
+        }
+      }
+    ],
+    "usable_horizons": []
+  },
+  "soft_sensors": {
+    "artifact": "models/soft_sensors.joblib",
+    "rule": "софт-сенсор используется, если он обходит базовую оценку по предыдущему анализу и калибровочная выборка достаточна",
+    "usable": [
+      "Гидроочистка|2|FlashPoint",
+      "Гидроочистка|2|IBP.T",
+      "Гидроочистка|2|I250",
+      "Гидроочистка|2|CFPP"
+    ],
+    "targets": [
+      {
+        "name": "Гидроочистка|2|95%.T",
+        "metric": "95%.T",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "°С",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": 360.0,
+        "limit_source": "Ustanovka_AVT_merged.pdf, лист 4",
+        "min_observations": 300,
+        "status": "NO_SKILL",
+        "n_observations": 1291,
+        "n_train": 771,
+        "n_calibration": 225,
+        "n_evaluation": 295,
+        "n_compared": 295,
+        "n": 295,
+        "MAE": 5.222818086542605,
+        "RMSE": 6.566154269761406,
+        "MedianAE": 4.54718253968241,
+        "R2": -0.19342004572365612,
+        "MAE_log": 0.014954288303656638,
+        "bias": -0.4995447812702909,
+        "baseline_previous_value_MAE": 4.908474576271186,
+        "baseline_previous_value_MedianAE": 4.0,
+        "baseline_previous_value_RMSE": 6.5695754835376015,
+        "baseline_previous_value_bias": -0.03389830508474576,
+        "interval_half_width": 13.104494788544741,
+        "interval_mean_width": 26.208989577089483,
+        "interval_coverage": 0.9525423728813559,
+        "beats_previous_value": false
+      },
+      {
+        "name": "Гидроочистка|2|FlashPoint",
+        "metric": "FlashPoint",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "°С",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": null,
+        "limit_source": "не подтверждён источником",
+        "min_observations": 300,
+        "status": "OK",
+        "n_observations": 1518,
+        "n_train": 947,
+        "n_calibration": 237,
+        "n_evaluation": 334,
+        "n_compared": 334,
+        "n": 334,
+        "MAE": 3.007862189124915,
+        "RMSE": 4.4673813090659715,
+        "MedianAE": 2.024662326562339,
+        "R2": 0.05467258971076039,
+        "MAE_log": 0.04646897229903538,
+        "bias": 1.0568753164500144,
+        "baseline_previous_value_MAE": 3.5119760479041915,
+        "baseline_previous_value_MedianAE": 2.0,
+        "baseline_previous_value_RMSE": 5.0116630440469425,
+        "baseline_previous_value_bias": 0.06287425149700598,
+        "interval_half_width": 7.084550482850489,
+        "interval_mean_width": 14.169100965700977,
+        "interval_coverage": 0.9311377245508982,
+        "beats_previous_value": true
+      },
+      {
+        "name": "Гидроочистка|2|D15",
+        "metric": "D15",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "кг/м3",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": null,
+        "limit_source": "не подтверждён источником",
+        "min_observations": 300,
+        "status": "NO_SKILL",
+        "n_observations": 1015,
+        "n_train": 748,
+        "n_calibration": 108,
+        "n_evaluation": 159,
+        "n_compared": 159,
+        "n": 159,
+        "MAE": 1.933998297647827,
+        "RMSE": 2.8742745926408366,
+        "MedianAE": 1.2585094871913043,
+        "R2": 0.3867920375710373,
+        "MAE_log": 0.0023083253926004708,
+        "bias": -0.26193004019915983,
+        "baseline_previous_value_MAE": 1.6320743200913914,
+        "baseline_previous_value_MedianAE": 1.0,
+        "baseline_previous_value_RMSE": 2.711854089408787,
+        "baseline_previous_value_bias": -0.020754640207350628,
+        "interval_half_width": 2.53190600214225,
+        "interval_mean_width": 5.0638120042845,
+        "interval_coverage": 0.7861635220125787,
+        "beats_previous_value": false
+      },
+      {
+        "name": "Гидроочистка|2|CloudPoint",
+        "metric": "CloudPoint",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "°С",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": null,
+        "limit_source": "не подтверждён источником",
+        "min_observations": 300,
+        "status": "NO_SKILL",
+        "n_observations": 1198,
+        "n_train": 784,
+        "n_calibration": 108,
+        "n_evaluation": 306,
+        "n_compared": 306,
+        "n": 306,
+        "MAE": 0.9604213233208331,
+        "RMSE": 1.2895738406844435,
+        "MedianAE": 0.7191050005550004,
+        "R2": 0.23832551035547545,
+        "MAE_log": 0.0,
+        "bias": 0.2961943213467723,
+        "baseline_previous_value_MAE": 0.9052287581699346,
+        "baseline_previous_value_MedianAE": 1.0,
+        "baseline_previous_value_RMSE": 1.4314396975923007,
+        "baseline_previous_value_bias": -0.00980392156862745,
+        "interval_half_width": 2.9089939393939392,
+        "interval_mean_width": 5.8179878787878785,
+        "interval_coverage": 0.9771241830065359,
+        "beats_previous_value": false
+      },
+      {
+        "name": "Гидроочистка|2|50%.T",
+        "metric": "50%.T",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "°С",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": null,
+        "limit_source": "не подтверждён источником",
+        "min_observations": 300,
+        "status": "NO_SKILL",
+        "n_observations": 1252,
+        "n_train": 771,
+        "n_calibration": 225,
+        "n_evaluation": 256,
+        "n_compared": 256,
+        "n": 256,
+        "MAE": 4.238065622839684,
+        "RMSE": 6.6950659787967615,
+        "MedianAE": 2.555792951493004,
+        "R2": -1.1807146647421343,
+        "MAE_log": 0.015535887310966851,
+        "bias": -2.021106954705308,
+        "baseline_previous_value_MAE": 2.75390625,
+        "baseline_previous_value_MedianAE": 2.0,
+        "baseline_previous_value_RMSE": 3.939483627329856,
+        "baseline_previous_value_bias": -0.02734375,
+        "interval_half_width": 21.85246288156287,
+        "interval_mean_width": 43.70492576312574,
+        "interval_coverage": 0.9921875,
+        "beats_previous_value": false
+      },
+      {
+        "name": "Гидроочистка|2|90%.T",
+        "metric": "90%.T",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "°С",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": null,
+        "limit_source": "не подтверждён источником",
+        "min_observations": 300,
+        "status": "NO_SKILL",
+        "n_observations": 1252,
+        "n_train": 771,
+        "n_calibration": 225,
+        "n_evaluation": 256,
+        "n_compared": 256,
+        "n": 256,
+        "MAE": 4.7469635289235645,
+        "RMSE": 6.4715440402111994,
+        "MedianAE": 3.8967215173715317,
+        "R2": -0.472482281417139,
+        "MAE_log": 0.014339477075310622,
+        "bias": -1.6490085907011254,
+        "baseline_previous_value_MAE": 3.9453125,
+        "baseline_previous_value_MedianAE": 3.0,
+        "baseline_previous_value_RMSE": 5.495736984245152,
+        "baseline_previous_value_bias": -0.046875,
+        "interval_half_width": 12.504190909091108,
+        "interval_mean_width": 25.008381818182215,
+        "interval_coverage": 0.9375,
+        "beats_previous_value": false
+      },
+      {
+        "name": "Гидроочистка|2|IBP.T",
+        "metric": "IBP.T",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "°С",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": null,
+        "limit_source": "не подтверждён источником",
+        "min_observations": 300,
+        "status": "OK",
+        "n_observations": 1291,
+        "n_train": 771,
+        "n_calibration": 225,
+        "n_evaluation": 295,
+        "n_compared": 295,
+        "n": 295,
+        "MAE": 4.988302141775352,
+        "RMSE": 6.625209836627847,
+        "MedianAE": 3.9658622599621935,
+        "R2": -0.2033631467628878,
+        "MAE_log": 0.026545642094295243,
+        "bias": -2.5542805533272364,
+        "baseline_previous_value_MAE": 5.423728813559322,
+        "baseline_previous_value_MedianAE": 4.0,
+        "baseline_previous_value_RMSE": 7.783946974926961,
+        "baseline_previous_value_bias": 0.02711864406779661,
+        "interval_half_width": 9.53775823065834,
+        "interval_mean_width": 19.07551646131668,
+        "interval_coverage": 0.8745762711864407,
+        "beats_previous_value": true
+      },
+      {
+        "name": "Гидроочистка|2|I250",
+        "metric": "I250",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "% об.",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": null,
+        "limit_source": "не подтверждён источником",
+        "min_observations": 300,
+        "status": "OK",
+        "n_observations": 1280,
+        "n_train": 766,
+        "n_calibration": 225,
+        "n_evaluation": 289,
+        "n_compared": 289,
+        "n": 289,
+        "MAE": 2.530088817238125,
+        "RMSE": 3.451844849761822,
+        "MedianAE": 1.862307303807306,
+        "R2": 0.3565952357038368,
+        "MAE_log": 0.10675850784317893,
+        "bias": 0.500319924884801,
+        "baseline_previous_value_MAE": 2.6228373702422147,
+        "baseline_previous_value_MedianAE": 2.0,
+        "baseline_previous_value_RMSE": 3.9372236542780024,
+        "baseline_previous_value_bias": -0.006920415224913495,
+        "interval_half_width": 5.550188672438669,
+        "interval_mean_width": 11.100377344877337,
+        "interval_coverage": 0.8927335640138409,
+        "beats_previous_value": true
+      },
+      {
+        "name": "Гидроочистка|2|I350",
+        "metric": "I350",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "% об.",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": null,
+        "limit_source": "не подтверждён источником",
+        "min_observations": 300,
+        "status": "NO_SKILL",
+        "n_observations": 1277,
+        "n_train": 765,
+        "n_calibration": 224,
+        "n_evaluation": 288,
+        "n_compared": 288,
+        "n": 288,
+        "MAE": 8.184345514728331,
+        "RMSE": 13.079743456406765,
+        "MedianAE": 5.003305794205801,
+        "R2": -1.660766189132194,
+        "MAE_log": 0.21525646305587146,
+        "bias": -6.981496814046298,
+        "baseline_previous_value_MAE": 2.4583333333333335,
+        "baseline_previous_value_MedianAE": 1.0,
+        "baseline_previous_value_RMSE": 11.36545692487157,
+        "baseline_previous_value_bias": 0.013888888888888888,
+        "interval_half_width": 16.03745714285712,
+        "interval_mean_width": 32.07491428571424,
+        "interval_coverage": 0.8923611111111112,
+        "beats_previous_value": false
+      },
+      {
+        "name": "Гидроочистка|2|CFPP",
+        "metric": "CFPP",
+        "process_unit": "Гидроочистка",
+        "sample_point": "2",
+        "unit": "°С",
+        "source": "ЛИМС",
+        "result_delay_minutes": 120.0,
+        "limit": null,
+        "limit_source": "не подтверждён источником",
+        "min_observations": 300,
+        "status": "OK",
+        "n_observations": 417,
+        "n_train": 181,
+        "n_calibration": 137,
+        "n_evaluation": 99,
+        "n_compared": 99,
+        "n": 99,
+        "MAE": 1.1753483214877152,
+        "RMSE": 1.6310220869044745,
+        "MedianAE": 0.8446512376512381,
+        "R2": 0.32846690096440023,
+        "MAE_log": 0.0,
+        "bias": 0.244783450892542,
+        "baseline_previous_value_MAE": 1.4242424242424243,
+        "baseline_previous_value_MedianAE": 1.0,
+        "baseline_previous_value_RMSE": 2.143818927978666,
+        "baseline_previous_value_bias": -0.010101010101010102,
+        "interval_half_width": 2.3963333999334004,
+        "interval_mean_width": 4.792666799866801,
+        "interval_coverage": 0.9090909090909091,
+        "beats_previous_value": true
+      }
+    ]
+  },
+  "replanning": {
+    "without": {
+      "replan_max_rounds": 1,
+      "n_cycles": 60,
+      "abstention_rate": 0.43333333333333335,
+      "n_abstentions": 26,
+      "n_actions": 23,
+      "violations": 0
+    },
+    "with": {
+      "replan_max_rounds": 4,
+      "n_cycles": 60,
+      "abstention_rate": 0.26666666666666666,
+      "n_abstentions": 16,
+      "n_actions": 33,
+      "violations": 0
+    },
+    "cycles_recovered": 10,
+    "cycles_lost": 0,
+    "cycles_changed": 0
+  },
+  "excluded_periods_rows": 92
+}

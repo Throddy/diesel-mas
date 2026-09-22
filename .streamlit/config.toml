@@ -1,0 +1,10 @@
+# Закрытая сеть: никаких исходящих соединений из интерфейса.
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+fileWatcherType = "none"
+
+[runner]
+fastReruns = true

@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+# Пакет организаторов входит в репозиторий
+data/interim/*
+data/processed/*
+models/*.joblib
+artifacts/*.jsonl
+reports/figures/*
+.venv/
+
+_context/
+.mypy_cache/
+.ruff_cache/
+.streamlit/secrets.toml

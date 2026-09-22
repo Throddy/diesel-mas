@@ -1,0 +1,44 @@
+{
+  "ht_r201_gss_outlet_temp": {
+    "canonical_name": "ht_r201_gss_outlet_temp",
+    "tags": {
+      "ht:T5": {
+        "low": 347.06226959228513,
+        "high": 388.2955322265625,
+        "median": 368.1527099609375,
+        "step_q95": 1.1722564697265625,
+        "n": 105830
+      }
+    },
+    "industrial_limit_known": false,
+    "note": "ASSUMPTION - NOT INDUSTRIAL LIMIT (robust TRAIN quantiles)"
+  },
+  "ht_feed_flow_mass": {
+    "canonical_name": "ht_feed_flow_mass",
+    "tags": {
+      "ht:F9": {
+        "low": 130.9251887512207,
+        "high": 257.4960528564453,
+        "median": 214.86126708984375,
+        "step_q95": 2.9194679260253906,
+        "n": 105830
+      }
+    },
+    "industrial_limit_known": false,
+    "note": "ASSUMPTION - NOT INDUSTRIAL LIMIT (robust TRAIN quantiles)"
+  },
+  "ht_s201_inlet_pressure": {
+    "canonical_name": "ht_s201_inlet_pressure",
+    "tags": {
+      "ht:P3": {
+        "low": 3.3815063405036927,
+        "high": 3.825006773471832,
+        "median": 3.674955368041992,
+        "step_q95": 0.03459733724594116,
+        "n": 105830
+      }
+    },
+    "industrial_limit_known": false,
+    "note": "ASSUMPTION - NOT INDUSTRIAL LIMIT (robust TRAIN quantiles)"
+  }
+}

@@ -1,0 +1,41 @@
+hard:
+  - id: HC-01
+    name: product_sulfur_limit
+    description: "Sulfur in commercial diesel <= 10 mg/kg"
+    source: "ТЗ_нефтекод.docx, раздел 4 'Минимальные жёсткие проверки'"
+    confirmed: true
+    metric: Mg.Sulfur
+    unit: "мг/кг"
+    operator: "<="
+    value: 10.0
+    applies_to_upper_bound: true
+  - id: HC-02
+    name: blend_fraction_sum
+    description: "Blend component fractions must sum to 100 %"
+    source: "ТЗ_нефтекод.docx, раздел 4"
+    confirmed: true
+    operator: "=="
+    value: 1.0
+    tolerance: 1.0e-9
+  - id: HC-03
+    name: control_within_model_support
+    description: "Recommended control value must stay inside the model support range"
+    source: "config/controls.yaml robust training quantiles - ASSUMPTION, NOT AN INDUSTRIAL LIMIT"
+    confirmed: false
+  - id: HC-04
+    name: data_validity
+    description: "Critical inputs must be fresh, numeric and not from a failed analyzer"
+    source: "ТЗ_нефтекод.docx, раздел 2"
+    confirmed: true
+  - id: HC-05
+    name: state_in_distribution
+    description: "Process state must not be strongly out-of-distribution for the model"
+    source: "model support - ASSUMPTION"
+    confirmed: false
+  - id: HC-06
+    name: reliability_gate
+    description: "Operating severity must not be in the critical class"
+    source: "reliability proxy - ASSUMPTION (no failure labels in the package)"
+    confirmed: false
+
+soft_monitored: [CFPP, CloudPoint, D15, FlashPoint, "95%.T", CetaneNumber]

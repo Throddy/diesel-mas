@@ -1,0 +1,112 @@
+{
+  "period": [
+    "2026-05-01 00:00:00",
+    "2026-06-01 00:00:00"
+  ],
+  "blocks_touched": [
+    "test"
+  ],
+  "honest_reading": "период не пересекается с обучением: оценка честная",
+  "model_version": "quality-sulfur-v2",
+  "model": {
+    "n_analyses": 42,
+    "analyses_period": [
+      "2026-05-01 10:00:00",
+      "2026-05-31 10:00:00"
+    ],
+    "regression": {
+      "n": 42,
+      "MAE": 1.6669473030924284,
+      "RMSE": 2.7204719112125315,
+      "MedianAE": 1.0619117469708605,
+      "R2": 0.17832494488230421,
+      "MAE_log": 0.2035702887442385
+    },
+    "violation_point_forecast": {
+      "n": 42,
+      "n_positive": 10,
+      "recall": 0.2,
+      "precision": 0.6666666666666666,
+      "f1": 0.3076923076923077,
+      "confusion": {
+        "tn": 31,
+        "fp": 1,
+        "fn": 8,
+        "tp": 2
+      },
+      "pr_auc": 0.6923076923076923
+    },
+    "violation_upper_bound": {
+      "n": 42,
+      "n_positive": 10,
+      "recall": 0.9,
+      "precision": 0.375,
+      "f1": 0.5294117647058824,
+      "confusion": {
+        "tn": 17,
+        "fp": 15,
+        "fn": 1,
+        "tp": 9
+      },
+      "pr_auc": 0.6923076923076923
+    },
+    "interval": {
+      "coverage": 0.7857142857142857,
+      "mean_width": 3.83094148597343
+    },
+    "baselines": {
+      "previous_lims": {
+        "n": 42,
+        "MAE": 2.702380861554827,
+        "RMSE": 3.490224331826017,
+        "MedianAE": 2.3499999046325684,
+        "R2": -0.3524408933422305,
+        "MAE_log": 0.3330590836634104
+      },
+      "pak_nowcast": {
+        "n": 42,
+        "MAE": 1.7932861021586828,
+        "RMSE": 3.081509616847899,
+        "MedianAE": 1.0419187545776367,
+        "R2": -0.05423799705100585,
+        "MAE_log": 0.2112140869570076
+      }
+    }
+  },
+  "system": {
+    "n_cycles": 24,
+    "abstention_reasons": {
+      "переходный режим: управляющие действия заблокированы.": 1,
+      "Критические данные недостоверны; проверьте статусы источников и датчиков.": 1,
+      "Сильное расхождение ЛИМС и ПАК; требуется сверка измерений.": 1
+    },
+    "abstention_rate": 0.041666666666666664,
+    "action_rate": 0.5833333333333334,
+    "do_nothing_rate": 0.375,
+    "hard_constraint_violations_in_recommendations": 0,
+    "cycles_at_risk": 14,
+    "action_rate_when_at_risk": 1.0,
+    "mean_confidence": 0.9398541778423372,
+    "ood_rate": 0.0,
+    "mode_counts": {
+      "RUNNING": 23,
+      "TRANSIENT": 1
+    },
+    "seconds_per_cycle_mean": 0.3262936472892761,
+    "seconds_per_cycle_max": 0.536747932434082,
+    "seconds_per_cycle_p95": 0.5156937122344971,
+    "seconds_by_rounds": {
+      "1": {
+        "cycles": 21,
+        "mean": 0.2994609900883266,
+        "max": 0.5367510318756104
+      },
+      "2": {
+        "cycles": 3,
+        "mean": 0.5141512552897135,
+        "max": 0.5160660743713379
+      }
+    },
+    "n_recommending": 23
+  }
+}

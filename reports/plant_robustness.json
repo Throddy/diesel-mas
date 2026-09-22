@@ -1,0 +1,62 @@
+{
+  "scenario": "limit_breach",
+  "policy": "mas",
+  "start": "2026-05-08 06:00:00",
+  "limit_mgkg": 10.0,
+  "model_M_d_ln_s_dt": -0.02035704788708111,
+  "variants": [
+    {
+      "variant": "как ожидает система",
+      "sensitivity_factor": 1.0,
+      "delay_factor": 1.0,
+      "plant_d_ln_s_dt": -0.06624734356778594,
+      "n_actions": 12,
+      "minutes_off_spec": 380,
+      "sulfur_start": 10.8214,
+      "sulfur_final": 3.2712,
+      "sulfur_max": 10.8214,
+      "sulfur_min": 3.2712,
+      "overshoot_below_half_limit": 1.0
+    },
+    {
+      "variant": "чувствительность выше в 1,5 раза",
+      "sensitivity_factor": 1.5,
+      "delay_factor": 1.0,
+      "plant_d_ln_s_dt": -0.09939590760960781,
+      "n_actions": 12,
+      "minutes_off_spec": 370,
+      "sulfur_start": 10.8214,
+      "sulfur_final": 2.3062,
+      "sulfur_max": 10.8214,
+      "sulfur_min": 2.3062,
+      "overshoot_below_half_limit": 1.0
+    },
+    {
+      "variant": "чувствительность ниже в 1,5 раза",
+      "sensitivity_factor": 0.6666666666666666,
+      "delay_factor": 1.0,
+      "plant_d_ln_s_dt": -0.044157454314284195,
+      "n_actions": 12,
+      "minutes_off_spec": 380,
+      "sulfur_start": 10.8214,
+      "sulfur_final": 4.1642,
+      "sulfur_max": 10.8214,
+      "sulfur_min": 4.1642,
+      "overshoot_below_half_limit": 1.0
+    },
+    {
+      "variant": "запаздывание вдвое длиннее",
+      "sensitivity_factor": 1.0,
+      "delay_factor": 2.0,
+      "plant_d_ln_s_dt": -0.06624734356778594,
+      "n_actions": 12,
+      "minutes_off_spec": 740,
+      "sulfur_start": 10.8214,
+      "sulfur_final": 4.5366,
+      "sulfur_max": 10.8214,
+      "sulfur_min": 4.5366,
+      "overshoot_below_half_limit": 1.0
+    }
+  ],
+  "question": "остаётся ли рекомендация безопасной, когда представление системы о процессе неверно"
+}

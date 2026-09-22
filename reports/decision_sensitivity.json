@@ -1,0 +1,69 @@
+{
+  "rows": [
+    {
+      "off_spec": 200.0,
+      "scenario": "quality_risk",
+      "n_actions": 1,
+      "minutes_off_spec": 0,
+      "sulfur_final": 8.26,
+      "overshoot": 1.74
+    },
+    {
+      "off_spec": 200.0,
+      "scenario": "limit_breach",
+      "n_actions": 9,
+      "minutes_off_spec": 400,
+      "sulfur_final": 4.62,
+      "overshoot": 5.38
+    },
+    {
+      "off_spec": 100.0,
+      "scenario": "quality_risk",
+      "n_actions": 1,
+      "minutes_off_spec": 0,
+      "sulfur_final": 8.26,
+      "overshoot": 1.74
+    },
+    {
+      "off_spec": 100.0,
+      "scenario": "limit_breach",
+      "n_actions": 9,
+      "minutes_off_spec": 400,
+      "sulfur_final": 4.62,
+      "overshoot": 5.38
+    },
+    {
+      "off_spec": 50.0,
+      "scenario": "quality_risk",
+      "n_actions": 1,
+      "minutes_off_spec": 0,
+      "sulfur_final": 8.26,
+      "overshoot": 1.74
+    },
+    {
+      "off_spec": 50.0,
+      "scenario": "limit_breach",
+      "n_actions": 9,
+      "minutes_off_spec": 400,
+      "sulfur_final": 4.62,
+      "overshoot": 5.38
+    },
+    {
+      "off_spec": 20.0,
+      "scenario": "quality_risk",
+      "n_actions": 1,
+      "minutes_off_spec": 0,
+      "sulfur_final": 8.26,
+      "overshoot": 1.74
+    },
+    {
+      "off_spec": 20.0,
+      "scenario": "limit_breach",
+      "n_actions": 9,
+      "minutes_off_spec": 400,
+      "sulfur_final": 4.62,
+      "overshoot": 5.38
+    }
+  ],
+  "note": "цена некондиции меняется вчетверо, от 20 до 200"
+}

@@ -1,0 +1,143 @@
+
+### SCENARIO STABLE - стабильный режим: качество с запасом, анализатор здоров, низкая неопределённость
+
+==============================================================================
+DECISION @ 2025-12-04 00:00:00   [TEST period]   model quality-sulfur-v1
+------------------------------------------------------------------------------
+DATA FRESHNESS
+  LIMS:Mg.Sulfur           {'last_timestamp': '2025-12-03 10:00:00', 'value': 6.800000190734863, 'unit': 'мг/кг', 'age_min': 840.0, 'staleness_ratio': 0.5833333333333334, 'health': 'OK'}
+  PAK:Mg.Sulfur            {'last_timestamp': '2025-12-04 00:00:00', 'value': 4.952888011932373, 'unit': 'мг/кг', 'age_min': 0.0, 'staleness_ratio': None, 'health': 'OK'}
+  PAK:D15                  {'last_timestamp': '2025-12-04 00:00:00', 'value': 832.5614, 'unit': 'кг/м3', 'age_min': 0.0, 'staleness_ratio': None, 'health': 'OK'}
+  TELEMETRY                {'last_timestamp': '2025-12-04 00:00:00', 'missing_share': 0.010309278350515464, 'flags': ['SUDDEN_JUMP:avt:F30']}
+
+PROBLEM / RISK
+  data flag SUDDEN_JUMP:avt:F30
+
+PROPOSED ACTION
+  DO NOTHING - keep the current regime
+
+EXPECTED EFFECT
+  sulfur_forecast          4.954699754105114
+  sulfur_interval          [3.7826646905451753, 5.789989296996955]
+  risk_exceed_limit        0.03879310344827586
+  production_proxy         188.3100128173828
+  energy_proxy             2.943655188221273
+  energy_proxy_formula     energy_proxy = 1.0 * avt:T55/median(avt:T55) + 1.0 * ht:T5/median(ht:T5) + 0.5 * avt:F29/median(avt:F29) + 0.5 * ht:F15/median(ht:F15)   (relative, dimensionless; no monetary data in the package)
+  reliability_severity     0.4086880024224927
+
+HARD CONSTRAINTS
+  [PASS] HC-04 data_validity: critical inputs fresh, numeric and from a healthy analyser
+  [NA  ] HC-03 control_within_model_support: no control move   (ASSUMPTION, not an industrial limit)
+  [PASS] HC-01 product_sulfur_limit: upper confidence bound 5.79 мг/кг vs limit 10.0 (point forecast 4.95)
+  [PASS] HC-05 state_in_distribution: process state inside the historical operating envelope   (ASSUMPTION, not an industrial limit)
+  [PASS] HC-06 reliability_gate: operating severity acceptable   (ASSUMPTION, not an industrial limit)
+
+CONFIDENCE  overall=0.96  terms={'lims_freshness': 1.0, 'pak_health': 1.0, 'model_uncertainty': 0.8649548438134486, 'source_agreement': 1.0}
+
+EXPLANATION
+  - quality nowcast source: LIMS (priority ЛИМС > ПАК > ВАК); LIMS=6.800000190734863 (age 840 min, OK), PAK=4.952888011932373 (health OK)
+  - model forecast 4.95 мг/кг, 90 % interval [3.78, 5.79], risk>limit 4%
+  - factor ht:Q21|value (current 4.845) raises sulfur when increased by 2 %
+  - factor lims_sulfur_prev (current 6.8) lowers sulfur when increased by 2 %
+  - factor ht:Q21|std180 (current 1.188) lowers sulfur when increased by 2 %
+  - severity proxy 0.41 -> class NORMAL (warn>=0.43, high>=0.85); main contributors: avt:P23 robust-z=2.258; ht:F9 robust-z=1.595; ht:F26 robust-z=1.531
+  - DO NOTHING wins: no feasible control move improves the quality margin enough to justify an unnecessary action
+  - alternative A01_avt_furnace_p3_outlet_temp_increase scored 0.732 vs 0.324 (upper bound 5.78)
+  - alternative A20_ht_s201_inlet_pressure_decrease scored 0.595 vs 0.324 (upper bound 5.78)
+
+ALTERNATIVES
+  A01_avt_furnace_p3_outlet_temp_increase score=0.732 upper=5.78 prod=188.3100128173828
+  A20_ht_s201_inlet_pressure_decrease    score=0.595 upper=5.78 prod=188.3100128173828
+  A19_ht_s201_inlet_pressure_increase    score=0.537 upper=5.78 prod=188.3100128173828
+==============================================================================
+decision trace appended to artifacts/decisions.jsonl
+
+### SCENARIO QUALITY_RISK - риск по сере: ЛИМС 22.8 мг/кг и ПАК ~10 мг/кг одновременно выше предела
+
+==============================================================================
+DECISION @ 2023-11-22 05:00:00   [TRAIN period]   model quality-sulfur-v1
+------------------------------------------------------------------------------
+DATA FRESHNESS
+  LIMS:Mg.Sulfur           {'last_timestamp': '2023-11-22 05:00:00', 'value': 22.799999237060547, 'unit': 'мг/кг', 'age_min': 0.0, 'staleness_ratio': 0.0, 'health': 'OK'}
+  PAK:Mg.Sulfur            {'last_timestamp': '2023-11-22 05:00:00', 'value': 14.027152061462402, 'unit': 'мг/кг', 'age_min': 0.0, 'staleness_ratio': None, 'health': 'OK'}
+  PAK:D15                  {'last_timestamp': None, 'value': None, 'unit': 'кг/м3', 'age_min': None, 'staleness_ratio': None, 'health': 'MISSING'}
+  TELEMETRY                {'last_timestamp': '2023-11-22 05:00:00', 'missing_share': 0.010309278350515464, 'flags': ['STUCK_SIGNALS:1']}
+
+PROBLEM / RISK
+  forecast upper bound 19.1 мг/кг exceeds the 10 мг/кг limit; risk of exceeding the limit 99%; data flag STUCK_SIGNALS:1
+
+PROPOSED ACTION
+  NO SAFE RECOMMENDATION
+
+EXPECTED EFFECT
+
+HARD CONSTRAINTS
+  [PASS] HC-04 data_validity: critical inputs fresh, numeric and from a healthy analyser
+  [NA  ] HC-03 control_within_model_support: no control move   (ASSUMPTION, not an industrial limit)
+  [FAIL] HC-01 product_sulfur_limit: upper confidence bound 19.15 мг/кг vs limit 10.0 (point forecast 16.39)
+  [PASS] HC-05 state_in_distribution: process state inside the historical operating envelope   (ASSUMPTION, not an industrial limit)
+  [PASS] HC-06 reliability_gate: operating severity acceptable   (ASSUMPTION, not an industrial limit)
+
+CONFIDENCE  overall=0.96  terms={'lims_freshness': 1.0, 'pak_health': 1.0, 'model_uncertainty': 0.8649548438134486, 'source_agreement': 1.0}
+
+EXPLANATION
+  - quality nowcast source: LIMS (priority ЛИМС > ПАК > ВАК); LIMS=22.799999237060547 (age 0 min, OK), PAK=14.027152061462402 (health OK)
+  - model forecast 16.39 мг/кг, 90 % interval [12.51, 19.15], risk>limit 99%
+  - factor ht:Q21|value (current 21.43) lowers sulfur when increased by 2 %
+  - factor lims_sulfur_prev (current 22.8) lowers sulfur when increased by 2 %
+  - factor ht:Q21|std180 (current 3.903) lowers sulfur when increased by 2 %
+  - severity proxy 0.31 -> class NORMAL (warn>=0.43, high>=0.85); main contributors: ht:W10 robust-z=2.355; ht:P3 robust-z=1.101; ht:T5 robust-z=1.063
+
+ABSTAIN - reasons
+  ! no feasible candidate survived the hard constraints
+  ! HC-01 product_sulfur_limit: upper confidence bound 19.06 мг/кг vs limit 10.0 (point forecast 16.31)
+  ! HC-01 product_sulfur_limit: upper confidence bound 19.08 мг/кг vs limit 10.0 (point forecast 16.32)
+  ! HC-01 product_sulfur_limit: upper confidence bound 19.12 мг/кг vs limit 10.0 (point forecast 16.36)
+  ! HC-01 product_sulfur_limit: upper confidence bound 19.13 мг/кг vs limit 10.0 (point forecast 16.37)
+  ! HC-01 product_sulfur_limit: upper confidence bound 19.15 мг/кг vs limit 10.0 (point forecast 16.39)
+  needed to restore trust: fresh laboratory result and/or a healthy online analyser
+==============================================================================
+decision trace appended to artifacts/decisions.jsonl
+
+### SCENARIO BAD_DATA - аномальные данные: ЛИМС 2120 мг/кг внутри flatline ПАК 16.03-02.05.2024 (значение 7.70516)
+
+==============================================================================
+DECISION @ 2024-04-23 06:30:00   [TRAIN period]   model quality-sulfur-v1
+------------------------------------------------------------------------------
+DATA FRESHNESS
+  LIMS:Mg.Sulfur           {'last_timestamp': '2024-04-23 06:30:00', 'value': 2120.0, 'unit': 'мг/кг', 'age_min': 0.0, 'staleness_ratio': 0.0, 'health': 'OK'}
+  PAK:Mg.Sulfur            {'last_timestamp': '2024-04-23 06:30:00', 'value': 7.705160617828369, 'unit': 'мг/кг', 'age_min': 0.0, 'staleness_ratio': None, 'health': 'FAILED'}
+  PAK:D15                  {'last_timestamp': None, 'value': None, 'unit': 'кг/м3', 'age_min': None, 'staleness_ratio': None, 'health': 'MISSING'}
+  TELEMETRY                {'last_timestamp': '2024-04-23 06:30:00', 'missing_share': 0.030927835051546393, 'flags': ['STUCK_SIGNALS:1', 'PAK_FLATLINE:47.8h@7.705160617828369', 'SOURCE_CONFLICT:|LIMS-PAK|=2112.3']}
+
+PROBLEM / RISK
+  forecast upper bound 77.8 мг/кг exceeds the 10 мг/кг limit; risk of exceeding the limit 100%; data flag STUCK_SIGNALS:1; data flag PAK_FLATLINE:47.8h@7.705160617828369; data flag SOURCE_CONFLICT:|LIMS-PAK|=2112.3; operating severity HIGH
+
+PROPOSED ACTION
+  NO SAFE RECOMMENDATION
+
+EXPECTED EFFECT
+
+HARD CONSTRAINTS
+  [PASS] HC-04 data_validity: critical inputs fresh, numeric and from a healthy analyser
+  [NA  ] HC-03 control_within_model_support: no control move   (ASSUMPTION, not an industrial limit)
+  [FAIL] HC-01 product_sulfur_limit: upper confidence bound 77.77 мг/кг vs limit 10.0 (point forecast 66.55)
+  [PASS] HC-05 state_in_distribution: process state inside the historical operating envelope   (ASSUMPTION, not an industrial limit)
+  [FAIL] HC-06 reliability_gate: operating severity in the critical class   (ASSUMPTION, not an industrial limit)
+
+CONFIDENCE  overall=0.36  terms={'lims_freshness': 1.0, 'pak_health': 0.1, 'model_uncertainty': 0.8649548438134486, 'source_agreement': 0.2}
+
+EXPLANATION
+  - quality nowcast source: LIMS (priority ЛИМС > ПАК > ВАК); LIMS=2120.0 (age 0 min, OK), PAK=7.705160617828369 (health FAILED)
+  - model forecast 66.55 мг/кг, 90 % interval [50.81, 77.77], risk>limit 100%
+  - factor ht:Q21|value (current 24.77) lowers sulfur when increased by 2 %
+  - factor lims_sulfur_prev (current 2120) lowers sulfur when increased by 2 %
+  - factor ht:Q21|std180 (current 0.002238) lowers sulfur when increased by 2 %
+  - severity proxy 0.94 -> class HIGH (warn>=0.43, high>=0.85); main contributors: ht:P3 robust-z=38.091; ht:T5 robust-z=3.785; ht:F9 robust-z=2.031
+
+ABSTAIN - reasons
+  ! severe LIMS/PAK conflict: the laboratory value is the control fact and the online analyser is suspect
+  ! operating severity proxy in the critical class
+  needed to restore trust: fresh laboratory result and/or a healthy online analyser
+==============================================================================
+decision trace appended to artifacts/decisions.jsonl

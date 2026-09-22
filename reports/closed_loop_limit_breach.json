@@ -1,0 +1,4672 @@
+{
+  "scenario": "limit_breach",
+  "start": "2026-05-08 06:00:00",
+  "limit_mgkg": 10.0,
+  "simulation": {
+    "steps": 12,
+    "step_minutes": 10,
+    "lag_minutes": 360.0,
+    "time_constant_minutes": 180.0,
+    "max_temp_step_c": 1.0,
+    "max_feed_step_tph": 5.0,
+    "seed": 42,
+    "sensitivity_factor": 1.0,
+    "delay_factor": 1.0,
+    "plant": {
+      "form": "плуг-флоу, реакция порядка n, Аррениус, P^m по водороду",
+      "order": 1.5,
+      "hydrogen_order": 0.7,
+      "activation_energy_kj_mol": 116.91,
+      "pre_exponential": 191322559078.748,
+      "delay_minutes": 360.0,
+      "time_constant_minutes": 180.0,
+      "calibration_point": {
+        "temperature_c": 368.15,
+        "feed_tph": 214.86,
+        "pressure_mpa": 3.675,
+        "feed_sulfur_mgkg": 9343.0,
+        "product_sulfur_mgkg": 8.5
+      }
+    },
+    "caveat": "установка моделируется независимой кинетической моделью (src/sim/plant_model.py), система по-прежнему видит только N и M; сама модель установки не валидирована, см. reports/plant_model_validation.json"
+  },
+  "summary": [
+    {
+      "policy": "do_nothing",
+      "description": "удержание режима: уставки не меняются",
+      "steps": 102,
+      "minutes_off_spec": 1020,
+      "share_off_spec": 1.0,
+      "n_actions": 0,
+      "sulfur_start_mgkg": 10.8214,
+      "sulfur_final_mgkg": 10.8214,
+      "sulfur_max_mgkg": 10.8214,
+      "margin_final_mgkg": -0.821,
+      "severity_final": 0.2830063982494698
+    },
+    {
+      "policy": "naive",
+      "description": "наивное правило: +1 °C за шаг, пока прогноз выше предела",
+      "steps": 102,
+      "minutes_off_spec": 380,
+      "share_off_spec": 0.37254901960784315,
+      "n_actions": 12,
+      "sulfur_start_mgkg": 10.8214,
+      "sulfur_final_mgkg": 5.0239,
+      "sulfur_max_mgkg": 10.8214,
+      "margin_final_mgkg": 4.976,
+      "severity_final": 0.3002013982331585
+    },
+    {
+      "policy": "mas",
+      "description": "мультиагентная система: рекомендация с проверками и вето",
+      "steps": 102,
+      "minutes_off_spec": 380,
+      "share_off_spec": 0.37254901960784315,
+      "n_actions": 12,
+      "sulfur_start_mgkg": 10.8214,
+      "sulfur_final_mgkg": 3.2712,
+      "sulfur_max_mgkg": 10.8214,
+      "margin_final_mgkg": 6.729,
+      "severity_final": 0.2377871609872796
+    }
+  ],
+  "trajectories": {
+    "do_nothing": [
+      {
+        "step": 0,
+        "timestamp": "2026-05-08 06:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 1,
+        "timestamp": "2026-05-08 06:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 2,
+        "timestamp": "2026-05-08 06:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 3,
+        "timestamp": "2026-05-08 06:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 4,
+        "timestamp": "2026-05-08 06:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 5,
+        "timestamp": "2026-05-08 06:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 6,
+        "timestamp": "2026-05-08 07:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 7,
+        "timestamp": "2026-05-08 07:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 8,
+        "timestamp": "2026-05-08 07:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 9,
+        "timestamp": "2026-05-08 07:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 10,
+        "timestamp": "2026-05-08 07:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 11,
+        "timestamp": "2026-05-08 07:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Ничего не делать"
+      },
+      {
+        "step": 12,
+        "timestamp": "2026-05-08 08:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 13,
+        "timestamp": "2026-05-08 08:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 14,
+        "timestamp": "2026-05-08 08:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 15,
+        "timestamp": "2026-05-08 08:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 16,
+        "timestamp": "2026-05-08 08:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 17,
+        "timestamp": "2026-05-08 08:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 18,
+        "timestamp": "2026-05-08 09:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 19,
+        "timestamp": "2026-05-08 09:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 20,
+        "timestamp": "2026-05-08 09:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 21,
+        "timestamp": "2026-05-08 09:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 22,
+        "timestamp": "2026-05-08 09:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 23,
+        "timestamp": "2026-05-08 09:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 24,
+        "timestamp": "2026-05-08 10:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 25,
+        "timestamp": "2026-05-08 10:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 26,
+        "timestamp": "2026-05-08 10:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 27,
+        "timestamp": "2026-05-08 10:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 28,
+        "timestamp": "2026-05-08 10:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 29,
+        "timestamp": "2026-05-08 10:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 30,
+        "timestamp": "2026-05-08 11:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 31,
+        "timestamp": "2026-05-08 11:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 32,
+        "timestamp": "2026-05-08 11:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 33,
+        "timestamp": "2026-05-08 11:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 34,
+        "timestamp": "2026-05-08 11:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 35,
+        "timestamp": "2026-05-08 11:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 36,
+        "timestamp": "2026-05-08 12:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 37,
+        "timestamp": "2026-05-08 12:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 38,
+        "timestamp": "2026-05-08 12:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 39,
+        "timestamp": "2026-05-08 12:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 40,
+        "timestamp": "2026-05-08 12:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 41,
+        "timestamp": "2026-05-08 12:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 42,
+        "timestamp": "2026-05-08 13:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 43,
+        "timestamp": "2026-05-08 13:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 44,
+        "timestamp": "2026-05-08 13:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 45,
+        "timestamp": "2026-05-08 13:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 46,
+        "timestamp": "2026-05-08 13:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 47,
+        "timestamp": "2026-05-08 13:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 48,
+        "timestamp": "2026-05-08 14:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 49,
+        "timestamp": "2026-05-08 14:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 50,
+        "timestamp": "2026-05-08 14:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 51,
+        "timestamp": "2026-05-08 14:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 52,
+        "timestamp": "2026-05-08 14:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 53,
+        "timestamp": "2026-05-08 14:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 54,
+        "timestamp": "2026-05-08 15:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 55,
+        "timestamp": "2026-05-08 15:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 56,
+        "timestamp": "2026-05-08 15:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 57,
+        "timestamp": "2026-05-08 15:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 58,
+        "timestamp": "2026-05-08 15:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 59,
+        "timestamp": "2026-05-08 15:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 60,
+        "timestamp": "2026-05-08 16:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 61,
+        "timestamp": "2026-05-08 16:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 62,
+        "timestamp": "2026-05-08 16:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 63,
+        "timestamp": "2026-05-08 16:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 64,
+        "timestamp": "2026-05-08 16:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 65,
+        "timestamp": "2026-05-08 16:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 66,
+        "timestamp": "2026-05-08 17:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 67,
+        "timestamp": "2026-05-08 17:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 68,
+        "timestamp": "2026-05-08 17:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 69,
+        "timestamp": "2026-05-08 17:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 70,
+        "timestamp": "2026-05-08 17:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 71,
+        "timestamp": "2026-05-08 17:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 72,
+        "timestamp": "2026-05-08 18:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 73,
+        "timestamp": "2026-05-08 18:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 74,
+        "timestamp": "2026-05-08 18:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 75,
+        "timestamp": "2026-05-08 18:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 76,
+        "timestamp": "2026-05-08 18:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 77,
+        "timestamp": "2026-05-08 18:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 78,
+        "timestamp": "2026-05-08 19:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 79,
+        "timestamp": "2026-05-08 19:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 80,
+        "timestamp": "2026-05-08 19:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 81,
+        "timestamp": "2026-05-08 19:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 82,
+        "timestamp": "2026-05-08 19:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 83,
+        "timestamp": "2026-05-08 19:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 84,
+        "timestamp": "2026-05-08 20:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 85,
+        "timestamp": "2026-05-08 20:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 86,
+        "timestamp": "2026-05-08 20:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 87,
+        "timestamp": "2026-05-08 20:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 88,
+        "timestamp": "2026-05-08 20:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 89,
+        "timestamp": "2026-05-08 20:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 90,
+        "timestamp": "2026-05-08 21:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 91,
+        "timestamp": "2026-05-08 21:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 92,
+        "timestamp": "2026-05-08 21:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 93,
+        "timestamp": "2026-05-08 21:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 94,
+        "timestamp": "2026-05-08 21:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 95,
+        "timestamp": "2026-05-08 21:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 96,
+        "timestamp": "2026-05-08 22:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 97,
+        "timestamp": "2026-05-08 22:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 98,
+        "timestamp": "2026-05-08 22:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 99,
+        "timestamp": "2026-05-08 22:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 100,
+        "timestamp": "2026-05-08 22:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 101,
+        "timestamp": "2026-05-08 22:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.8214,
+        "controls": {
+          "ht:T5": 357.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2830063982494698,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      }
+    ],
+    "naive": [
+      {
+        "step": 0,
+        "timestamp": "2026-05-08 06:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 10.1189,
+        "controls": {
+          "ht:T5": 358.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 1,
+        "timestamp": "2026-05-08 06:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 9.463,
+        "controls": {
+          "ht:T5": 359.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 2,
+        "timestamp": "2026-05-08 06:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 8.8506,
+        "controls": {
+          "ht:T5": 360.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 3,
+        "timestamp": "2026-05-08 06:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 8.2787,
+        "controls": {
+          "ht:T5": 361.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 4,
+        "timestamp": "2026-05-08 06:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 7.7445,
+        "controls": {
+          "ht:T5": 362.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 5,
+        "timestamp": "2026-05-08 06:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 7.2457,
+        "controls": {
+          "ht:T5": 363.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 6,
+        "timestamp": "2026-05-08 07:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 6.7798,
+        "controls": {
+          "ht:T5": 364.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 7,
+        "timestamp": "2026-05-08 07:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 6.3446,
+        "controls": {
+          "ht:T5": 365.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 8,
+        "timestamp": "2026-05-08 07:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 5.938,
+        "controls": {
+          "ht:T5": 366.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 9,
+        "timestamp": "2026-05-08 07:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 5.5582,
+        "controls": {
+          "ht:T5": 367.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.2830063982494698,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 10,
+        "timestamp": "2026-05-08 07:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 5.2033,
+        "controls": {
+          "ht:T5": 368.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.28998908689664704,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 11,
+        "timestamp": "2026-05-08 07:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": "+1.0 °C",
+        "moved": true,
+        "severity": 0.3002013982331585,
+        "deciding": true,
+        "headline": "Поднять температуру"
+      },
+      {
+        "step": 12,
+        "timestamp": "2026-05-08 08:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 13,
+        "timestamp": "2026-05-08 08:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 14,
+        "timestamp": "2026-05-08 08:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 15,
+        "timestamp": "2026-05-08 08:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 16,
+        "timestamp": "2026-05-08 08:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 17,
+        "timestamp": "2026-05-08 08:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 18,
+        "timestamp": "2026-05-08 09:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 19,
+        "timestamp": "2026-05-08 09:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 20,
+        "timestamp": "2026-05-08 09:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 21,
+        "timestamp": "2026-05-08 09:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 22,
+        "timestamp": "2026-05-08 09:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 23,
+        "timestamp": "2026-05-08 09:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 24,
+        "timestamp": "2026-05-08 10:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 25,
+        "timestamp": "2026-05-08 10:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 26,
+        "timestamp": "2026-05-08 10:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 27,
+        "timestamp": "2026-05-08 10:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 28,
+        "timestamp": "2026-05-08 10:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 29,
+        "timestamp": "2026-05-08 10:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 30,
+        "timestamp": "2026-05-08 11:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 31,
+        "timestamp": "2026-05-08 11:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 32,
+        "timestamp": "2026-05-08 11:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 33,
+        "timestamp": "2026-05-08 11:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 34,
+        "timestamp": "2026-05-08 11:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 35,
+        "timestamp": "2026-05-08 11:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 36,
+        "timestamp": "2026-05-08 12:00:00",
+        "sulfur_mgkg": 10.4998,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 37,
+        "timestamp": "2026-05-08 12:10:00",
+        "sulfur_mgkg": 10.1957,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 38,
+        "timestamp": "2026-05-08 12:20:00",
+        "sulfur_mgkg": 9.908,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 39,
+        "timestamp": "2026-05-08 12:30:00",
+        "sulfur_mgkg": 9.6358,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 40,
+        "timestamp": "2026-05-08 12:40:00",
+        "sulfur_mgkg": 9.3784,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 41,
+        "timestamp": "2026-05-08 12:50:00",
+        "sulfur_mgkg": 9.1348,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 42,
+        "timestamp": "2026-05-08 13:00:00",
+        "sulfur_mgkg": 8.9045,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 43,
+        "timestamp": "2026-05-08 13:10:00",
+        "sulfur_mgkg": 8.6865,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 44,
+        "timestamp": "2026-05-08 13:20:00",
+        "sulfur_mgkg": 8.4804,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 45,
+        "timestamp": "2026-05-08 13:30:00",
+        "sulfur_mgkg": 8.2854,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 46,
+        "timestamp": "2026-05-08 13:40:00",
+        "sulfur_mgkg": 8.1009,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 47,
+        "timestamp": "2026-05-08 13:50:00",
+        "sulfur_mgkg": 7.9264,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 48,
+        "timestamp": "2026-05-08 14:00:00",
+        "sulfur_mgkg": 7.7613,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 49,
+        "timestamp": "2026-05-08 14:10:00",
+        "sulfur_mgkg": 7.6052,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 50,
+        "timestamp": "2026-05-08 14:20:00",
+        "sulfur_mgkg": 7.4575,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 51,
+        "timestamp": "2026-05-08 14:30:00",
+        "sulfur_mgkg": 7.3177,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 52,
+        "timestamp": "2026-05-08 14:40:00",
+        "sulfur_mgkg": 7.1855,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 53,
+        "timestamp": "2026-05-08 14:50:00",
+        "sulfur_mgkg": 7.0605,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 54,
+        "timestamp": "2026-05-08 15:00:00",
+        "sulfur_mgkg": 6.9422,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 55,
+        "timestamp": "2026-05-08 15:10:00",
+        "sulfur_mgkg": 6.8303,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 56,
+        "timestamp": "2026-05-08 15:20:00",
+        "sulfur_mgkg": 6.7245,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 57,
+        "timestamp": "2026-05-08 15:30:00",
+        "sulfur_mgkg": 6.6244,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 58,
+        "timestamp": "2026-05-08 15:40:00",
+        "sulfur_mgkg": 6.5297,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 59,
+        "timestamp": "2026-05-08 15:50:00",
+        "sulfur_mgkg": 6.4401,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 60,
+        "timestamp": "2026-05-08 16:00:00",
+        "sulfur_mgkg": 6.3553,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 61,
+        "timestamp": "2026-05-08 16:10:00",
+        "sulfur_mgkg": 6.2751,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 62,
+        "timestamp": "2026-05-08 16:20:00",
+        "sulfur_mgkg": 6.1993,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 63,
+        "timestamp": "2026-05-08 16:30:00",
+        "sulfur_mgkg": 6.1276,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 64,
+        "timestamp": "2026-05-08 16:40:00",
+        "sulfur_mgkg": 6.0597,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 65,
+        "timestamp": "2026-05-08 16:50:00",
+        "sulfur_mgkg": 5.9955,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 66,
+        "timestamp": "2026-05-08 17:00:00",
+        "sulfur_mgkg": 5.9348,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 67,
+        "timestamp": "2026-05-08 17:10:00",
+        "sulfur_mgkg": 5.8773,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 68,
+        "timestamp": "2026-05-08 17:20:00",
+        "sulfur_mgkg": 5.823,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 69,
+        "timestamp": "2026-05-08 17:30:00",
+        "sulfur_mgkg": 5.7716,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 70,
+        "timestamp": "2026-05-08 17:40:00",
+        "sulfur_mgkg": 5.723,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 71,
+        "timestamp": "2026-05-08 17:50:00",
+        "sulfur_mgkg": 5.677,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 72,
+        "timestamp": "2026-05-08 18:00:00",
+        "sulfur_mgkg": 5.6334,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 73,
+        "timestamp": "2026-05-08 18:10:00",
+        "sulfur_mgkg": 5.5923,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 74,
+        "timestamp": "2026-05-08 18:20:00",
+        "sulfur_mgkg": 5.5534,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 75,
+        "timestamp": "2026-05-08 18:30:00",
+        "sulfur_mgkg": 5.5165,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 76,
+        "timestamp": "2026-05-08 18:40:00",
+        "sulfur_mgkg": 5.4817,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 77,
+        "timestamp": "2026-05-08 18:50:00",
+        "sulfur_mgkg": 5.4487,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 78,
+        "timestamp": "2026-05-08 19:00:00",
+        "sulfur_mgkg": 5.4175,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 79,
+        "timestamp": "2026-05-08 19:10:00",
+        "sulfur_mgkg": 5.388,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 80,
+        "timestamp": "2026-05-08 19:20:00",
+        "sulfur_mgkg": 5.3601,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 81,
+        "timestamp": "2026-05-08 19:30:00",
+        "sulfur_mgkg": 5.3338,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 82,
+        "timestamp": "2026-05-08 19:40:00",
+        "sulfur_mgkg": 5.3088,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 83,
+        "timestamp": "2026-05-08 19:50:00",
+        "sulfur_mgkg": 5.2852,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 84,
+        "timestamp": "2026-05-08 20:00:00",
+        "sulfur_mgkg": 5.2628,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 85,
+        "timestamp": "2026-05-08 20:10:00",
+        "sulfur_mgkg": 5.2417,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 86,
+        "timestamp": "2026-05-08 20:20:00",
+        "sulfur_mgkg": 5.2217,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 87,
+        "timestamp": "2026-05-08 20:30:00",
+        "sulfur_mgkg": 5.2028,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 88,
+        "timestamp": "2026-05-08 20:40:00",
+        "sulfur_mgkg": 5.1849,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 89,
+        "timestamp": "2026-05-08 20:50:00",
+        "sulfur_mgkg": 5.168,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 90,
+        "timestamp": "2026-05-08 21:00:00",
+        "sulfur_mgkg": 5.152,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 91,
+        "timestamp": "2026-05-08 21:10:00",
+        "sulfur_mgkg": 5.1368,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 92,
+        "timestamp": "2026-05-08 21:20:00",
+        "sulfur_mgkg": 5.1225,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 93,
+        "timestamp": "2026-05-08 21:30:00",
+        "sulfur_mgkg": 5.109,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 94,
+        "timestamp": "2026-05-08 21:40:00",
+        "sulfur_mgkg": 5.0961,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 95,
+        "timestamp": "2026-05-08 21:50:00",
+        "sulfur_mgkg": 5.084,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 96,
+        "timestamp": "2026-05-08 22:00:00",
+        "sulfur_mgkg": 5.0725,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 97,
+        "timestamp": "2026-05-08 22:10:00",
+        "sulfur_mgkg": 5.0617,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 98,
+        "timestamp": "2026-05-08 22:20:00",
+        "sulfur_mgkg": 5.0514,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 99,
+        "timestamp": "2026-05-08 22:30:00",
+        "sulfur_mgkg": 5.0417,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 100,
+        "timestamp": "2026-05-08 22:40:00",
+        "sulfur_mgkg": 5.0325,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 101,
+        "timestamp": "2026-05-08 22:50:00",
+        "sulfur_mgkg": 5.0239,
+        "target_sulfur_mgkg": 4.8718,
+        "controls": {
+          "ht:T5": 369.828,
+          "ht:F9": 237.327
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.3002013982331585,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      }
+    ],
+    "mas": [
+      {
+        "step": 0,
+        "timestamp": "2026-05-08 06:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 9.7165,
+        "controls": {
+          "ht:T5": 358.828,
+          "ht:F9": 232.327
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 357,83 на 371,90 °C; Расход сырья на установку, массовый: 237,33 на 222,73 т/ч",
+        "moved": true,
+        "severity": 0.26968499554985725,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 357,83 на 371,90 °C; Расход сырья на установку, массовый: 237,33 на 222,73 т/ч"
+      },
+      {
+        "step": 1,
+        "timestamp": "2026-05-08 06:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 8.7161,
+        "controls": {
+          "ht:T5": 359.828,
+          "ht:F9": 227.327
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 357,72 на 371,78 °C; Расход сырья на установку, массовый: 233,25 на 209,90 т/ч",
+        "moved": true,
+        "severity": 0.25611608747578674,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 357,72 на 371,78 °C; Расход сырья на установку, массовый: 233,25 на 209,90 т/ч"
+      },
+      {
+        "step": 2,
+        "timestamp": "2026-05-08 06:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 7.811,
+        "controls": {
+          "ht:T5": 360.828,
+          "ht:F9": 222.327
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 358,60 на 372,66 °C; Расход сырья на установку, массовый: 235,47 на 212,11 т/ч",
+        "moved": true,
+        "severity": 0.24229507549422324,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 358,60 на 372,66 °C; Расход сырья на установку, массовый: 235,47 на 212,11 т/ч"
+      },
+      {
+        "step": 3,
+        "timestamp": "2026-05-08 06:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 6.9927,
+        "controls": {
+          "ht:T5": 361.828,
+          "ht:F9": 217.327
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 358,93 на 372,99 °C; Расход сырья на установку, массовый: 232,72 на 209,36 т/ч",
+        "moved": true,
+        "severity": 0.22821727563355865,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 358,93 на 372,99 °C; Расход сырья на установку, массовый: 232,72 на 209,36 т/ч"
+      },
+      {
+        "step": 4,
+        "timestamp": "2026-05-08 06:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 6.2535,
+        "controls": {
+          "ht:T5": 362.828,
+          "ht:F9": 212.327
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 359,83 на 373,90 °C; Расход сырья на установку, массовый: 231,95 на 208,60 т/ч",
+        "moved": true,
+        "severity": 0.221178104991259,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 359,83 на 373,90 °C; Расход сырья на установку, массовый: 231,95 на 208,60 т/ч"
+      },
+      {
+        "step": 5,
+        "timestamp": "2026-05-08 06:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 5.5863,
+        "controls": {
+          "ht:T5": 363.828,
+          "ht:F9": 207.327
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 360,50 на 374,57 °C; Расход сырья на установку, массовый: 227,17 на 203,82 т/ч",
+        "moved": true,
+        "severity": 0.221178104991259,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 360,50 на 374,57 °C; Расход сырья на установку, массовый: 227,17 на 203,82 т/ч"
+      },
+      {
+        "step": 6,
+        "timestamp": "2026-05-08 07:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 5.405,
+        "controls": {
+          "ht:T5": 364.828,
+          "ht:F9": 210.987
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 361,19 на 375,26 °C; Расход сырья на установку, массовый: 225,58 на 210,99 т/ч",
+        "moved": true,
+        "severity": 0.221178104991259,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 361,19 на 375,26 °C; Расход сырья на установку, массовый: 225,58 на 210,99 т/ч"
+      },
+      {
+        "step": 7,
+        "timestamp": "2026-05-08 07:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.8274,
+        "controls": {
+          "ht:T5": 365.828,
+          "ht:F9": 205.987
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 361,46 на 370,84 °C; Расход сырья на установку, массовый: 220,93 на 185,90 т/ч",
+        "moved": true,
+        "severity": 0.221178104991259,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 361,46 на 370,84 °C; Расход сырья на установку, массовый: 220,93 на 185,90 т/ч"
+      },
+      {
+        "step": 8,
+        "timestamp": "2026-05-08 07:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 4.3067,
+        "controls": {
+          "ht:T5": 366.828,
+          "ht:F9": 200.987
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 361,41 на 370,78 °C; Расход сырья на установку, массовый: 219,33 на 184,30 т/ч",
+        "moved": true,
+        "severity": 0.221178104991259,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 361,41 на 370,78 °C; Расход сырья на установку, массовый: 219,33 на 184,30 т/ч"
+      },
+      {
+        "step": 9,
+        "timestamp": "2026-05-08 07:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.8374,
+        "controls": {
+          "ht:T5": 367.828,
+          "ht:F9": 195.987
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 361,18 на 370,55 °C; Расход сырья на установку, массовый: 220,00 на 184,96 т/ч",
+        "moved": true,
+        "severity": 0.221178104991259,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 361,18 на 370,55 °C; Расход сырья на установку, массовый: 220,00 на 184,96 т/ч"
+      },
+      {
+        "step": 10,
+        "timestamp": "2026-05-08 07:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.4151,
+        "controls": {
+          "ht:T5": 368.828,
+          "ht:F9": 190.987
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 360,86 на 370,24 °C; Расход сырья на установку, массовый: 219,51 на 184,47 т/ч",
+        "moved": true,
+        "severity": 0.22876292972494294,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 360,86 на 370,24 °C; Расход сырья на установку, массовый: 219,51 на 184,47 т/ч"
+      },
+      {
+        "step": 11,
+        "timestamp": "2026-05-08 07:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": "Полисеп. Р-201. Температура ГСС на выходе: 360,26 на 369,64 °C; Расход сырья на установку, массовый: 219,45 на 184,42 т/ч",
+        "moved": true,
+        "severity": 0.2377871609872796,
+        "deciding": true,
+        "headline": "Полисеп. Р-201. Температура ГСС на выходе: 360,26 на 369,64 °C; Расход сырья на установку, массовый: 219,45 на 184,42 т/ч"
+      },
+      {
+        "step": 12,
+        "timestamp": "2026-05-08 08:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 13,
+        "timestamp": "2026-05-08 08:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 14,
+        "timestamp": "2026-05-08 08:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 15,
+        "timestamp": "2026-05-08 08:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 16,
+        "timestamp": "2026-05-08 08:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 17,
+        "timestamp": "2026-05-08 08:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 18,
+        "timestamp": "2026-05-08 09:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 19,
+        "timestamp": "2026-05-08 09:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 20,
+        "timestamp": "2026-05-08 09:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 21,
+        "timestamp": "2026-05-08 09:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 22,
+        "timestamp": "2026-05-08 09:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 23,
+        "timestamp": "2026-05-08 09:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 24,
+        "timestamp": "2026-05-08 10:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 25,
+        "timestamp": "2026-05-08 10:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 26,
+        "timestamp": "2026-05-08 10:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 27,
+        "timestamp": "2026-05-08 10:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 28,
+        "timestamp": "2026-05-08 10:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 29,
+        "timestamp": "2026-05-08 10:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 30,
+        "timestamp": "2026-05-08 11:00:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 31,
+        "timestamp": "2026-05-08 11:10:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 32,
+        "timestamp": "2026-05-08 11:20:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 33,
+        "timestamp": "2026-05-08 11:30:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 34,
+        "timestamp": "2026-05-08 11:40:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 35,
+        "timestamp": "2026-05-08 11:50:00",
+        "sulfur_mgkg": 10.8214,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 36,
+        "timestamp": "2026-05-08 12:00:00",
+        "sulfur_mgkg": 10.4026,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 37,
+        "timestamp": "2026-05-08 12:10:00",
+        "sulfur_mgkg": 10.0065,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 38,
+        "timestamp": "2026-05-08 12:20:00",
+        "sulfur_mgkg": 9.6319,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 39,
+        "timestamp": "2026-05-08 12:30:00",
+        "sulfur_mgkg": 9.2774,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 40,
+        "timestamp": "2026-05-08 12:40:00",
+        "sulfur_mgkg": 8.9421,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 41,
+        "timestamp": "2026-05-08 12:50:00",
+        "sulfur_mgkg": 8.625,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 42,
+        "timestamp": "2026-05-08 13:00:00",
+        "sulfur_mgkg": 8.3249,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 43,
+        "timestamp": "2026-05-08 13:10:00",
+        "sulfur_mgkg": 8.0411,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 44,
+        "timestamp": "2026-05-08 13:20:00",
+        "sulfur_mgkg": 7.7727,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 45,
+        "timestamp": "2026-05-08 13:30:00",
+        "sulfur_mgkg": 7.5187,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 46,
+        "timestamp": "2026-05-08 13:40:00",
+        "sulfur_mgkg": 7.2785,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 47,
+        "timestamp": "2026-05-08 13:50:00",
+        "sulfur_mgkg": 7.0512,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 48,
+        "timestamp": "2026-05-08 14:00:00",
+        "sulfur_mgkg": 6.8362,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 49,
+        "timestamp": "2026-05-08 14:10:00",
+        "sulfur_mgkg": 6.6329,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 50,
+        "timestamp": "2026-05-08 14:20:00",
+        "sulfur_mgkg": 6.4405,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 51,
+        "timestamp": "2026-05-08 14:30:00",
+        "sulfur_mgkg": 6.2585,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 52,
+        "timestamp": "2026-05-08 14:40:00",
+        "sulfur_mgkg": 6.0864,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 53,
+        "timestamp": "2026-05-08 14:50:00",
+        "sulfur_mgkg": 5.9235,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 54,
+        "timestamp": "2026-05-08 15:00:00",
+        "sulfur_mgkg": 5.7695,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 55,
+        "timestamp": "2026-05-08 15:10:00",
+        "sulfur_mgkg": 5.6238,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 56,
+        "timestamp": "2026-05-08 15:20:00",
+        "sulfur_mgkg": 5.4859,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 57,
+        "timestamp": "2026-05-08 15:30:00",
+        "sulfur_mgkg": 5.3555,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 58,
+        "timestamp": "2026-05-08 15:40:00",
+        "sulfur_mgkg": 5.2322,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 59,
+        "timestamp": "2026-05-08 15:50:00",
+        "sulfur_mgkg": 5.1155,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 60,
+        "timestamp": "2026-05-08 16:00:00",
+        "sulfur_mgkg": 5.0051,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 61,
+        "timestamp": "2026-05-08 16:10:00",
+        "sulfur_mgkg": 4.9007,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 62,
+        "timestamp": "2026-05-08 16:20:00",
+        "sulfur_mgkg": 4.802,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 63,
+        "timestamp": "2026-05-08 16:30:00",
+        "sulfur_mgkg": 4.7085,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 64,
+        "timestamp": "2026-05-08 16:40:00",
+        "sulfur_mgkg": 4.6202,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 65,
+        "timestamp": "2026-05-08 16:50:00",
+        "sulfur_mgkg": 4.5366,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 66,
+        "timestamp": "2026-05-08 17:00:00",
+        "sulfur_mgkg": 4.4575,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 67,
+        "timestamp": "2026-05-08 17:10:00",
+        "sulfur_mgkg": 4.3827,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 68,
+        "timestamp": "2026-05-08 17:20:00",
+        "sulfur_mgkg": 4.3119,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 69,
+        "timestamp": "2026-05-08 17:30:00",
+        "sulfur_mgkg": 4.2449,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 70,
+        "timestamp": "2026-05-08 17:40:00",
+        "sulfur_mgkg": 4.1816,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 71,
+        "timestamp": "2026-05-08 17:50:00",
+        "sulfur_mgkg": 4.1217,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 72,
+        "timestamp": "2026-05-08 18:00:00",
+        "sulfur_mgkg": 4.065,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 73,
+        "timestamp": "2026-05-08 18:10:00",
+        "sulfur_mgkg": 4.0114,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 74,
+        "timestamp": "2026-05-08 18:20:00",
+        "sulfur_mgkg": 3.9607,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 75,
+        "timestamp": "2026-05-08 18:30:00",
+        "sulfur_mgkg": 3.9128,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 76,
+        "timestamp": "2026-05-08 18:40:00",
+        "sulfur_mgkg": 3.8674,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 77,
+        "timestamp": "2026-05-08 18:50:00",
+        "sulfur_mgkg": 3.8245,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 78,
+        "timestamp": "2026-05-08 19:00:00",
+        "sulfur_mgkg": 3.7839,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 79,
+        "timestamp": "2026-05-08 19:10:00",
+        "sulfur_mgkg": 3.7455,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 80,
+        "timestamp": "2026-05-08 19:20:00",
+        "sulfur_mgkg": 3.7091,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 81,
+        "timestamp": "2026-05-08 19:30:00",
+        "sulfur_mgkg": 3.6747,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 82,
+        "timestamp": "2026-05-08 19:40:00",
+        "sulfur_mgkg": 3.6422,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 83,
+        "timestamp": "2026-05-08 19:50:00",
+        "sulfur_mgkg": 3.6115,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 84,
+        "timestamp": "2026-05-08 20:00:00",
+        "sulfur_mgkg": 3.5824,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 85,
+        "timestamp": "2026-05-08 20:10:00",
+        "sulfur_mgkg": 3.5549,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 86,
+        "timestamp": "2026-05-08 20:20:00",
+        "sulfur_mgkg": 3.5288,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 87,
+        "timestamp": "2026-05-08 20:30:00",
+        "sulfur_mgkg": 3.5042,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 88,
+        "timestamp": "2026-05-08 20:40:00",
+        "sulfur_mgkg": 3.4809,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 89,
+        "timestamp": "2026-05-08 20:50:00",
+        "sulfur_mgkg": 3.4589,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 90,
+        "timestamp": "2026-05-08 21:00:00",
+        "sulfur_mgkg": 3.438,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 91,
+        "timestamp": "2026-05-08 21:10:00",
+        "sulfur_mgkg": 3.4183,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 92,
+        "timestamp": "2026-05-08 21:20:00",
+        "sulfur_mgkg": 3.3996,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 93,
+        "timestamp": "2026-05-08 21:30:00",
+        "sulfur_mgkg": 3.382,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 94,
+        "timestamp": "2026-05-08 21:40:00",
+        "sulfur_mgkg": 3.3653,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 95,
+        "timestamp": "2026-05-08 21:50:00",
+        "sulfur_mgkg": 3.3495,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 96,
+        "timestamp": "2026-05-08 22:00:00",
+        "sulfur_mgkg": 3.3346,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 97,
+        "timestamp": "2026-05-08 22:10:00",
+        "sulfur_mgkg": 3.3204,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 98,
+        "timestamp": "2026-05-08 22:20:00",
+        "sulfur_mgkg": 3.3071,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 99,
+        "timestamp": "2026-05-08 22:30:00",
+        "sulfur_mgkg": 3.2944,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 100,
+        "timestamp": "2026-05-08 22:40:00",
+        "sulfur_mgkg": 3.2825,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      },
+      {
+        "step": 101,
+        "timestamp": "2026-05-08 22:50:00",
+        "sulfur_mgkg": 3.2712,
+        "target_sulfur_mgkg": 3.0731,
+        "controls": {
+          "ht:T5": 369.641,
+          "ht:F9": 185.987
+        },
+        "action": null,
+        "moved": false,
+        "severity": 0.2377871609872796,
+        "deciding": false,
+        "headline": "наблюдение эффекта"
+      }
+    ]
+  }
+}

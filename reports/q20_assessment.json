@@ -1,0 +1,73 @@
+{
+  "tag": "ht:Q20",
+  "claim": "поточный анализатор серы; по диапазону соответствует сырью, а не продукту",
+  "levels": {
+    "analyser_median_mgkg": 8089.619140625,
+    "feed_lab_median_mgkg": 9459.500014781952,
+    "product_lab_median_mgkg": 8.600000381469727,
+    "analyser_over_product": 940.6533467202587,
+    "analyser_p05_p95": [
+      5609.540625000001,
+      10531.30634765625
+    ],
+    "feed_lab_p05_p95": [
+      7816.800147294998,
+      10331.699788570404
+    ]
+  },
+  "agreement_with_feed": {
+    "n": 113,
+    "pearson": 0.1631130867452975,
+    "spearman": 0.03281163253473836,
+    "median_ratio": 0.8637719497204677,
+    "median_bias_mgkg": -1267.4713134765625,
+    "mae_mgkg": 1819.3563054515198
+  },
+  "agreement_with_product": {
+    "n": 1291,
+    "pearson": 0.10642932398411319,
+    "spearman": 0.10166810152995881,
+    "median_ratio": 953.43017578125,
+    "median_bias_mgkg": 8079.133008003235,
+    "mae_mgkg": 8003.093100876211
+  },
+  "agreement_by_shift": {
+    "-48h": -0.05682939501283738,
+    "-24h": 0.15988836023727604,
+    "-12h": 0.3391477226484782,
+    "-6h": 0.3410861737360695,
+    "+0h": 0.14091127859727204,
+    "+6h": 0.1504984142214007,
+    "+12h": 0.15652900458084978,
+    "+24h": -0.1047146446759387
+  },
+  "agreement_by_year": {
+    "2023": 0.07554501926482474,
+    "2024": 0.207213001789128,
+    "2025": 0.45481627033879857,
+    "2026": null
+  },
+  "variability": {
+    "feed_lab_cv": 0.1169395529406691,
+    "analyser_cv_12h": 0.21396985419287232
+  },
+  "health": {
+    "points_total": 189217,
+    "sentinel_counts": {
+      "307.0": 22043
+    },
+    "sentinel_share": 0.11649587510635936,
+    "missing_after_masking_share": 0.11639546129576095,
+    "running_points": 177271,
+    "flatline_segments_ge_24h": 0,
+    "flatline_points_ge_24h": 0,
+    "flatline_share_of_running": 0.0
+  },
+  "verdict": {
+    "reads_at_feed_level": true,
+    "tracks_laboratory_feed_sulfur": false,
+    "relationship_stable_over_years": false,
+    "usable_as_feed_sulfur_source": false,
+    "rule": "подключать только если анализатор читает на уровне сырья И следует за лабораторной серой сырья (Пирсон не ниже 0,5) И связь устойчива по годам"
+  }
+}

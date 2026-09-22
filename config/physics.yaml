@@ -1,0 +1,31 @@
+source: теги АВТ_24-2000.xlsx; схемы и разъяснение 11.09 16:15
+variables:
+  ht:T5:
+    class: MV
+    sulfur_sign: -1
+    unit: °C
+  ht:F9:
+    class: MV
+    sulfur_sign: 1
+    unit: т/ч
+  ht:P3:
+    class: MV
+    sulfur_sign: -1
+    unit: МПа
+  feed_sulfur_mgkg:
+    class: DV
+    sulfur_sign: 1
+    unit: мг/кг
+  ht:Q21:
+    class: CV
+    unit: ppm
+  ht:P8:
+    class: CV
+    unit: МПа
+  ht:F26:
+    class: CV
+    unit: м³/ч
+limitations:
+- Знаки инженерные; коэффициенты не являются идентифицированным причинным эффектом.
+- Исполнительные контуры ГО не подтверждены P&ID; рекомендации требуют согласования.
+- Календарное время не считать возрастом катализатора без дат регенерации.

@@ -1,0 +1,18 @@
+
+=== подготовка данных: -m scripts.prepare_data
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "<repo>/scripts/prepare_data.py", line 116, in <module>
+    main(**vars(ap.parse_args()))
+  File "<repo>/scripts/prepare_data.py", line 33, in main
+    out = build_canonical(cfg, force=force)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/src/data/loaders.py", line 89, in build_canonical
+    csvs = ensure_telemetry_csv(cfg)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repo>/src/data/loaders.py", line 44, in ensure_telemetry_csv
+    raise FileNotFoundError(
+FileNotFoundError: neither the telemetry CSVs nor data.rar were found in <repo>/data/raw
+--- подготовка данных: rc=1, 4.4s
+ОСТАНОВ на шаге 'подготовка данных'

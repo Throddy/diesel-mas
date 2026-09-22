@@ -1,0 +1,23 @@
+{
+  "grid": "тестовый блок, та же сетка, что в сравнении архитектур",
+  "without_replanning": {
+    "replan_max_rounds": 1,
+    "n_cycles": 60,
+    "abstention_rate": 0.43333333333333335,
+    "n_abstentions": 26,
+    "n_actions": 23,
+    "violations": 0
+  },
+  "with_replanning": {
+    "replan_max_rounds": 4,
+    "n_cycles": 60,
+    "abstention_rate": 0.26666666666666666,
+    "n_abstentions": 16,
+    "n_actions": 33,
+    "violations": 0
+  },
+  "cycles_recovered": 10,
+  "cycles_that_lost_a_recommendation": [],
+  "cycles_where_the_choice_changed": [],
+  "note": "перепланирование расширяет поиск, когда после вердикта безопасности допустимых вариантов не осталось; жёсткое ограничение при этом не ослабляется, нарушений предела нет ни в одном варианте"
+}

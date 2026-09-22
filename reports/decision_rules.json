@@ -1,0 +1,116 @@
+{
+  "cycles": 40,
+  "limit_mgkg": 10.0,
+  "threshold_rule": {
+    "n_cycles": 40,
+    "abstention_rate": 0.175,
+    "action_rate": 0.65,
+    "action_rate_when_at_risk": 0.896551724137931,
+    "violations": 0,
+    "median_margin_below_limit": 2.309446743581693,
+    "mean_margin_below_limit": 2.329788001213216,
+    "mean_energy_when_acting": 1.0561915566629299,
+    "mean_magnitude_when_acting": 0.18506293679333974,
+    "acted_at_low_risk": 22,
+    "held_at_high_risk": 0,
+    "seconds_per_cycle_mean": 0.38512401580810546
+  },
+  "expected_loss_rule": {
+    "n_cycles": 40,
+    "abstention_rate": 0.175,
+    "action_rate": 0.65,
+    "action_rate_when_at_risk": 0.896551724137931,
+    "violations": 0,
+    "median_margin_below_limit": 2.309446743581693,
+    "mean_margin_below_limit": 2.329788001213216,
+    "mean_energy_when_acting": 1.0561915566629299,
+    "mean_magnitude_when_acting": 0.18506293679333974,
+    "acted_at_low_risk": 22,
+    "held_at_high_risk": 0,
+    "seconds_per_cycle_mean": 0.3925893485546112
+  },
+  "closed_loop": {
+    "threshold": {
+      "quality_risk": {
+        "n_actions": 6,
+        "minutes_off_spec": 400,
+        "sulfur_start": 10.9977,
+        "sulfur_final": 6.1718,
+        "sulfur_min": 6.1718,
+        "overshoot_below_limit": 3.8282
+      },
+      "limit_breach": {
+        "n_actions": 12,
+        "minutes_off_spec": 380,
+        "sulfur_start": 10.8214,
+        "sulfur_final": 3.2712,
+        "sulfur_min": 3.2712,
+        "overshoot_below_limit": 6.7288
+      }
+    },
+    "expected_loss": {
+      "quality_risk": {
+        "n_actions": 6,
+        "minutes_off_spec": 400,
+        "sulfur_start": 10.9977,
+        "sulfur_final": 6.1718,
+        "sulfur_min": 6.1718,
+        "overshoot_below_limit": 3.8282
+      },
+      "limit_breach": {
+        "n_actions": 12,
+        "minutes_off_spec": 380,
+        "sulfur_start": 10.8214,
+        "sulfur_final": 3.2712,
+        "sulfur_min": 3.2712,
+        "overshoot_below_limit": 6.7288
+      }
+    }
+  },
+  "sensitivity": {
+    "цена некондиции вдвое выше": {
+      "n_cycles": 40,
+      "abstention_rate": 0.175,
+      "action_rate": 0.65,
+      "action_rate_when_at_risk": 0.896551724137931,
+      "violations": 0,
+      "median_margin_below_limit": 2.309446743581693,
+      "mean_margin_below_limit": 2.329788001213216,
+      "mean_energy_when_acting": 1.0561915566629299,
+      "mean_magnitude_when_acting": 0.18506293679333974,
+      "acted_at_low_risk": 22,
+      "held_at_high_risk": 0,
+      "seconds_per_cycle_mean": 0.38996766209602357
+    },
+    "цена некондиции вдвое ниже": {
+      "n_cycles": 40,
+      "abstention_rate": 0.175,
+      "action_rate": 0.65,
+      "action_rate_when_at_risk": 0.896551724137931,
+      "violations": 0,
+      "median_margin_below_limit": 2.309446743581693,
+      "mean_margin_below_limit": 2.329788001213216,
+      "mean_energy_when_acting": 1.0561915566629299,
+      "mean_magnitude_when_acting": 0.18506293679333974,
+      "acted_at_low_risk": 22,
+      "held_at_high_risk": 0,
+      "seconds_per_cycle_mean": 0.38964102864265443
+    }
+  },
+  "weights": {
+    "off_spec": 100.0,
+    "energy": 1.0,
+    "production_loss": 3.0,
+    "severity": 1.0,
+    "movement": 0.2,
+    "margin": 0.05,
+    "cooldown_minutes": 180.0
+  },
+  "verdict": {
+    "no_new_violations": true,
+    "still_acts_when_at_risk": true,
+    "less_overshoot": true,
+    "adopt": true,
+    "rule": "внедрять, если нарушений не больше, действие при риске не упало более чем на пятую часть и избыточность снизилась"
+  }
+}

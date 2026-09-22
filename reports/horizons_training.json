@@ -1,0 +1,35 @@
+{
+  "horizons": [
+    {
+      "horizon_hours": 6.0,
+      "n_targets": 1422,
+      "n_train": 825,
+      "n_calibration": 99,
+      "training_cutoff": "2025-02-28 00:00:00",
+      "calibration_cutoff": "2025-10-01 00:00:00",
+      "status": "OK",
+      "artifact": "models/sulfur_model_h6.joblib"
+    },
+    {
+      "horizon_hours": 12.0,
+      "n_targets": 1422,
+      "n_train": 825,
+      "n_calibration": 99,
+      "training_cutoff": "2025-02-28 00:00:00",
+      "calibration_cutoff": "2025-10-01 00:00:00",
+      "status": "OK",
+      "artifact": "models/sulfur_model_h12.joblib"
+    },
+    {
+      "horizon_hours": 24.0,
+      "n_targets": 1422,
+      "n_train": 825,
+      "n_calibration": 99,
+      "training_cutoff": "2025-02-28 00:00:00",
+      "calibration_cutoff": "2025-10-01 00:00:00",
+      "status": "OK",
+      "artifact": "models/sulfur_model_h24.joblib"
+    }
+  ],
+  "definition": "горизонт h означает прогноз на t_decision плюс h часов; признаки собираются на t_decision"
+}

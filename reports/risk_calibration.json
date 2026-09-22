@@ -1,0 +1,80 @@
+{
+  "period": [
+    "2025-10-01 10:00:00",
+    "2026-08-06 10:00:00"
+  ],
+  "n": 367,
+  "limit_mgkg": 10.0,
+  "base_rate": 0.16893732970027248,
+  "brier": {
+    "model_probability": 0.12412419685807516,
+    "always_base_rate": 0.1403975083340139,
+    "threshold_rule_as_certainty": 0.6049046321525886,
+    "skill_against_base_rate": 0.1159088339176475
+  },
+  "mean_predicted": 0.13630033303057826,
+  "expected_calibration_error": 0.06890705419315772,
+  "reliability": [
+    {
+      "from": 0.0,
+      "to": 0.05,
+      "n": 102,
+      "mean_predicted": 0.04128540305010892,
+      "observed_frequency": 0.029411764705882353,
+      "gap": 0.01187363834422657
+    },
+    {
+      "from": 0.05,
+      "to": 0.1,
+      "n": 126,
+      "mean_predicted": 0.07328042328042328,
+      "observed_frequency": 0.14285714285714285,
+      "gap": -0.06957671957671957
+    },
+    {
+      "from": 0.1,
+      "to": 0.2,
+      "n": 83,
+      "mean_predicted": 0.13788487282463185,
+      "observed_frequency": 0.20481927710843373,
+      "gap": -0.06693440428380187
+    },
+    {
+      "from": 0.2,
+      "to": 0.3,
+      "n": 15,
+      "mean_predicted": 0.24814814814814815,
+      "observed_frequency": 0.13333333333333333,
+      "gap": 0.11481481481481481
+    },
+    {
+      "from": 0.3,
+      "to": 0.5,
+      "n": 19,
+      "mean_predicted": 0.41871345029239765,
+      "observed_frequency": 0.631578947368421,
+      "gap": -0.21286549707602337
+    },
+    {
+      "from": 0.5,
+      "to": 0.7,
+      "n": 20,
+      "mean_predicted": 0.586111111111111,
+      "observed_frequency": 0.4,
+      "gap": 0.186111111111111
+    },
+    {
+      "from": 0.7,
+      "to": 1.01,
+      "n": 2,
+      "mean_predicted": 0.8666666666666667,
+      "observed_frequency": 1.0,
+      "gap": -0.1333333333333333
+    }
+  ],
+  "verdict": {
+    "beats_base_rate": true,
+    "usable_for_expected_loss": true,
+    "rule": "вероятность пригодна для сравнения ожидаемых потерь, если она обыгрывает базовую частоту по Brier и ошибка калибровки ниже 0,15"
+  }
+}

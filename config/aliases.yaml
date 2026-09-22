@@ -1,0 +1,70 @@
+metrics:
+  Mg.Sulfur:
+    canonical: Mg.Sulfur
+    canonical_unit: "мг/кг"
+    aliases: ["Mg.Sulfur", "Mg.Sulfur.Q", "24-2000:Mg.Sulfur", "24-2000:Mg.Sulfur.Q", "МД серы", "Среднее сера"]
+  Mass.Sulfur:
+    canonical: Mass.Sulfur
+    canonical_unit: "% масс."
+    aliases: ["Mass.Sulfur"]
+  D15:
+    canonical: D15
+    canonical_unit: "кг/м3"
+    aliases: ["D15", "24-2000:D15", "Плотность при 15 °С", "Плотность при 15С", "Среднее плотность"]
+  CFPP:
+    canonical: CFPP
+    canonical_unit: "°С"
+    aliases: ["CFPP", "FilterabilityLimit.T", "ПТФ"]
+  CloudPoint:
+    canonical: CloudPoint
+    canonical_unit: "°С"
+    aliases: ["CloudPoint", "CloudPoint_1", "Температура помутнения"]
+  PourPoint:
+    canonical: PourPoint
+    canonical_unit: "°С"
+    aliases: ["PourPoint", "Температура застывания"]
+  FlashPoint:
+    canonical: FlashPoint
+    canonical_unit: "°С"
+    aliases: ["FlashPoint", "Температура вспышки"]
+  "50%.T":
+    canonical: "50%.T"
+    canonical_unit: "°С"
+    aliases: ["50%.T", "Т50%", "T50"]
+  "90%.T":
+    canonical: "90%.T"
+    canonical_unit: "°С"
+    aliases: ["90%.T", "Т90%", "T90"]
+  "95%.T":
+    canonical: "95%.T"
+    canonical_unit: "°С"
+    aliases: ["95%.T", "Т95%", "T95"]
+  IBP.T:
+    canonical: IBP.T
+    canonical_unit: "°С"
+    aliases: ["IBP.T", "IBP", "Начало кипения", "ТНК"]
+  EBP.T:
+    canonical: EBP.T
+    canonical_unit: "°С"
+    aliases: ["EBP.T", "EBP", "Конец кипения"]
+  I250:
+    canonical: I250
+    canonical_unit: "% об."
+    aliases: ["I250", "ОДИС 250°С"]
+  I350:
+    canonical: I350
+    canonical_unit: "% об."
+    aliases: ["I350", "И-350", "ОДИС 350°С"]
+  CetaneNumber:
+    canonical: CetaneNumber
+    canonical_unit: "ед.цет.ч."
+    aliases: ["CetaneNumber", "Цетановое число"]
+
+units:
+  "мг/кг": mg_per_kg
+  "ppm": mg_per_kg
+  "кг/м3": kg_per_m3
+  "°С": deg_c
+  "% масс.": mass_pct
+  "% об.": vol_pct
+  "ед.цет.ч.": cetane_units

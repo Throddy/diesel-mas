@@ -1,0 +1,120 @@
+{
+  "period": [
+    "2026-03-01 00:00:00",
+    "2026-04-01 00:00:00"
+  ],
+  "blocks_touched": [
+    "test"
+  ],
+  "honest_reading": "период не пересекается с обучением: оценка честная",
+  "model_version": "quality-sulfur-v2",
+  "model": {
+    "n_analyses": 37,
+    "analyses_period": [
+      "2026-03-01 10:00:00",
+      "2026-03-31 10:00:00"
+    ],
+    "regression": {
+      "n": 37,
+      "MAE": 0.8688146209322948,
+      "RMSE": 1.129452104036111,
+      "MedianAE": 0.67373331070789,
+      "R2": 0.3979905159065882,
+      "MAE_log": 0.10611249179757135
+    },
+    "violation_point_forecast": {
+      "n": 37,
+      "n_positive": 2,
+      "recall": 0.0,
+      "precision": 0.0,
+      "f1": 0.0,
+      "confusion": {
+        "tn": 34,
+        "fp": 1,
+        "fn": 2,
+        "tp": 0
+      },
+      "pr_auc": 0.3
+    },
+    "violation_upper_bound": {
+      "n": 37,
+      "n_positive": 2,
+      "recall": 1.0,
+      "precision": 0.06451612903225806,
+      "f1": 0.12121212121212122,
+      "confusion": {
+        "tn": 6,
+        "fp": 29,
+        "fn": 0,
+        "tp": 2
+      },
+      "pr_auc": 0.3
+    },
+    "interval": {
+      "coverage": 0.918918918918919,
+      "mean_width": 4.0372277803115475
+    },
+    "baselines": {
+      "previous_lims": {
+        "n": 37,
+        "MAE": 1.3783783654908877,
+        "RMSE": 2.0637148108971695,
+        "MedianAE": 0.8999996185302734,
+        "R2": -1.00986578802714,
+        "MAE_log": 0.18708990547420545
+      },
+      "pak_nowcast": {
+        "n": 37,
+        "MAE": 0.7632620978999782,
+        "RMSE": 1.0284714421826053,
+        "MedianAE": 0.6409764289855957,
+        "R2": 0.5008257550441912,
+        "MAE_log": 0.09873145713170914
+      }
+    }
+  },
+  "system": {
+    "n_cycles": 24,
+    "abstention_reasons": {
+      "Режим за пределами области обучения модели.": 2,
+      "Нет варианта, проходящего все проверки SafetyAgent.": 1
+    },
+    "abstention_rate": 0.125,
+    "action_rate": 0.7916666666666666,
+    "do_nothing_rate": 0.08333333333333333,
+    "hard_constraint_violations_in_recommendations": 0,
+    "cycles_at_risk": 21,
+    "action_rate_when_at_risk": 0.9047619047619048,
+    "mean_confidence": 0.9573114979070896,
+    "ood_rate": 0.08333333333333333,
+    "mode_counts": {
+      "RUNNING": 24
+    },
+    "seconds_per_cycle_mean": 0.4904184540112813,
+    "seconds_per_cycle_max": 1.018867015838623,
+    "seconds_per_cycle_p95": 1.0026087045669556,
+    "seconds_by_rounds": {
+      "1": {
+        "cycles": 10,
+        "mean": 0.29301402568817136,
+        "max": 0.4955940246582031
+      },
+      "2": {
+        "cycles": 8,
+        "mean": 0.46475881338119507,
+        "max": 0.4796922206878662
+      },
+      "3": {
+        "cycles": 3,
+        "mean": 0.7025240262349447,
+        "max": 0.7107081413269043
+      },
+      "4": {
+        "cycles": 3,
+        "mean": 1.0047818819681804,
+        "max": 1.0188727378845215
+      }
+    },
+    "n_recommending": 21
+  }
+}

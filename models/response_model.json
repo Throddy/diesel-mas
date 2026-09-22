@@ -1,0 +1,25 @@
+{
+  "n_train": 735,
+  "train_end": "2025-02-28 00:00:00",
+  "lag_minutes": 360,
+  "lag_basis": "A-18: заданное модельное запаздывание, не оценка времени пребывания",
+  "temperature_log_sensitivity_data": 0.003775245239263052,
+  "constrained": true,
+  "prior_used": true,
+  "temperature_log_sensitivity_sign_constrained": -1.4267506029604564e-19,
+  "temperature_log_sensitivity_prior": -0.034266114298630815,
+  "temperature_log_sensitivity_joint": -0.02035704788708111,
+  "prior_status": "A-19: литературное E_a перенесено в приближённую log-модель; это допущение, не параметр данной установки",
+  "prior_source": "https://doi.org/10.1016/j.fuel.2017.07.092",
+  "temperature_sensitivity_bootstrap": [
+    -0.024696539185810235,
+    -0.01728391195832987
+  ],
+  "coefficients": {
+    "ht:T5": 8.353479564703353,
+    "ht:F9": 1.2477335156629508,
+    "ht:P3": 5.3227216733868724e-14,
+    "feed_sulfur_mgkg": 0.929773368549195
+  },
+  "limitation": "Замкнутый контур, редкая сера сырья; причинность и перенос на установку не доказаны"
+}

@@ -1,0 +1,299 @@
+{
+  "model_version": "quality-sulfur-v1",
+  "model": {
+    "valid": {
+      "period": [
+        "2025-02-28 10:00:00",
+        "2025-09-29 10:00:00"
+      ],
+      "regression": {
+        "n": 232,
+        "MAE": 1.789227333619578,
+        "RMSE": 7.993143389939906,
+        "MedianAE": 0.6377938348265926,
+        "R2": 0.02242348379109682,
+        "MAE_log": 0.15603349449879797
+      },
+      "violation_point_forecast": {
+        "n": 232,
+        "n_positive": 41,
+        "recall": 0.24390243902439024,
+        "precision": 0.9090909090909091,
+        "f1": 0.38461538461538464,
+        "confusion": {
+          "tn": 190,
+          "fp": 1,
+          "fn": 31,
+          "tp": 10
+        },
+        "pr_auc": 0.540849069721333
+      },
+      "violation_upper_bound": {
+        "n": 232,
+        "n_positive": 41,
+        "recall": 0.8292682926829268,
+        "precision": 0.21656050955414013,
+        "f1": 0.3434343434343434,
+        "confusion": {
+          "tn": 68,
+          "fp": 123,
+          "fn": 7,
+          "tp": 34
+        },
+        "pr_auc": 0.540849069721333
+      },
+      "interval": {
+        "coverage": 0.8577586206896551,
+        "mean_width": 3.5273954037663957
+      },
+      "baselines": {
+        "previous_lims": {
+          "n": 232,
+          "MAE": 2.866810299199203,
+          "RMSE": 9.93842025553572,
+          "MedianAE": 1.2999999523162842,
+          "R2": -0.5112985550070046,
+          "MAE_log": 0.23715804806738033
+        },
+        "pak_nowcast": {
+          "n": 232,
+          "MAE": 2.097072425587424,
+          "RMSE": 8.802954734616659,
+          "MedianAE": 0.7970671653747559,
+          "R2": -0.18569363848580256,
+          "MAE_log": 0.21340986412150345
+        },
+        "train_median": {
+          "n": 232,
+          "MAE": 2.0314654964825203,
+          "RMSE": 8.151700160125694,
+          "MedianAE": 0.9000000953674316,
+          "R2": -0.016744767633009916,
+          "MAE_log": 0.17548064471153366
+        }
+      }
+    },
+    "test": {
+      "period": [
+        "2025-10-01 10:00:00",
+        "2026-08-09 10:00:00"
+      ],
+      "regression": {
+        "n": 375,
+        "MAE": 1.1281258029123769,
+        "RMSE": 1.6951950634659796,
+        "MedianAE": 0.7991691214722678,
+        "R2": 0.4174451737402689,
+        "MAE_log": 0.16122036654445568
+      },
+      "violation_point_forecast": {
+        "n": 375,
+        "n_positive": 63,
+        "recall": 0.1111111111111111,
+        "precision": 0.4666666666666667,
+        "f1": 0.1794871794871795,
+        "confusion": {
+          "tn": 304,
+          "fp": 8,
+          "fn": 56,
+          "tp": 7
+        },
+        "pr_auc": 0.4034468983195802
+      },
+      "violation_upper_bound": {
+        "n": 375,
+        "n_positive": 63,
+        "recall": 0.8571428571428571,
+        "precision": 0.27835051546391754,
+        "f1": 0.42023346303501946,
+        "confusion": {
+          "tn": 172,
+          "fp": 140,
+          "fn": 9,
+          "tp": 54
+        },
+        "pr_auc": 0.4034468983195802
+      },
+      "interval": {
+        "coverage": 0.776,
+        "mean_width": 3.3761145035414337
+      },
+      "baselines": {
+        "previous_lims": {
+          "n": 375,
+          "MAE": 1.7397333070039749,
+          "RMSE": 2.461609208891397,
+          "MedianAE": 1.1999998092651367,
+          "R2": -0.22838827503830994,
+          "MAE_log": 0.24433025122013194
+        },
+        "pak_nowcast": {
+          "n": 375,
+          "MAE": 1.58908618948857,
+          "RMSE": 2.272383104396848,
+          "MedianAE": 1.1775603294372559,
+          "R2": -0.04679237300058903,
+          "MAE_log": 0.22602869995277589
+        },
+        "train_median": {
+          "n": 375,
+          "MAE": 1.5381333156228065,
+          "RMSE": 2.2210507845377734,
+          "MedianAE": 1.1000003814697266,
+          "R2": -3.3213648546803753e-05,
+          "MAE_log": 0.2213875220333042
+        }
+      }
+    }
+  },
+  "system": {
+    "summary": {
+      "n_cycles": 10,
+      "abstention_rate": 0.5,
+      "recommendation_rate": 0.5,
+      "hard_constraint_violation_rate_of_recommendations": 0.0,
+      "unsafe_candidates_rejected_share": 1.0,
+      "unnecessary_action_rate_when_recommending": 1.0,
+      "ood_rejection_rate": 0.2,
+      "mean_confidence": 0.8200100550974809,
+      "inference_seconds_mean": 0.9123693227767944,
+      "inference_seconds_max": 0.9772593975067139
+    },
+    "cycles": [
+      {
+        "t": "2025-10-06 00:00:00",
+        "abstained": true,
+        "n_candidates": 21,
+        "n_feasible": 0,
+        "n_unsafe_rejected": 21,
+        "n_unsafe_total": 21,
+        "selected_is_do_nothing": false,
+        "selected_upper": null,
+        "ood": false,
+        "severity": "ELEVATED",
+        "confidence": 0.9643803634737664
+      },
+      {
+        "t": "2025-11-08 08:00:00",
+        "abstained": true,
+        "n_candidates": 21,
+        "n_feasible": 0,
+        "n_unsafe_rejected": 21,
+        "n_unsafe_total": 21,
+        "selected_is_do_nothing": false,
+        "selected_upper": null,
+        "ood": false,
+        "severity": "NORMAL",
+        "confidence": 0.9643803634737664
+      },
+      {
+        "t": "2025-12-11 16:00:00",
+        "abstained": true,
+        "n_candidates": 21,
+        "n_feasible": 0,
+        "n_unsafe_rejected": 21,
+        "n_unsafe_total": 21,
+        "selected_is_do_nothing": false,
+        "selected_upper": null,
+        "ood": false,
+        "severity": "NORMAL",
+        "confidence": 0.9643803634737664
+      },
+      {
+        "t": "2026-01-14 00:00:00",
+        "abstained": false,
+        "n_candidates": 21,
+        "n_feasible": 21,
+        "n_unsafe_rejected": 0,
+        "n_unsafe_total": 0,
+        "selected_is_do_nothing": false,
+        "selected_upper": 9.160081522293956,
+        "ood": false,
+        "severity": "NORMAL",
+        "confidence": 0.9643803634737664
+      },
+      {
+        "t": "2026-02-16 08:00:00",
+        "abstained": false,
+        "n_candidates": 21,
+        "n_feasible": 21,
+        "n_unsafe_rejected": 0,
+        "n_unsafe_total": 0,
+        "selected_is_do_nothing": false,
+        "selected_upper": 8.716848329909377,
+        "ood": false,
+        "severity": "NORMAL",
+        "confidence": 0.9643803634737664
+      },
+      {
+        "t": "2026-03-21 16:00:00",
+        "abstained": false,
+        "n_candidates": 21,
+        "n_feasible": 21,
+        "n_unsafe_rejected": 0,
+        "n_unsafe_total": 0,
+        "selected_is_do_nothing": false,
+        "selected_upper": 9.910557143231838,
+        "ood": false,
+        "severity": "NORMAL",
+        "confidence": 0.9643803634737664
+      },
+      {
+        "t": "2026-04-24 00:00:00",
+        "abstained": true,
+        "n_candidates": 21,
+        "n_feasible": 0,
+        "n_unsafe_rejected": 21,
+        "n_unsafe_total": 21,
+        "selected_is_do_nothing": false,
+        "selected_upper": null,
+        "ood": true,
+        "severity": "HIGH",
+        "confidence": 0.2425288215923388
+      },
+      {
+        "t": "2026-05-27 08:00:00",
+        "abstained": false,
+        "n_candidates": 21,
+        "n_feasible": 21,
+        "n_unsafe_rejected": 0,
+        "n_unsafe_total": 0,
+        "selected_is_do_nothing": false,
+        "selected_upper": 8.227531511137427,
+        "ood": false,
+        "severity": "NORMAL",
+        "confidence": 0.9643803634737664
+      },
+      {
+        "t": "2026-06-29 16:00:00",
+        "abstained": true,
+        "n_candidates": 21,
+        "n_feasible": 0,
+        "n_unsafe_rejected": 21,
+        "n_unsafe_total": 21,
+        "selected_is_do_nothing": false,
+        "selected_upper": null,
+        "ood": true,
+        "severity": "HIGH",
+        "confidence": 0.2425288215923388
+      },
+      {
+        "t": "2026-08-02 00:00:00",
+        "abstained": false,
+        "n_candidates": 21,
+        "n_feasible": 19,
+        "n_unsafe_rejected": 0,
+        "n_unsafe_total": 0,
+        "selected_is_do_nothing": false,
+        "selected_upper": 9.058917138551681,
+        "ood": false,
+        "severity": "NORMAL",
+        "confidence": 0.9643803634737664
+      }
+    ]
+  },
+  "reproducibility": {
+    "identical_recommendation_for_identical_input": true,
+    "headline": "NO SAFE RECOMMENDATION"
+  }
+}

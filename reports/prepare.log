@@ -1,0 +1,45 @@
+{
+  "telemetry_shape": [
+    189217,
+    97
+  ],
+  "lims_rows": 36806,
+  "pak_rows": 265104,
+  "lims_target": {
+    "n": 1462,
+    "t_min": "2023-01-01 10:00:00",
+    "t_max": "2026-08-09 10:00:00",
+    "n_above_limit": 230,
+    "inter_arrival": {
+      "median_min": 1440.0,
+      "q95_min": 1440.0,
+      "n": 1462
+    },
+    "max": 2120.0,
+    "min": 0.10000000149011612
+  },
+  "pak_sulfur": {
+    "n": 189649,
+    "t_min": "2023-01-01 00:00:00",
+    "t_max": "2026-08-10 00:00:00",
+    "flatline_segments_ge_6h": 18,
+    "flatline_segments_ge_24h": 7,
+    "flatlined_share": 0.06952317175413528,
+    "longest_flatline": {
+      "start": "2024-03-16 18:20:00",
+      "end": "2024-05-02 12:10:00",
+      "hours": 1121.8,
+      "n_points": 6732,
+      "value": 7.705160617828369
+    },
+    "saturation_hypothesis": {
+      "max": 19.998779296875,
+      "share_within_0_1pct_of_max": 4.218319105294518e-05
+    },
+    "gaps": {
+      "n_gaps": 0,
+      "max_gap_min": 0.0,
+      "total_gap_hours": 0.0
+    }
+  }
+}

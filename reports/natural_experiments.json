@@ -1,0 +1,184 @@
+{
+  "thresholds": {
+    "temperature_change_min_c": 3.0,
+    "feed_change_min_tph": 22.8,
+    "hold_hours": 12.0,
+    "hold_tolerance_temperature_c": 1.5,
+    "hold_tolerance_feed_tph": 6.0,
+    "stable_other_temperature_c": 1.5,
+    "stable_other_feed_tph": 12.1,
+    "stable_other_pressure_mpa": 0.104,
+    "feed_sulfur_max_relative_change": 0.1,
+    "settle_hours": 6.0,
+    "compare_window_hours": 12.0,
+    "min_episodes_for_conclusion": 10,
+    "transition_hours": 2.0,
+    "effect_lag_hours": 6.0
+  },
+  "basis": "A-26: пороги выбраны по распределению изменений за 12 ч в рабочем режиме ДО расчёта эффекта. Порог изменения температуры 3 °C задан постановкой (70-й процентиль |ΔT|); стабильность прочих параметров по 75-му процентилю их обычного изменения: F9 12,1 т/ч, P3 0,104 МПа; удержание с допуском 1,5 °C, вдвое меньше порога изменения; между окном до и окном после оставлен промежуток 2 ч на сам переход: смена уставки на 3 °C при темпе порядка 1 °C за 20 мин занимает около часа, взято вдвое больше",
+  "controls": {
+    "ht:T5": {
+      "episodes_found": 0,
+      "episodes_with_sulfur": 0,
+      "sources": {
+        "LIMS": 0,
+        "PAK": 0
+      },
+      "excluded_feed_change": 0,
+      "sensitivity_per_unit": {
+        "n": 0
+      },
+      "paired_with_model_M": {
+        "n_paired": 0,
+        "sign_agreement": null,
+        "correlation": null
+      },
+      "criterion_map": [
+        {
+          "hold_hours": 3,
+          "tolerance": 1.5,
+          "episodes": 20,
+          "shorter_than_transport_delay": true
+        },
+        {
+          "hold_hours": 3,
+          "tolerance": 3.0,
+          "episodes": 52,
+          "shorter_than_transport_delay": true
+        },
+        {
+          "hold_hours": 3,
+          "tolerance": 5.0,
+          "episodes": 83,
+          "shorter_than_transport_delay": true
+        },
+        {
+          "hold_hours": 6,
+          "tolerance": 1.5,
+          "episodes": 1,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 6,
+          "tolerance": 3.0,
+          "episodes": 5,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 6,
+          "tolerance": 5.0,
+          "episodes": 10,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 12,
+          "tolerance": 1.5,
+          "episodes": 0,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 12,
+          "tolerance": 3.0,
+          "episodes": 0,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 12,
+          "tolerance": 5.0,
+          "episodes": 2,
+          "shorter_than_transport_delay": false
+        }
+      ],
+      "episodes": []
+    },
+    "ht:F9": {
+      "episodes_found": 0,
+      "episodes_with_sulfur": 0,
+      "sources": {
+        "LIMS": 0,
+        "PAK": 0
+      },
+      "excluded_feed_change": 0,
+      "sensitivity_per_unit": {
+        "n": 0
+      },
+      "paired_with_model_M": {
+        "n_paired": 0,
+        "sign_agreement": null,
+        "correlation": null
+      },
+      "criterion_map": [
+        {
+          "hold_hours": 3,
+          "tolerance": 1.5,
+          "episodes": 0,
+          "shorter_than_transport_delay": true
+        },
+        {
+          "hold_hours": 3,
+          "tolerance": 3.0,
+          "episodes": 0,
+          "shorter_than_transport_delay": true
+        },
+        {
+          "hold_hours": 3,
+          "tolerance": 5.0,
+          "episodes": 0,
+          "shorter_than_transport_delay": true
+        },
+        {
+          "hold_hours": 6,
+          "tolerance": 1.5,
+          "episodes": 0,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 6,
+          "tolerance": 3.0,
+          "episodes": 0,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 6,
+          "tolerance": 5.0,
+          "episodes": 0,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 12,
+          "tolerance": 1.5,
+          "episodes": 0,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 12,
+          "tolerance": 3.0,
+          "episodes": 0,
+          "shorter_than_transport_delay": false
+        },
+        {
+          "hold_hours": 12,
+          "tolerance": 5.0,
+          "episodes": 0,
+          "shorter_than_transport_delay": false
+        }
+      ],
+      "episodes": []
+    }
+  },
+  "comparison_d_ln_s_dt": {
+    "natural_experiments": null,
+    "natural_experiments_ci90": null,
+    "model_M_data_only": 0.003775245239263052,
+    "model_M_prior": -0.034266114298630815,
+    "model_M_joint": -0.02035704788708111,
+    "plant_model": -0.0659
+  },
+  "conclusion": {
+    "episodes": 0,
+    "threshold": 10,
+    "sufficient": false,
+    "statement": "эпизодов 0, меньше порога 10: вывод о величине эффекта не строится",
+    "why_none": "при скачке температуры размах внутри 12-часового окна имеет медиану 9,2 °C: регулятор не оставляет ступенек с удержанием. Удержание короче транспортного запаздывания 6 ч физически непригодно, а при 12 ч эпизодов нет ни при одном допуске, см. criterion_map"
+  }
+}

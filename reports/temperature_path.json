@@ -1,0 +1,215 @@
+{
+  "moment": "2026-03-05 00:00:00",
+  "scenario": "quality_risk",
+  "base_temperature_c": 379.702,
+  "support_c": [
+    280.968,
+    390.865
+  ],
+  "held_fixed": "изменяются только уровневые признаки тега ht:T5; остальные признаки и все прочие теги сохраняют значения",
+  "forecast_model_N": [
+    {
+      "delta_c": -6.0,
+      "temperature_c": 373.702,
+      "forecast_mgkg": 11.0328,
+      "lower_mgkg": 8.6966,
+      "upper_mgkg": 13.9965,
+      "risk_over_limit": 0.8444,
+      "features_unchanged": 96,
+      "features_total": 99
+    },
+    {
+      "delta_c": -4.0,
+      "temperature_c": 375.702,
+      "forecast_mgkg": 11.0087,
+      "lower_mgkg": 8.6776,
+      "upper_mgkg": 13.966,
+      "risk_over_limit": 0.8444,
+      "features_unchanged": 96,
+      "features_total": 99
+    },
+    {
+      "delta_c": -2.0,
+      "temperature_c": 377.702,
+      "forecast_mgkg": 10.9977,
+      "lower_mgkg": 8.6689,
+      "upper_mgkg": 13.952,
+      "risk_over_limit": 0.8333,
+      "features_unchanged": 96,
+      "features_total": 99
+    },
+    {
+      "delta_c": 0.0,
+      "temperature_c": 379.702,
+      "forecast_mgkg": 10.9977,
+      "lower_mgkg": 8.6689,
+      "upper_mgkg": 13.952,
+      "risk_over_limit": 0.8333,
+      "features_unchanged": 99,
+      "features_total": 99
+    },
+    {
+      "delta_c": 2.0,
+      "temperature_c": 381.702,
+      "forecast_mgkg": 10.9977,
+      "lower_mgkg": 8.6689,
+      "upper_mgkg": 13.952,
+      "risk_over_limit": 0.8333,
+      "features_unchanged": 96,
+      "features_total": 99
+    },
+    {
+      "delta_c": 4.0,
+      "temperature_c": 383.702,
+      "forecast_mgkg": 10.9733,
+      "lower_mgkg": 8.6497,
+      "upper_mgkg": 13.9211,
+      "risk_over_limit": 0.8111,
+      "features_unchanged": 96,
+      "features_total": 99
+    },
+    {
+      "delta_c": 6.0,
+      "temperature_c": 385.702,
+      "forecast_mgkg": 10.9612,
+      "lower_mgkg": 8.6402,
+      "upper_mgkg": 13.9058,
+      "risk_over_limit": 0.8,
+      "features_unchanged": 96,
+      "features_total": 99
+    }
+  ],
+  "response_model_M": [
+    {
+      "delta_c": -6.0,
+      "log_change": 0.11869,
+      "ratio": 1.126,
+      "pessimistic_log_change": 0.14112
+    },
+    {
+      "delta_c": -4.0,
+      "log_change": 0.07888,
+      "ratio": 1.0821,
+      "pessimistic_log_change": 0.09379
+    },
+    {
+      "delta_c": -2.0,
+      "log_change": 0.03932,
+      "ratio": 1.0401,
+      "pessimistic_log_change": 0.04675
+    },
+    {
+      "delta_c": 0.0,
+      "log_change": 0.0,
+      "ratio": 1.0,
+      "pessimistic_log_change": 0.0
+    },
+    {
+      "delta_c": 2.0,
+      "log_change": -0.03908,
+      "ratio": 0.9617,
+      "pessimistic_log_change": -0.03358
+    },
+    {
+      "delta_c": 4.0,
+      "log_change": -0.07792,
+      "ratio": 0.925,
+      "pessimistic_log_change": -0.06696
+    },
+    {
+      "delta_c": 6.0,
+      "log_change": -0.11652,
+      "ratio": 0.89,
+      "pessimistic_log_change": -0.10013
+    }
+  ],
+  "sensitivity_d_ln_s_dt": {
+    "forecast_model_N": -0.00046382693632861775,
+    "response_model_M": -0.02035704788708111,
+    "response_model_M_data_only": 0.003775245239263052
+  },
+  "decision_at_the_moment": {
+    "abstained": false,
+    "headline": "Полисеп. Р-201. Температура ГСС на выходе: 379,70 → 382,05 °C; Расход сырья на установку, массовый: 197,74 → 151,03 т/ч",
+    "action_id": "A056_temperature_and_feed",
+    "moves": {
+      "ht_r201_gss_outlet_temp": 382.0466613769531,
+      "ht_feed_flow_mass": 151.02853393554688
+    },
+    "moves_from": {
+      "ht_r201_gss_outlet_temp": 379.7021484375,
+      "ht_feed_flow_mass": 197.74002075195312
+    },
+    "predicted_sulfur": 7.505614771318112,
+    "predicted_sulfur_upper": 9.913175108475292,
+    "constraint_checks": [
+      {
+        "id": "HC-04",
+        "name": "data_validity",
+        "status": "PASS",
+        "detail": "critical inputs fresh, numeric and from a healthy analyser"
+      },
+      {
+        "id": "HC-03",
+        "name": "control_within_model_support",
+        "status": "PASS",
+        "detail": "382 vs model support [347.1, 388.3] (ASSUMPTION - NOT AN INDUSTRIAL LIMIT)"
+      },
+      {
+        "id": "HC-03",
+        "name": "component_support",
+        "status": "PASS",
+        "detail": "ht_r201_gss_outlet_temp: 382.0466613769531; модельный диапазон (347.06226959228513, 388.2955322265625)"
+      },
+      {
+        "id": "HC-03",
+        "name": "component_support",
+        "status": "PASS",
+        "detail": "ht_feed_flow_mass: 151.02853393554688; модельный диапазон (130.9251887512207, 257.4960528564453)"
+      },
+      {
+        "id": "HC-03",
+        "name": "response_and_rate",
+        "status": "PASS",
+        "detail": "Применимость отклика и темп; допущения"
+      },
+      {
+        "id": "HC-01",
+        "name": "product_sulfur_limit",
+        "status": "PASS",
+        "detail": "upper confidence bound 9.91 мг/кг vs limit 10.0 (point forecast 7.51)"
+      },
+      {
+        "id": "HC-05",
+        "name": "state_in_distribution",
+        "status": "PASS",
+        "detail": "process state inside the historical operating envelope"
+      },
+      {
+        "id": "HC-06",
+        "name": "reliability_gate",
+        "status": "PASS",
+        "detail": "operating severity acceptable"
+      },
+      {
+        "id": "HC-02",
+        "name": "Сумма долей блендинга",
+        "status": "NOT_VERIFIED",
+        "detail": "нет данных товарного резервуара и состава смеси"
+      },
+      {
+        "id": "PRODUCT-T95",
+        "name": "T95 ≤ 360 °C",
+        "status": "PASS",
+        "detail": "оценка софт-сенсора 350,17 °C против 360,00 °C; это модельная оценка, а не лабораторный анализ"
+      },
+      {
+        "id": "PRODUCT-CN",
+        "name": "Цетановое число ≥ 51",
+        "status": "NOT_VERIFIED",
+        "detail": "цетановое число не измеряется и не оценивается ни одним источником пакета"
+      }
+    ]
+  },
+  "reading": "прогноз N отражает наблюдаемую связь на замкнутом контуре и занижает эффект; знак у M задан химией, а не данными; ни то, ни другое не является измеренным причинным эффектом"
+}

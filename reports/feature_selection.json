@@ -1,0 +1,360 @@
+{
+  "n_features_total": 50,
+  "n_training_rows": 825,
+  "method": "перестановочная важность на трёх скользящих отсечениях внутри обучающего блока, затем отсев признаков с корреляцией выше 0.95",
+  "correlation_threshold": 0.95,
+  "ranking": [
+    {
+      "feature": "ht:Q21|value",
+      "importance": 0.08495524210008731,
+      "folds": 3
+    },
+    {
+      "feature": "ht:Q21|mean60",
+      "importance": 0.011390695115926821,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P8|mean360",
+      "importance": 0.0009190339612664488,
+      "folds": 3
+    },
+    {
+      "feature": "ht:Q21|delta180",
+      "importance": 0.0006512136477367092,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P3|mean360",
+      "importance": 0.0006120356514090949,
+      "folds": 3
+    },
+    {
+      "feature": "lims_sulfur_prev",
+      "importance": 0.0004355778640298602,
+      "folds": 3
+    },
+    {
+      "feature": "lims_feed_sulfur_age_min",
+      "importance": 0.0003406164661576068,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T5|std180",
+      "importance": 0.00029048885650889694,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P8|std180",
+      "importance": 0.00019532365321349443,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P3|delta180",
+      "importance": 0.0001883760704525629,
+      "folds": 3
+    },
+    {
+      "feature": "ht:F9|value",
+      "importance": 0.0001842778978528766,
+      "folds": 3
+    },
+    {
+      "feature": "ht:F9|delta180",
+      "importance": 0.00017925170337547113,
+      "folds": 3
+    },
+    {
+      "feature": "source_disagreement_abs",
+      "importance": 0.00017062946894955133,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T5|delta180",
+      "importance": 0.00016929149225405893,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T11|delta180",
+      "importance": 0.00015780159073276116,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T6|std180",
+      "importance": 0.0001350492163338441,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P3|mean60",
+      "importance": 8.26248609808224e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P8|mean60",
+      "importance": 7.544946008887806e-05,
+      "folds": 3
+    },
+    {
+      "feature": "source_disagreement_rel",
+      "importance": 5.928259196311743e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T6|mean360",
+      "importance": 2.3072521304296553e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:F9|mean360",
+      "importance": 6.382761266043249e-06,
+      "folds": 3
+    },
+    {
+      "feature": "pak_failed_flag_age_min",
+      "importance": 7.160449685190202e-08,
+      "folds": 3
+    },
+    {
+      "feature": "pak_failed_flag",
+      "importance": 0.0,
+      "folds": 3
+    },
+    {
+      "feature": "pak_sulfur_healthy_age_min",
+      "importance": 0.0,
+      "folds": 3
+    },
+    {
+      "feature": "pak_suspect_flag",
+      "importance": 0.0,
+      "folds": 3
+    },
+    {
+      "feature": "pak_suspect_flag_age_min",
+      "importance": -2.0951376968429227e-06,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T11|value",
+      "importance": -4.322882621441489e-06,
+      "folds": 3
+    },
+    {
+      "feature": "pak_sulfur_age_min",
+      "importance": -6.17944887186682e-06,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P3|std180",
+      "importance": -6.766562935490532e-06,
+      "folds": 3
+    },
+    {
+      "feature": "lims_sulfur_prev_age_min",
+      "importance": -1.3417473267323611e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T6|mean60",
+      "importance": -1.4029950589212562e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T11|mean60",
+      "importance": -3.3510122286807704e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T5|value",
+      "importance": -4.640765732326973e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P8|delta180",
+      "importance": -6.632094312958763e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T11|mean360",
+      "importance": -7.203978243287834e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T5|mean60",
+      "importance": -7.98690236404285e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P8|value",
+      "importance": -8.416283315365593e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T6|delta180",
+      "importance": -9.688547832456232e-05,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T5|mean360",
+      "importance": -0.00011682341889395394,
+      "folds": 3
+    },
+    {
+      "feature": "ht:Q21|mean360",
+      "importance": -0.00012074199745988764,
+      "folds": 3
+    },
+    {
+      "feature": "ht:F9|mean60",
+      "importance": -0.00016179204037110163,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T11|std180",
+      "importance": -0.0001682109485392815,
+      "folds": 3
+    },
+    {
+      "feature": "ht:T6|value",
+      "importance": -0.00018059437244202163,
+      "folds": 3
+    },
+    {
+      "feature": "ht:P3|value",
+      "importance": -0.0001939777771218864,
+      "folds": 3
+    },
+    {
+      "feature": "lims_staleness_ratio",
+      "importance": -0.00022410071375060978,
+      "folds": 3
+    },
+    {
+      "feature": "pak_sulfur_healthy",
+      "importance": -0.00023919958742643632,
+      "folds": 3
+    },
+    {
+      "feature": "ht:Q21|std180",
+      "importance": -0.0002470370389211496,
+      "folds": 3
+    },
+    {
+      "feature": "lims_feed_sulfur",
+      "importance": -0.00025572842701318234,
+      "folds": 3
+    },
+    {
+      "feature": "ht:F9|std180",
+      "importance": -0.0002690767749925016,
+      "folds": 3
+    },
+    {
+      "feature": "pak_sulfur",
+      "importance": -0.00031139714801112526,
+      "folds": 3
+    }
+  ],
+  "variants": {
+    "все признаки": {
+      "n": 50
+    },
+    "с ненулевым вкладом": {
+      "n": 22
+    },
+    "без дубликатов": {
+      "n": 18
+    },
+    "20 лучших": {
+      "n": 20
+    },
+    "10 лучших": {
+      "n": 10
+    }
+  },
+  "validation": {
+    "все признаки": {
+      "n": 229,
+      "MAE": 1.1524265466115173,
+      "RMSE": 2.665988606440723,
+      "MedianAE": 0.6700446335243271,
+      "R2": -0.0846170688176211,
+      "MAE_log": 0.13655177510444946
+    },
+    "с ненулевым вкладом": {
+      "n": 229,
+      "MAE": 1.1693538310071845,
+      "RMSE": 2.724404871460972,
+      "MedianAE": 0.6485204980217354,
+      "R2": -0.13266936117095107,
+      "MAE_log": 0.13883307253469898
+    },
+    "без дубликатов": {
+      "n": 229,
+      "MAE": 1.1629359196757774,
+      "RMSE": 2.6627715969655026,
+      "MedianAE": 0.6688865988009489,
+      "R2": -0.08200106499710746,
+      "MAE_log": 0.13424305537801773
+    },
+    "20 лучших": {
+      "n": 229,
+      "MAE": 1.1677707566312523,
+      "RMSE": 2.729823463301677,
+      "MedianAE": 0.6541631614485617,
+      "R2": -0.13717939303801696,
+      "MAE_log": 0.1388578351160681
+    },
+    "10 лучших": {
+      "n": 229,
+      "MAE": 1.1907972706772614,
+      "RMSE": 2.7968044469068523,
+      "MedianAE": 0.6124619569351122,
+      "R2": -0.19366939676119954,
+      "MAE_log": 0.14278598149506128
+    }
+  },
+  "best_on_validation": "без дубликатов",
+  "selected_features": [
+    "ht:Q21|value",
+    "ht:P8|mean360",
+    "ht:P3|mean360",
+    "lims_sulfur_prev",
+    "lims_feed_sulfur_age_min",
+    "ht:T5|std180",
+    "ht:P8|std180",
+    "ht:P3|delta180",
+    "ht:F9|value",
+    "ht:F9|delta180",
+    "source_disagreement_abs",
+    "ht:T5|delta180",
+    "ht:T11|delta180",
+    "ht:P3|mean60",
+    "ht:P8|mean60",
+    "source_disagreement_rel",
+    "ht:T6|mean360",
+    "pak_failed_flag_age_min"
+  ],
+  "test": {
+    "все признаки": {
+      "n": 367,
+      "MAE": 1.1856719949838723,
+      "RMSE": 1.6656835205425835,
+      "MedianAE": 0.9635080829482927,
+      "R2": 0.41776972106802024,
+      "MAE_log": 0.16724538816359136,
+      "coverage": 0.8773841961852861,
+      "mean_width": 4.299453814301213
+    },
+    "без дубликатов": {
+      "n": 367,
+      "MAE": 1.2003822423715251,
+      "RMSE": 1.698890393978216,
+      "MedianAE": 0.975247236948638,
+      "R2": 0.39432376917746015,
+      "MAE_log": 0.17109733398606855,
+      "coverage": 0.8610354223433242,
+      "mean_width": 4.151255046924526
+    }
+  }
+}
